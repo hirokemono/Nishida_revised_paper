@@ -1,0 +1,53 @@
+\section{METHOD}
+%
+A numerical geodynamo model is given by an electrically conducting Boussinesq fluid in a rotating spherical shell. The governing equations of the geodynamo in the outer core are described by the momentum equation, heat equation, continuity equation, magnetic induction equation, and Gauss's law for the magnetic field, which are respectively given as
+%
+\begin{eqnarray}
+\frac{\partial \bvec{u}}{\partial t} + \left(\bvec{\omega} \times \bvec{u}\right)
+ & = & - \nabla \left(P+\frac{1}{2}u^{2} \right) - \nabla \times \nabla \times \bvec{u}
+      - \frac{2}{E} \left(\hat{z} \times \bvec{u} \right)
+\nonumber \\
+ & & + \frac{Ra}{Pr} T \frac{\bvec{r}}{r_{o}}
+        + \frac{1}{Pm E} \left(\bvec{J} \times \bvec{B} \right),
+\label{eq:momentum} \\
+%
+\nabla \cdot \bvec{u} & = & 0, 
+\label{eq:conservation} \\
+%
+\frac{\partial T}{\partial t} + \left(\bvec{u} \cdot \nabla \right) T
+ & = & \frac{1}{Pr} \nabla^{2} T,
+\label{eq:heat} \\
+%
+ \frac{\partial \bvec{B}}{\partial t}
+ & = & -\frac{1}{Pm}  \nabla \times \nabla \times \bvec{B}
+       + \nabla \times \left(\bvec{u} \times \bvec{B} \right),
+\label{eq:induction}
+\end{eqnarray}
+%
+and
+\begin{eqnarray}
+\nabla \cdot \bvec{B} = 0,
+\label{eq:Gauss_B}
+\end{eqnarray}
+%
+where $\bvec{u}$, $P$, $T$, $\bvec{B}$, and $\hat{z}$ are the velocity, pressure, temperature, magnetic field, and unit vector along the rotation axis, respectively. And, $\bvec{\omega} = \nabla \times \bvec{u}$ and $\bvec{J} = \nabla \times \bvec{B}$ are the vorticity and current density, respectively.
+In Eqs. (\ref{eq:momentum}) – (\ref{eq:Gauss_B}), the length and temperature are normalized by the outer core thickness, $L = r_{o} - r_{i}$ and average temperature difference between the inner core boundary (ICB) and CMB, $\Delta T$, respectively. The time is normalized by the kinematic viscosity diffusion time, $L^{2} / \nu$, where $\nu$ is the kinetic viscosity, and the magnetic field is normalized by $\sqrt{\rho_{0} \mu_{0} \eta \Omega}$, where $\rho_{0}$, $\mu_{0}$, $\eta$, and $\Omega$ are the average density, magnetic permiability, magnetic diffusivity, and angular velocity of system's rotation, respectively.
+The Rayleigh number, $Ra$, Ekman number, $E$, Prandtl number, $Pr$, and magnetic Prandtl number,  $Pm$ are defined as follows:
+%
+\begin{equation}
+Ra = \displaystyle{ \frac{\alpha g \Delta T L}{ \nu \Omega} }, 
+E  = \displaystyle{ \frac{\nu}{\Omega L^{2}} },
+Pr = \displaystyle{ \frac{\nu}{\kappa} }, 
+\mbox{ and }
+Pm = \displaystyle{ \frac{\nu}{\eta} }.
+\label{eq:dimensionless}
+\end{equation}
+%
+
+We used the numerical dynamo code Calypso \cite{Matsui:2014}. In Calypso, the spherical harmonic expansion method is used in the horizontal discretization, and the second-order finite differences are used in the radial discretization. For the time integrations, the Crank-Nicolson method was used in the linear diffusive terms and the second order Adams-Bashforth method was used in the other terms.
+
+At the initial condition, temperature perturbation was applied to all the sectorial modes. The initial magnetic field was set as an axial dipole based on Christensen {\it et al.} \shortcite{Uli:2001}. For the boundary condition, the temperatures at the CMB and ICB were fixed as $T(r_{o}) = 0$ and  $T(r_{i}) = 1$. The mantle and inner core were assumed to be co-rotating, and a non-slip boundary ($\bvec{u} = 0$) was applied to the CMB and ICB. The mantle and inner core were assumed to be electrically insulated, and the magnetic field at the boundaries was connected to the potential field.
+In the parameter setting, $Ra$ was changed among the cases; the Ekman, Prandtl, and magnetic Prandtl numbers were fixed at $E = 10^{-3}$, $Pr = 1$, and $Pm = 5$ in all simulation cases. The truncation of the spherical harmonics and the radial grid points were set to $L_{max} = 47$ and $N_{r} = 63$, respectively. To eliminate aliasing in the spherical harmonic expansion, horizontal grids were set to $(N_{\theta}, N_{\phi}) = (72, 144)$. To investigate the effects of different inner core sizes, the spherical shell radius ratios of the inner core radius to the outer core radius were set as $r_{i} / r_{i} = 0.15$, 0.25, and 0.35. First, we performed numerical simulations of non-magnetic thermal convection in rotating spherical shells to estimate the critical Rayleigh number, $Ra_{crit}$, for the onset of thermal convection. We then carried out numerical simulations of magnetohydrodynamic (MHD) dynamos driven by thermal convection. 
+{\color{red}
+Dynamo simulations with a lower Ekman number are necessary, however, we were forced to perform dynamo simulations with $E = 10^{-3}$ to investigate various Rayleigh numbers and inner core radii for computational limitation like dynamo simulations of Lhuillier {\it et al.} \shortcite{Lhuillier:2019}, in which the Ekman number is larger than $E = 10^{-3}$.
+}
