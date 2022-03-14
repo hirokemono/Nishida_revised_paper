@@ -31,18 +31,19 @@ and
 \end{eqnarray}
 %
 where $\bvec{u}$, $P$, $T$, $\bvec{B}$, and $\hat{z}$ are the velocity, pressure, temperature, magnetic field, and unit vector along the rotation axis, respectively. And, $\bvec{\omega} = \nabla \times \bvec{u}$ and $\bvec{J} = \nabla \times \bvec{B}$ are the vorticity and current density, respectively.
-In Eqs. (\ref{eq:momentum}) – (\ref{eq:Gauss_B}), the length and temperature are normalized by the outer core thickness, $L = r_{o} - r_{i}$ and average temperature difference between the inner core boundary (ICB) and CMB, $\Delta T$, respectively. The time is normalized by the kinematic viscosity diffusion time, $L^{2} / \nu$, where $\nu$ is the kinetic viscosity, and the magnetic field is normalized by $\sqrt{\rho_{0} \mu_{0} \eta \Omega}$, where $\rho_{0}$, $\mu_{0}$, $\eta$, and $\Omega$ are the average density, magnetic permiability, magnetic diffusivity, and angular velocity of system's rotation, respectively.
+In Eqs. (\ref{eq:momentum}) – (\ref{eq:Gauss_B}), the length and temperature are normalized by the outer core thickness, $L = r_{o} - r_{i}$ and average temperature difference between the inner core boundary (ICB) and CMB, $\Delta T$, respectively. The time is normalized by the kinematic viscosity diffusion time, $\tau_{\nu}  = L^{2} / \nu$, where $\nu$ is the kinetic viscosity, and the magnetic field is normalized by $\sqrt{\rho_{0} \mu_{0} \eta \Omega}$, where $\rho_{0}$, $\mu_{0}$, $\eta$, and $\Omega$ are the average density, magnetic permiability, magnetic diffusivity, and angular velocity of system's rotation, respectively.
 The Rayleigh number, $Ra$, Ekman number, $E$, Prandtl number, $Pr$, and magnetic Prandtl number,  $Pm$ are defined as follows:
 %
 \begin{equation}
-Ra = \displaystyle{ \frac{\alpha g \Delta T L}{ \nu \Omega} }, 
+Ra = \displaystyle{ \frac{\alpha g \Delta T L^{3}}{ \kappa \nu} }, 
 E  = \displaystyle{ \frac{\nu}{\Omega L^{2}} },
 Pr = \displaystyle{ \frac{\nu}{\kappa} }, 
 \mbox{ and }
-Pm = \displaystyle{ \frac{\nu}{\eta} }.
+Pm = \displaystyle{ \frac{\nu}{\eta} },
 \label{eq:dimensionless}
 \end{equation}
 %
+where, $\alpha$, $g$, and $\kappa$ are the thermal expansion, gravity at the outer boundary of the shell, and thermal diffusivity, respectively.
 
 We used the numerical dynamo code Calypso \cite{Matsui:2014}. In Calypso, the spherical harmonic expansion method is used in the horizontal discretization, and the second-order finite differences are used in the radial discretization. For the time integrations, the Crank-Nicolson method was used in the linear diffusive terms and the second order Adams-Bashforth method was used in the other terms.
 
