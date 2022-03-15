@@ -1,22 +1,25 @@
 \section{RESULTS}
-%
+
 \subsection{Estimation of the critical Rayleigh number}
-%
-To estimate the critical Rayleigh number ($Ra_{crit}$), equations (\ref{eq:momentum}) - (\ref{eq:heat}) without the Lorentz force term $\left(Pm E\right)^{-1} \left(\bvec{J} \times \bvec{B} \right)$, were solved as non-magnetic thermal convection simulations. The kinetic energy density was calculated for the average of $t / \tau_{\nu} = 4.5$ to 6 in viscous diffusion time as follows: 
+
+To estimate the critical Rayleigh number ($Ra_{\rm crit}$), equations (\ref{eq:momentum})--(\ref{eq:heat}) without the Lorentz force term $\left(Pm E\right)^{-1} \left(\bvec{J} \times \bvec{B} \right)$, were solved as non-magnetic thermal convection simulations. The kinetic energy density was calculated for the average of $t / \tau_{\nu} = 4.5$ to 6 in viscous diffusion time as follows: 
 %
 \begin{equation}
-E_{kin} = \frac{1}{V_{S}} \int_{V_{S}} \frac{1}{2} \bvec{u}^{2} dV,
+E_{\rm kin} = \frac{1}{V_{S}} \int_{V_{S}} \frac{1}{2} \bvec{u}^{2} dV,
 \label{eq:kinetic_energy}
 \end{equation}
 %
 where $V_{S}$ is the volume of the spherical shell.
 
-$E_{kin}$ listed in Table \ref{table:Rac} is calculated as a mean over a quasi-steady state, and is found to be linearly related to , as shown in Fig. 1.
+$E_{\rm kin}$ listed in Table~\ref{table:Rac} is calculated as a mean over a quasi-steady state, and is found to be linearly related to, as shown in Fig.~1.
+The critical Rayleigh numbers are estimated as $Ra_{\rm crit} = 1.09 \tiems 10^5$, $0.72 \times 10^5$, and $0.56 \tiems 10^5$ in $r_i/r_o = 0.15$, $0.25$, and $0.35$, respectively, by the same method as Al-Shamali {\it et al.} \shortcite{Al-Shamali:2004}. 
+The obtained values of $Ra_{\rm crit}$ were almost identical to those reported in Al-Shamali {\it et al.} \shortcite{Al-Shamali:2004} for the same parameters and conditions used in this study. 
+$Ra_{\rm crit}$ is large when the aspect ratio is smaller, indicating that convection in a rotating, thick spherical shell requires a large buoyancy.
 %
 %
 \begin{table}
 \caption{Average kinetic energy density $E_{kin}$ at the quasi-steady state \\
-for the thermal convection without the mangetic field}
+for the thermal convection without the magnetic field}
 \begin{center}
 \begin{tabular}{|ccc||}
    \hline
@@ -54,8 +57,31 @@ for the thermal convection without the mangetic field}
 \label{table:Rac}
 \end{table}
 %
+\subsection{MHD simulation results}
+
+We performed MHD dynamo simulations for various Rayleigh numbers and the radius ratios using Eqs (1)--(5). The magnetic energy density was calculated as follows:
 %
-\begin{table}
+\begin{equation}
+E_{mag} = \frac{1}{2V_{S}E Pm} \int_{V_{S}} \frac{1}{2} \bvec{B}^{2} dV.
+\label{eq:magnetic_energy}
+\end{equation}
+%
+Tables~\ref{table:Summary_15}, \ref{table:Summary_25}, and \ref{table:Summary_35} list results of MHD dynamo simulations. 
+We performed respective numerical simulations for at least two magnetic diffusion times to assess whether the magnetic field was sustained or dissipated. 
+For example, Fig.~2 shows the time evolution of the kinetic and magnetic energy density at $Ra/Ra_{\rm crit} = 2.8$ for $r_i/r_o = 0.25$. 
+In this case, the magnetic field was sustained. 
+We calculated the time average of the kinetic and magnetic energy density, as well as the dipolarity over a 0.5 magnetic diffusion time, at the end of each case (see shaded area in Fig.~2). The kinetic and magnetic energy density as a function of Rayleigh number is shown in Fig.~3.%, where the black, red, and blue points are the E_kin values in the non-MHD cases, E_kin values in the MHD cases, and E_mag values in the MHD cases, respectively. The “F” denotes the failed dynamo cases. 
+% Reviewer # のコメントに従い削除
+In each radius ratio case with a sustained magnetic field, the $E_{\rm kin}$ values in the MHD cases were smaller than the $E_{\rm kin}$ values in the corresponding non-MHD cases. 
+These results show that the Lorentz force caused by the intense magnetic field disturbs convection.
+There were differences among the three radius ratio cases. 
+At $r_i/r_o = 0.15$, the $E_{\rm mag}$ values in the MHD cases were smaller than the $E_{\rm kin}$ values in the MHD cases for all cases. 
+This trend is consistent with the results of Heimpel {\it et al.} \shortcite{Heimpel:2005}, whose simulations were performed around dynamo onset. 
+At $r_i/r_o = 0.25$, the values of $E_{\rm mag}$ in the MHD cases were either smaller or larger than the $E_{\rm kin}$ values in the MHD. For cases of $Ra/Ra_{\rm crit}  = 3.6$ and $4.0$, the $E_{\rm mag}$ values were significantly smaller than those for the cases of other Rayleigh numbers. 
+Although the trend in the magnetic energy spectrum did not change, there was a decrease in the amplitude. At $r_i/r_o = 0.35$, the values of $E_{\rm mag}$ in the MHD cases were larger than the values of $E_{\rm kin}$ in the MHD cases for almost all cases. 
+From the above, it is not likely to sustain a strong magnetic field with a smaller inner core.
+%
+\begin{table*}
  \begin{center}
 \caption{Time average of the kinetic energy $E_{\rm kin}$, magnetic energy $E_{\rm mag}$, dipolarity $f_{\rm dip}$, and Elsasser number $\Lambda$ for the cases with $r_{\rm i}/r_{\rm o} = 0.15$}
   \begin{tabular}{cccccccc}
@@ -73,10 +99,10 @@ for the thermal convection without the mangetic field}
   \end{tabular}
  \end{center}
  \label{table:Summary_15}
- \end{table}
+ \end{table*}
  
-  \begin{table}
- \begin{center}
+\begin{table*}
+\begin{center}
 \caption{Time average of the kinetic energy $E_{\rm kin}$, magnetic energy $E_{\rm mag}$, dipolarity $f_{\rm dip}$, and Elsasser number $\Lambda$ for the cases with $r_{\rm i}/r_{\rm o} = 0.25$}
   \begin{tabular}{ccccccc}
     \hline
@@ -99,10 +125,10 @@ for the thermal convection without the mangetic field}
   \end{tabular}
  \end{center}
  \label{table:Summary_25}
-\end{table}
+\end{table*}
  
- \begin{table}
- \begin{center}
+ \begin{table*}
+% \begin{center}
 \caption{Time average of the kinetic energy $E_{\rm kin}$, magnetic energy $E_{\rm mag}$, dipolarity $f_{\rm dip}$, and Elsasser number $\Lambda$ for the cases with $r_{\rm i}/r_{\rm o} = 0.35$}
   \begin{tabular}{ccccccc}
     \hline
@@ -120,10 +146,14 @@ for the thermal convection without the mangetic field}
      $450$  & $8.0$ &  $1060$ & $10.61$ & $-$ & $-$ & $-$\\
     \hline
   \end{tabular}
- \end{center}
+% \end{center}
 \label{table:Summary_35}
- \end{table}
+ \end{table*}
+%
+Fig.~4 shows the radial component of the magnetic field at the CMB and the equatorial cross-sections of the $z$-component of the vorticity and magnetic field are plotted at $Ra/Ra_{\rm crit} = 11.9$ for $r_i/r_o = 0.15$. 
+The same plots at $Ra/Ra_{\rm crit} = 3.1$ for $r_i/r_o = 0.25$ and at $Ra/Ra_{\rm crit} = 3.0$ for $r_i/r_o = 0.35$ are shown in Figs~5 and 6, respectively. 
+At the equatorial plane, the magnetic field is concentrated in the anti-cyclone columns to generate a dipolar field at $r_i/r_o = 0.25$ and $0.35$; intense magnetic patches are located near the tangent cylinder, which is an imaginary cylinder tangent to the inner-core equator and coaxial with the rotation axis. 
+In the case of $r_i/r_o = 0.15$ case, strong convection is generated locally, where strong $B_Z$ convection is generated between the cyclonic and anti-cyclonic columns at the equatorial plane.
+As these intense magnetic fields are not concentrated in the convection columns, the radial magnetic field at the CMB near the tangent cylinder has a quadrupolar (symmetric with respect to the equator) and is smaller than that of the cases with different aspect ratios.
 %
 %
-%
-
