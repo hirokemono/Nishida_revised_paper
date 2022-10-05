@@ -112,10 +112,16 @@ The initial magnetic field is set as an axial dipole field and zonal toroidal fi
 For the boundary condition, the non-dimensional temperatures at the CMB and ICB are fixed as $T(r_{o}) = 0$ and  $T(r_{i}) = 1$, respectively. 
 The mantle and inner core are assumed to be co-rotating, and a non-slip boundary ($\bvec{u} = \bvec{0}$) is applied to the CMB and ICB. 
 The mantle and inner core are assumed to be electrically insulated, and the magnetic field at the boundaries is connected to the potential field.
-In the parameter setting, $Ra$ is changed among the cases; the Ekman, Prandtl, and magnetic Prandtl numbers are fixed at $E = 10^{-3}$, $Pr = 1$, and $Pm = 5$ in all simulation cases. 
-The truncation of the spherical harmonics and the radial grid points were set to $L_{\rm max} = 47$ and $N_{r} = 63$, respectively. 
-To eliminate aliasing in the spherical harmonic expansion, horizontal grids are set to $(N_{\theta}, N_{\phi}) = (72, 144)$.
-To investigate the effects of different inner core sizes, the spherical shell radius ratios of the inner core radius to the outer core radius are set as $r_{i} / r_{i} = 0.15$, 0.25, and 0.35. 
+In the parameter setting, 
+{\color{blue}
+we choose two parameter regimes for the Ekman, Parndtl, and magnetic Prandtl numbers. In one regime the Ekman, Prandtl, and magnetic Prandtl numbers are fixed at $E = 10^{-3}$, $Pr = 1$, and $Pm = 5$, and  $E = 10^{-4}$, $Pr = 1$, and $Pm = 2$ are chosen in the other regime. To investigate the effects of different inner core sizes, the spherical shell radius ratios of the inner core radius to the outer core radius are set as $r_{i} / r_{i} = 0.15$, 0.25, and 0.35 for each parameter regimes, and $Ra$ is also changed in each regime. Parameters and spatial resolution (truncation of the spherical harmonics $L_{max}$ and number of radial grids $N_{r}$) are listed in Table \ref{table:Summary_15} to 8 
+% \ref{table:SummaryEk4_35}.  (Table 6 to 8 cannot be referred. Why??)
+in the next section. To eliminate aliasing in the spherical harmonic expansion, number of meridional and zonal grids are set to $1.5 L_{max}$ and $3 L_{max}$, respectively.
+}
+%$Ra$ is changed among the cases; the Ekman, Prandtl, and magnetic Prandtl numbers are fixed at $E = 10^{-3}$, $Pr = 1$, and $Pm = 5$ in all simulation cases. 
+%The truncation of the spherical harmonics and the radial grid points were set to $L_{\rm max} = 47$ and $N_{r} = 63$, respectively. 
+%To eliminate aliasing in the spherical harmonic expansion, horizontal grids are set to $(N_{\theta}, N_{\phi}) = (72, 144)$.
+% To investigate the effects of different inner core sizes, the spherical shell radius ratios of the inner core radius to the outer core radius are set as $r_{i} / r_{i} = 0.15$, 0.25, and 0.35. 
 First, we perform numerical simulations of non-magnetic thermal convection in rotating spherical shells to estimate the critical Rayleigh number, $Ra_{\rm crit}$, for the onset of thermal convection. 
 We then carry out numerical simulations of magnetohydrodynamic (MHD) dynamos driven by thermal convection. 
 % {\color{red}

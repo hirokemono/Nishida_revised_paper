@@ -31,7 +31,11 @@ The dependency of the dipolarity on the Rayleigh number is similar for the two r
 Here, $f_{\rm dip}$ is always larger than $0.35$ at $r_i/r_o = 0.25$ and $0.35$. 
 In contrast, this tendency is different at $r_i/r_o = 0.15$. 
 Furthermore, $f_{\rm dip}$ is larger than $0.45$ at $Ra/Ra_{\rm crit} = 8.0$ and $9.0$ while $f_{dip}$ is smaller than $0.35$ at $Ra/Ra_{\rm crit} > 10.1$.
+% End of moving
 
+{\color{blue}
+As shown in Fig.~\ref{fig:fig_7} in the previous section, 
+}
 The results of a number of previous numerical dynamo simulations determine the threshold of the dipolar dominance for $f_{\rm dip} = 0.35$. 
 To obtain a clearer threshold for the dipole dominance, we focused on the magnetic energy spectrum at the CMB as a function of the spherical harmonic degree, $l$. 
 For example, Fig. \ref{fig:fig_8} shows the magnetic energy density as a function of the spherical harmonic degree at $Ra/Ra_{\rm crit} = 2.8$ for $r_i/r_o = 0.25$. 
@@ -88,6 +92,9 @@ We calculated the dynamic Elsasser number ($\Lambda_d$) defined by Soderlund et 
 It is found that $\Lambda_d$ is approximately 0.01 to 0.1. 
 Therefore, Coriolis force is sufficient to form a columnar convection structure in the dynamos.
 }
+{\color{blue}
+We also investigate force balances in the convective region ($r_{i} + 0.05 < r < r_{o} - 0.05$) in the strong dipolar and non-dipolar cases in the both regimes with $E = 10^{3}$ and $10^{-4}$ in Figure \ref{fig:force_balance_spectr}. As seen in the force balance in the case with non-dipolar solution in $E = 10^{-3}$ case, the geostrophic balance is still dominant in this case, but the force balance is departing from the geostrophic balane.  The significant difference between the dipolar and non-dipolar cases is also seen in the amplitude of the Lorentz force and inertia. In the non-dipolar cases, the amplitude of inertia is larger than the Lorentz force in the dominant scale, while the Lorentz force is larger than the inertia in the all length scales in the cases with dipolar solutions. The result suggests that the amplitude of inertia and Lorentz forces control the upper bound to sustain the dipolar magetic field.
+}
 
 The dipolarity at the CMB of the present Earth is $f_{\rm dip} = 0.64$, which is calculated from the 12th IGRF model \cite{Thebault:2015}. 
 The present radius ratio, $r_i/r_o$, is 0.35. 
@@ -124,12 +131,16 @@ Investigation of the numerical dynamo with our proposed method is capable of imp
 \begin{figure}
 \begin{center}
 \[
-\begin{array}{c}
-\includegraphics*[width=80mm]{Figures/Fig7.png}
+\begin{array}{cc}
+\mbox{$E = 1.0 \times 10^{-3}$} &
+\mbox{$E = 1.0 \times 10^{-4}$} \\
+\includegraphics*[width=70mm]{Figures/fdip_vs_RacRatio_Ek3.pdf} &
+\includegraphics*[width=70mm]{Figures/fdip_vs_RacRatio_Ek4.pdf}
 \end{array}
+% \includegraphics*[width=80mm]{Figures/Fig7.png}
 \]
 \end{center}
-\caption{Dipolarity $f_{\rm dip}$ as a function of the ratio of Rayleigh number to the Critical Rayleigh number for different spherical shell geometries. The red, blue, and green points indicate the cases of $r_{i} / r_{o} = 0.15$, 0,25, and 0.35, respectively. The bar represents the standard deviation.
+\caption{Dipolarity $f_{\rm dip}$ as a function of the magnetic Reynolds number $Rm$ for different spherical shell geometries. The cases with $E = 1.0 \times 10^{-3}$ and $Pm = 5.0$ are plotted in the left panel, and the cases with $E = 1.0 \times 10^{-4}$ and $Pm = 2.0$ are plotted in the right panel. The blue, green, and red marks indicate the cases of $r_{i} / r_{o} = 0.15$, 0,25, and 0.35, respectively. The failed dynamo cases are plottes as negative value (-0.2). %The bar represents the standard deviation.
 }
 \label{fig:fig_7}
 \end{figure}
@@ -186,7 +197,61 @@ Investigation of the numerical dynamo with our proposed method is capable of imp
 \begin{figure}
 \begin{center}
 \[
-\includegraphics*[width=80mm]{Figures/Fig12.png}
+\begin{array}{cc}
+\mbox{$E = 1.0 \times 10^{-3}$} &
+\mbox{$E = 1.0 \times 10^{-4}$} \\
+\includegraphics*[width=75mm]{Figures/Eratio_vs_Rm_Ek3.pdf} &
+\includegraphics*[width=75mm]{Figures/Eratio_vs_Rm_Ek4.pdf} \\
+\includegraphics*[width=75mm]{Figures/ffit_vs_Rm_Ek3.pdf} &
+\includegraphics*[width=75mm]{Figures/ffit_vs_Rm_Ek4.pdf}
+\end{array}
+\]
+\end{center}
+{\color{red}
+\caption{
+{\color{red}
+Dynamo regime in $r_{i} / r_{o} = 0.15$, 0.25, and 0.35. Red circles, blue triangles, green squares, and black crosses represent strong dipolar, weak dipolar, non-dipolar, and failed dynamo cases, respectively.
+}}
+}
+\label{fig:summary_vs_Rm}
+\end{figure}
+%
+%
+\begin{figure*}
+\begin{center}
+\[
+\begin{array}{cc}
+ \mbox{$E = 1.0 \times 10^{-3}$, $Pm = 5.0$} &
+ \mbox{$E = 1.0 \times 10^{-3}$, $Pm = 5.0$} \\
+ \mbox{$Ra / Ra_{\rm crit} = 3.056$, $r_{i} / r_{o} = 0.25$} &
+ \mbox{$Ra / Ra_{\rm crit} = 15.60$, $r_{i} / r_{o} = 0.15$} \\
+\includegraphics*[width=75mm]{Figures/A25_Ra220_forces.png} &
+ \includegraphics*[width=75mm]{Figures/sph_shell_401_forces.png} \\
+ \mbox{$E = 1.0 \times 10^{-4}$, $Pm = 2.0$} &
+ \mbox{$E = 1.0 \times 10^{-4}$, $Pm = 2.0$} \\
+ \mbox{$Ra / Ra_{\rm crit} = 7.916$, $r_{i} / r_{o} = 0.25$} &
+ \mbox{$Ra / Ra_{\rm crit} = 56.82$, $r_{i} / r_{o} = 0.15$} \\
+ \includegraphics*[width=75mm]{Figures/sph_shell_387_forces.png} &
+ \includegraphics*[width=75mm]{Figures/sph_shell_376_forces.png}
+\end{array}
+%\includegraphics*[width=160mm]{Figures/Fig6.png}
+\]
+\end{center}
+\caption{Power spectrum of the forces averaged over the  convective layer ($r_{i}+0.05 < r < r_{o} - 0.05$) as a function of spherical harmonic digree $l$. Results are averaged over the 0.5 times of the magnetic diffusion time and the standard deviations of the power are shown by shaded area.}
+\label{fig:force_balance_spectr}
+\end{figure*}
+%
+%
+%
+\begin{figure}
+\begin{center}
+\[
+\begin{array}{cc}
+\mbox{$E = 1.0 \times 10^{-3}$} &
+\mbox{$E = 1.0 \times 10^{-4}$} \\
+\includegraphics*[width=75mm]{Figures/ratio_rac_VS_aspect_Ek3.pdf} &
+\includegraphics*[width=75mm]{Figures/ratio_rac_VS_aspect_Ek4.pdf}
+\end{array}
 \]
 \end{center}
 {\color{red}
