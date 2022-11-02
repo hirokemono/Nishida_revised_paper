@@ -1,79 +1,66 @@
 \section{DISCUSSION}
 
-In numerical dynamos, dipolarity is used for quantification of the magnetic field morphology at the CMB. 
 Although dipolarity has been evaluated in some numerical dynamos \cite{Uli:2006,Soderlund:2012}, it is not sufficiently valid in dynamos whose dipolarities are gradually changing (e.g., Aubert {\it et al.} 2009).
 In an observational magnetic field, the dipole is assessed by how far the dipolar component is from the trend of higher degree components \cite{Lowes:1974,Langel:1982}. 
 We quantitatively evaluated dipolar component dominance in combination with the dipolarity, comparison of the dipolar magnetic energy, and an extrapolation of $l = 1$ based on the fitting curve of higher degrees.
 
-To quantitatively evaluate the axial dipole component dominancy, we calculated the dipolarity at the CMB, which is defined as follows:
-%
-\begin{equation}
-f_{\rm dip} = 
-\left(
-\frac{E_{mag}^{(l=1,m=0)} (r=r_o)}
-     {\sum_{l=1}^{l_{\rm max}}
-      \sum_{m=0}^l E_{\rm mag}^{l,m} (r=r_o)}
-\right)^{1/2},
-\label{eq:f_dip}
-\end{equation}
-%
-where the magnetic energy at the CMB, $E_{\rm mag} (r=r_o)$, is calculated as follows:
-%
-\begin{equation}
-E_{\rm mag} (r=r_o) = 
-  \frac{1}{V_s E Pm} \int_S \frac{1}{2} \bvec{B}^2 dS.
-\end{equation}
-%
-Fig.~\ref{fig:fig_7} shows the dipolarity as a function of the Rayleigh number for $r_i/r_o = 0.15$, $0.25$, and $0.35$. 
-The dipolarity gradually decreases with an increasing Rayleigh number for $r_i/r_o = 0.25$ and $0.35$. 
-The axial dipolar component becomes weak during intense convection. 
-The dependency of the dipolarity on the Rayleigh number is similar for the two radius ratio cases, i.e., $r_i/r_o = 0.25$ and $0.35$. 
-Here, $f_{\rm dip}$ is always larger than $0.35$ at $r_i/r_o = 0.25$ and $0.35$. 
-In contrast, this tendency is different at $r_i/r_o = 0.15$. 
-Furthermore, $f_{\rm dip}$ is larger than $0.45$ at $Ra/Ra_{\rm crit} = 8.0$ and $9.0$ while $f_{dip}$ is smaller than $0.35$ at $Ra/Ra_{\rm crit} > 10.1$.
-% End of moving
 
 {\color{blue}
-As shown in Fig.~\ref{fig:fig_7} in the previous section, 
+As shown in Fig.~\ref{fig:fdip_vs_Racratio} in the previous section, 
 }
 The results of a number of previous numerical dynamo simulations determine the threshold of the dipolar dominance for $f_{\rm dip} = 0.35$. 
 To obtain a clearer threshold for the dipole dominance, we focused on the magnetic energy spectrum at the CMB as a function of the spherical harmonic degree, $l$. 
-For example, Fig. \ref{fig:fig_8} shows the magnetic energy density as a function of the spherical harmonic degree at $Ra/Ra_{\rm crit} = 2.8$ for $r_i/r_o = 0.25$. 
+For example, Fig. \ref{fig:mag_fitting} shows the magnetic energy density as a function of the spherical harmonic degree at $Ra/Ra_{\rm crit} = 2.8$ for $r_i/r_o = 0.25$. 
 Using odd-degree components in the magnetic energy from $l = 3$ to $19$, we evaluated the fitting curve as $46.21 \times 1.481^{-l}$. 
 At degree $l = 1$, the $E_{\rm mag}$ of the simulation data $E_{\rm mag\_data}^{l = 1}$ was compared with that from the extrapolated value in the fitting function $E_{\rm mag\_fitting}^{l = 1}$. 
 Then, we acquired the ratio of $E_{\rm mag}$ for the simulation result to that from the extrapolated value, $E_{\rm mag\_data}^{l = 1}/E_{\rm mag\_fitting}^{l=1}$ (hereafter referred to as $f_{\rm mag\_fit}$. 
-We can assess the dipolar component dominance from a higher degree trend based on how much the ratio of the extrapolation from fitting $f_{mag\_fit}$ is larger than $1$. 
-Here, $f_{\rm mag\_fit}$ was calculated in all cases and plotted as a function of the Rayleigh number at $r_i/r_o = 0.15$, $0.25$, and $0.35$ (Fig.~\ref{fig:fig_9}). 
-At $r_i/r_o = 0.15$, $f_{\rm mag\_fit}$ was smaller than $1$ at $Ra/Ra_{\rm crit} > 10.1$. 
-At $r_i/r_o = 0.25$, $f_{\rm mag\_fit}$ was approximately $2.1$ at $Ra/Ra_{\rm crit} = 2.2$ and gradually decreased to $1.6$ with increase of $Ra/Ra_{\rm crit}$ of up to approximately $8.0$. 
-At $r_i/r_o = 0.35$, $f_{\rm mag\_fit}$ was approximately $4.7$ at $Ra/Ra_{\rm crit} = 2.0$, gradually decreasing to $2.1$ with increase of $Ra/Ra_{\rm crit}$ of up to approximately $7.0$.
+We can assess the dipolar component dominance from a higher degree trend based on how much the ratio of the extrapolation from fitting $f_{mag\_fit}$ is larger than $1$.
 
-Comparing the result between $f_{dip}$ and $f_{\rm mag\_fit}$, the common point is that the dipolar dominance decreases with an increasing Rayleigh number. 
-At $r_i/r_o = 0.15$, the dipolar non-dominance can be represented by $Ra/Ra_{\rm crit} > 10.1$ for both indices. 
-At $r_i/r_o = 0.25$ and $0.35$, the magnitude relationship of $f_{\rm dip}$ and $f_{\rm mag\_fit}$ is reversed at a small $Ra/Ra_{\rm crit}$ value. 
-Because the magnetic energy of higher degrees is relatively larger for the total energy at $r_i/r_o = 0.35$ than at $r_i/r_o = 0.25$, $f_{\rm dip}$ is smaller at $r_i/r_o = 0.35$ than at $r_i/r_o = 0.25$. 
-Although $E_{\rm mag\_fitting}^{l = 1}$ is almost the same at $r_i/r_o = 0.25$ and $0.35$, $E_{\rm mag\_data}^{l = 1}$ is significantly larger, such that $f_{\rm mag\_fit}$ is larger at $r_i/r_o = 0.35$ than at $r_i/r_o = 0.25$. 
-The difference between $f_{\rm dip}$ and $f_{\rm mag\_fit}$ derives from whether a higher-degree spectrum is taken into account or not. 
-The dependency of the dipolar dominance on the radius ratio can be revealed by $f_{\rm mag\_fit}$ as it contains information from a higher degree spectrum.
+{\color{blue}
+Comparing the result between $f_{dip}$ and $f_{\rm mag\_fit}$ in Fig. \ref{fig:fig_9}, the common point is that the dipolar dominance decreases with an increasing the magnetic Reynolds number ({\it i.e.} Rayleigh number). In addition, The dependence on the radius ratio is very small by referring the magnetic Reynolds number instead of the Rayleigh number.
+In the regime with $E = 1.0 \times 10^{-3}$, the dipolar non-dominance can be represented by approximately $Rm > 200$ for the all radius ratio cases. In the regime with $E = 1.0 \times 10^{-4}$, the dipolar non-dominance can be represented by approximately $Rm > 400$. 
+As seen in Figure \ref{fig:Eratio_vs_Rm}, the ratio of the magnetic to kinetic energies as a function of $Rm$ has also small dependence on the radius ratio in the large $Rm$. These results suggests that the upper limit of to sustain the dipolar magnetic field is not controlled by the geometry of the spherical shell.
+}
 
-We show an example in which we could not categorize the dipole or non-dipole based only on the dipolarity, i.e., the cases for $f_{\rm dip} = 0.376$ at $Ra/Ra_{\rm crit} = 7.1$ with $r_i/r_o = 0.35$ and $f_{\rm dip} = 0.349$ at $Ra/Ra_{\rm crit} = 10.1$ for $r_i/r_o = 0.15$. 
-Fig. \ref{fig:fig_10} shows the CMB spectra for these two cases. 
+%Here, $f_{\rm mag\_fit}$ was calculated in all cases and plotted as a function of the Rayleigh number at $r_i/r_o = 0.15$, $0.25$, and $0.35$ (Fig.~\ref{fig:fig_9}). 
+%At $r_i/r_o = 0.15$, $f_{\rm mag\_fit}$ was smaller than $1$ at $Ra/Ra_{\rm crit} > 10.1$. 
+%At $r_i/r_o = 0.25$, $f_{\rm mag\_fit}$ was approximately $2.1$ at $Ra/Ra_{\rm crit} = 2.2$ and gradually decreased to $1.6$ with increase of $Ra/Ra_{\rm crit}$ of up to approximately $8.0$. 
+%At $r_i/r_o = 0.35$, $f_{\rm mag\_fit}$ was approximately $4.7$ at $Ra/Ra_{\rm crit} = 2.0$, gradually decreasing to $2.1$ with increase of $Ra/Ra_{\rm crit}$ of up to approximately $7.0$.
+
+%Comparing the result between $f_{dip}$ and $f_{\rm mag\_fit}$ in Fig. \ref{fig:fig_9}, the common point is that the dipolar dominance decreases with an increasing Rayleigh number. 
+%At $r_i/r_o = 0.15$, the dipolar non-dominance can be represented by $Ra/Ra_{\rm crit} > 10.1$ for both indices. 
+%At $r_i/r_o = 0.25$ and $0.35$, the magnitude relationship of $f_{\rm dip}$ and $f_{\rm mag\_fit}$ is reversed at a small $Ra/Ra_{\rm crit}$ value. 
+%Because the magnetic energy of higher degrees is relatively larger for the total energy at $r_i/r_o = 0.35$ than at $r_i/r_o = 0.25$, $f_{\rm dip}$ is smaller at $r_i/r_o = 0.35$ than at $r_i/r_o = 0.25$. 
+%Although $E_{\rm mag\_fitting}^{l = 1}$ is almost the same at $r_i/r_o = 0.25$ and $0.35$, $E_{\rm mag\_data}^{l = 1}$ is significantly larger, such that $f_{\rm mag\_fit}$ is larger at $r_i/r_o = 0.35$ than at $r_i/r_o = 0.25$. 
+%The difference between $f_{\rm dip}$ and $f_{\rm mag\_fit}$ derives from whether a higher-degree spectrum is taken into account or not. 
+%The dependency of the dipolar dominance on the radius ratio can be revealed by $f_{\rm mag\_fit}$ as it contains information from a higher degree spectrum.
+
+{\color{blue}
+We can also show some cases in which we could not categorize the dipole or non-dipole based only on the dipolarity because $f_{\rm mag\_fit}$ is more than 1.0 while $f_{\rm dip}$ is less than 0.35 or {\it vis versa}. In the Regime $E = 1.0 \times 10^{-3}$, The magnetic spectra at CMB for the cases for $f_{\rm dip} = 0.376$ at $Ra/Ra_{\rm crit} = 7.1$ with $r_i/r_o = 0.35$ and $f_{\rm dip} = 0.349$ at $Ra/Ra_{\rm crit} = 10.1$ for $r_i/r_o = 0.15$ are shown in 
+Fig. \ref{fig:mag_fitting} as examples.
+}
+
+%We show an example in which we could not categorize the dipole or non-dipole based only on the dipolarity, {\it i.e.}, the cases for $f_{\rm dip} = 0.376$ at $Ra/Ra_{\rm crit} = 7.1$ with $r_i/r_o = 0.35$ and $f_{\rm dip} = 0.349$ at $Ra/Ra_{\rm crit} = 10.1$ for $r_i/r_o = 0.15$. 
+%Fig. \ref{fig:mag_fitting} shows the CMB spectra for these two cases.
+
+
+
 The dipolar component is dominant against the high degree trend in the former case while it is not dominant in the latter case. 
 The ratio of extrapolation from the fitting is $f_{\rm mag\_fit} = 2.071$ in the former case and $f_{\rm mag\_fit} = 0.860$ in the latter case; we observed that the former case is dipolar-dominated while the latter case is non-dipolar dominated. 
 The results obtained for $f_{\rm mag\_fit}$  also indicate the dependence of the dipolar dominance on the inner core size. 
 The dipolar dominance becomes weaker with a smaller inner core by calculating the dipolar magnetic energy at the CMB \cite{Heimpel:2005}. 
 In this study, although this tendency was not observed from the dipolarity, it was clear based on the ratio of extrapolation from fitting.
 
-{\color{red}
-Fig.~\ref{fig:fig_11} shows the magnetic energy density at the CMB and surface for two cases; (a) $Ra/Ra_{\rm crit} = 8.0$ at $r_i/r_o = 0.15$ and (b) $Ra/Ra_{\rm crit} = 11.9$ at $r_i/r_o = 0.15$. 
-In case (a), the dipolarity is $f_{\rm dip} = 0.494 > 0.35$ and the ratio of extrapolation from the fitting is $f_{\rm mag\_fit} = 1.435 > 1$. 
-These values mean a dipolar component is dominant. 
-This is consistent with the spectra of the CMB and surface. 
-In case (b), the dipolarity is $f_{\rm dip} = 0.117 < 0.35$ and the ratio of extrapolation from the fitting is $f_{\rm mag\_fit} = 0.322 < 1$. 
-These values mean a dipolar component is not dominant. 
-This is consistent with the spectra of the CMB and surface, which show a quadrupolar component is dominant. 
-The spectra imply that if paleointensity is large, geomagnetic field was not always dipolar-dominated.
-}
+%{\color{red}
+%Fig.~\ref{fig:fig_11} shows the magnetic energy density at the CMB and surface for two cases; (a) $Ra/Ra_{\rm crit} = 8.0$ at $r_i/r_o = 0.15$ and (b) $Ra/Ra_{\rm crit} = 11.9$ at $r_i/r_o = 0.15$. 
+%In case (a), the dipolarity is $f_{\rm dip} = 0.494 > 0.35$ and the ratio of extrapolation from the fitting is $f_{\rm mag\_fit} = 1.435 > 1$. 
+%These values mean a dipolar component is dominant. 
+%This is consistent with the spectra of the CMB and surface. 
+%In case (b), the dipolarity is $f_{\rm dip} = 0.117 < 0.35$ and the ratio of extrapolation from the fitting is $f_{\rm mag\_fit} = 0.322 < 1$. 
+%These values mean a dipolar component is not dominant. 
+%This is consistent with the spectra of the CMB and surface, which show a quadrupolar component is dominant. 
+%The spectra imply that if paleointensity is large, geomagnetic field was not always dipolar-dominated.
+%}
 
 Considering both $f_{\rm dip}$ and $f_{\rm mag\_fit}$, Fig.~{\color{red}\ref{fig:fig_12}
 } describes the dynamo regime. 
@@ -82,9 +69,9 @@ Considering both $f_{\rm dip}$ and $f_{\rm mag\_fit}$, Fig.~{\color{red}\ref{fig
 When the magnetic energy is larger/smaller than the kinetic energy in a simulation case, we categorized this as a strong/weak dynamo. 
 Sustaining the dynamo with a smaller inner core size requires a large Rayleigh number. 
 This is consistent with the findings of Heimpel et al.\ \shortcite{Heimpel:2005}. 
-At $r_i/r_o = 0.35$, almost all the sustained dynamo cases were strong dipoles. 
-At $r_i/r_o = 0.25$, there were strong dipolar dynamo cases and weak dipolar dynamo cases. 
-At $r_i/r_o = 0.15$, there were weak dipolar and non-dipolar dynamo cases.
+%At $r_i/r_o = 0.35$, almost all the sustained dynamo cases were strong dipoles. 
+%At $r_i/r_o = 0.25$, there were strong dipolar dynamo cases and weak dipolar dynamo cases. 
+%At $r_i/r_o = 0.15$, there were weak dipolar and non-dipolar dynamo cases.
 
 {\color{red}
 In these dynamos, since the Ekman number is $E = 1 \times 10^{-3}$, thermal convection in a rotating spherical shell is not the rapidly rotating regime reported by Gastine et al.\  \shortcite{Gastine:2016} or Long et al.\ \shortcite{Long:2020}. 
@@ -93,7 +80,9 @@ It is found that $\Lambda_d$ is approximately 0.01 to 0.1.
 Therefore, Coriolis force is sufficient to form a columnar convection structure in the dynamos.
 }
 {\color{blue}
-We also investigate force balances in the convective region ($r_{i} + 0.05 < r < r_{o} - 0.05$) in the strong dipolar and non-dipolar cases in the both regimes with $E = 10^{3}$ and $10^{-4}$ in Figure \ref{fig:force_balance_spectr}. As seen in the force balance in the case with non-dipolar solution in $E = 10^{-3}$ case, the geostrophic balance is still dominant in this case, but the force balance is departing from the geostrophic balane.  The significant difference between the dipolar and non-dipolar cases is also seen in the amplitude of the Lorentz force and inertia. In the non-dipolar cases, the amplitude of inertia is larger than the Lorentz force in the dominant scale, while the Lorentz force is larger than the inertia in the all length scales in the cases with dipolar solutions. The result suggests that the amplitude of inertia and Lorentz forces control the upper bound to sustain the dipolar magetic field.
+We also investigate force balances in the convective region ($r_{i} + 0.05 < r < r_{o} - 0.05$) in the strong dipolar and non-dipolar cases in the both regimes with $E = 10^{-3}$ and $10^{-4}$ in Figure \ref{fig:force_balance_spectr}. As seen in the force balance in the case with non-dipolar solution in $E = 10^{-3}$ case, the geostrophic balance is still dominant in this case, but the force balance is departing from the geostrophic balane.  The significant difference between the dipolar and non-dipolar cases is also seen in the amplitude of the Lorentz force and inertia. In the non-dipolar cases, the amplitude of inertia is larger than the Lorentz force in the dominant scale, while the Lorentz force is larger than the inertia in the all length scales in the cases with dipolar solutions. The result suggests that the amplitude of inertia and Lorentz forces control the upper bound to sustain the dipolar magnetic field.
+
+On the other hand, the dominant length scale might be take into account to explain the reason why larger magnetic Reynolds number is required. As seen in Figs. \ref{fig:Snap_non_dipoler_E1-3} to \ref{fig:Snap_Dypoler_E1-4}, the flow and temperature patterns in the  $r_i/r_o  = 0.15$ cases are more localized and have smaller zonal wave numbers ({\it i.e.} fewer numbers of upwellong flow) than that in the $r_i/r_o  = 0.25$ and 0.35 cases. In the qualitative expression, more strong convection in each column is required to sustain the axial dipolar field if the convection is characterized by the fewer number of localized columns.
 }
 
 The dipolarity at the CMB of the present Earth is $f_{\rm dip} = 0.64$, which is calculated from the 12th IGRF model \cite{Thebault:2015}. 
@@ -115,7 +104,7 @@ At $r_i/r_o =0.15$, an axial dipole formed by a single column \cite{Heimpel:2005
 In this study, a dipole also formed by some azimuthally localized narrow columns around the dynamo-onset cases. 
 Here, $E_{\rm mag}$ is always smaller than $E_{rm kin}$ in all Ra cases. 
 The magnitude relationship is the same as that of Heimpel et al.\ \shortcite{Heimpel:2005}. 
-A strong dipole is sustained with a smaller inner core in the fixed flux calculation \cite{Hori:2010}, changing the core power based on the thermal history \cite{Driscoll:2016}, or the buoyancy gained by light elements \cite{(Lhuillier:2019}.
+A strong dipole is sustained with a smaller inner core in the fixed flux calculation \cite{Hori:2010}, changing the core power based on the thermal history \cite{Driscoll:2016}, or the buoyancy gained by light elements \cite{Lhuillier:2019}.
 Clarifying how heat flow at boundaries sustains the dipole requires further numerical simulations.
 
 Our proposed method of evaluating the dipolar dominance, $f_{\rm mag\_fit}$, enables quantitative investigations of the magnetic field structure in the past environment. 
@@ -131,67 +120,45 @@ Investigation of the numerical dynamo with our proposed method is capable of imp
 \begin{figure}
 \begin{center}
 \[
+\includegraphics*[width=160mm]{Figures/Fig10_mod.png}
+\]
+\end{center}
+\caption{Magnetic energy density at the CMB of simulation data at $l = 1$ and fitting value of $l = 1$ as a function of spherical harmonic odd degrees. (a) Dipolar case at $Ra / Ra_{\rm crit} = 7.1$ at $r_{i} / r_{o} = 0.35$, and (b) Non-dipolar case at $Ra / Ra_{\rm crit} = 10.1$ at $r_{i} / r_{o} = 0.15$.
+}
+\label{fig:mag_fitting}
+\end{figure}
+%
+%
+\begin{figure}
+\begin{center}
+\[
 \begin{array}{cc}
 \mbox{$E = 1.0 \times 10^{-3}$} &
 \mbox{$E = 1.0 \times 10^{-4}$} \\
-\includegraphics*[width=70mm]{Figures/fdip_vs_RacRatio_Ek3.pdf} &
-\includegraphics*[width=70mm]{Figures/fdip_vs_RacRatio_Ek4.pdf}
+\includegraphics*[width=75mm]{Figures/fdip_vs_Rm_Ek3.pdf} &
+\includegraphics*[width=75mm]{Figures/fdip_vs_Rm_Ek4.pdf} \\
+\includegraphics*[width=75mm]{Figures/ffit_vs_Rm_Ek3.pdf} &
+\includegraphics*[width=75mm]{Figures/ffit_vs_Rm_Ek4.pdf}
 \end{array}
-% \includegraphics*[width=80mm]{Figures/Fig7.png}
+%\includegraphics*[width=80mm]{Figures/Fig9.png}
 \]
 \end{center}
-\caption{Dipolarity $f_{\rm dip}$ as a function of the magnetic Reynolds number $Rm$ for different spherical shell geometries. The cases with $E = 1.0 \times 10^{-3}$ and $Pm = 5.0$ are plotted in the left panel, and the cases with $E = 1.0 \times 10^{-4}$ and $Pm = 2.0$ are plotted in the right panel. The blue, green, and red marks indicate the cases of $r_{i} / r_{o} = 0.15$, 0,25, and 0.35, respectively. The failed dynamo cases are plottes as negative value (-0.2). %The bar represents the standard deviation.
-}
-\label{fig:fig_7}
-\end{figure}
-%
-%
-\begin{figure}
-\begin{center}
-\[
-\includegraphics*[width=80mm]{Figures/Fig8.png}
-\]
-\end{center}
-\caption{Magnetic energy density at the CMB of simulation data in the spherical harmonics degree $l = 1$ and fitting value of $l = 1$ as a function of spherical harmonic degree for $r_{i} / r_{o} = 0.25$ and $Ra / Ra_{\rm crit} = 2.8$.
-}
-\label{fig:fig_8}
-\end{figure}
-%
-%
-\begin{figure}
-\begin{center}
-\[
-\includegraphics*[width=80mm]{Figures/Fig9.png}
-\]
-\end{center}
-\caption{The ratio of the dipolar magnetic energy density at the CMB to the extrapolation of the spherical harmonic degree $l = 1$, $f_{\rm mag\_fit}$, as a function of the ratio of Rayleigh number to the critical Rayleigh number for different geometries. The red, blue, and green points indicate the cases of $r_{i} / r_{o} = 0.15$, 0,25, and 0.35, respectively. The bar represents the standard deviation.
+\caption{The dipolarity $f_{\rm dip}$ and the ratio of the dipolar magnetic energy density at the CMB to the extrapolation of the spherical harmonic degree $l = 1$, $f_{\rm mag\_fit}$, as a function of the magnetic Reynolds numnber $Rm$ for different geometries. $f_{\rm dip}$ and $f_{\rm mag\_fit}$ are shown in the upper and lower panels, respectively. The regimes with $E = 1.0 \times 10^{-3}$ and $10^{4}$ are shown in the left and right panels, respectively. The blue, green, and red points indicate the cases of $r_{i} / r_{o} = 0.15$, 0,25, and 0.35, respectively. 
 }
 \label{fig:fig_9}
 \end{figure}
 %
 %
-\begin{figure*}
-\begin{center}
-\[
-\includegraphics*[width=160mm]{Figures/Fig10.png}
-\]
-\end{center}
-\caption{Magnetic energy density at the CMB of simulation data at $l = 1$ and fitting value of $l = 1$ as a function of spherical harmonic odd degrees. (a) Dipolar case at $Ra / Ra_{\rm crit} = 7.1$ at $r_{i} / r_{o} = 0.35$, and (b) Non-dipolar case at $Ra / Ra_{\rm crit} = 10.1$ at $r_{i} / r_{o} = 0.15$.
-}
-\label{fig:fig_10}
-\end{figure*}
-%
-%
-\begin{figure*}
-\begin{center}
-\[
-\includegraphics*[width=160mm]{Figures/Fig11.png}
-\]
-\end{center}
-\caption{{\color{red} Magnetic energy density at the CMB and surface of simulation data as a function of spherical harmonic degree. (a) Dipolar case at $Ra / Ra_{\rm crit} = 8.0$ at $r_{i} / r_{o} = 0.15$, and (b) Non-dipolar case at $Ra / Ra_{\rm crit} = 11.9$ at $r_{i} / r_{o} = 0.15$.
-}}
-\label{fig:fig_11}
-\end{figure*}
+%\begin{figure*}
+%\begin{center}
+%\[
+%\includegraphics*[width=160mm]{Figures/Fig11.png}
+%\]
+%\end{center}
+%\caption{{\color{red} Magnetic energy density at the CMB and surface of simulation data as a function of spherical harmonic degree. (a) Dipolar case at $Ra / Ra_{\rm crit} = 8.0$ at $r_{i} / r_{o} = 0.15$, and (b) Non-dipolar case at $Ra / Ra_{\rm crit} = 11.9$ at $r_{i} / r_{o} = 0.15$.
+%}}
+%\label{fig:fig_11}
+%\end{figure*}
 %
 %
 \begin{figure}
@@ -201,19 +168,17 @@ Investigation of the numerical dynamo with our proposed method is capable of imp
 \mbox{$E = 1.0 \times 10^{-3}$} &
 \mbox{$E = 1.0 \times 10^{-4}$} \\
 \includegraphics*[width=75mm]{Figures/Eratio_vs_Rm_Ek3.pdf} &
-\includegraphics*[width=75mm]{Figures/Eratio_vs_Rm_Ek4.pdf} \\
-\includegraphics*[width=75mm]{Figures/ffit_vs_Rm_Ek3.pdf} &
-\includegraphics*[width=75mm]{Figures/ffit_vs_Rm_Ek4.pdf}
+\includegraphics*[width=75mm]{Figures/Eratio_vs_Rm_Ek4.pdf}
 \end{array}
 \]
 \end{center}
 {\color{red}
 \caption{
 {\color{red}
-Dynamo regime in $r_{i} / r_{o} = 0.15$, 0.25, and 0.35. Red circles, blue triangles, green squares, and black crosses represent strong dipolar, weak dipolar, non-dipolar, and failed dynamo cases, respectively.
+The ratio of the magnetic to kinetic energy densities averaged over the spherical shells as a function of the magnetic Reynolds numnber $Rm$ for different geometries. The blue, green, and red points indicate the cases of $r_{i} / r_{o} = 0.15$, 0,25, and 0.35, respectively.
 }}
 }
-\label{fig:summary_vs_Rm}
+\label{fig:Eratio_vs_Rm}
 \end{figure}
 %
 %

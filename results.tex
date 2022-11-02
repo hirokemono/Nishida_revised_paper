@@ -2,33 +2,47 @@
 
 \subsection{Estimation of the critical Rayleigh number}
 
-To estimate the critical Rayleigh number, $Ra_{\rm crit}$, equations (\ref{eq:momentum})--(\ref{eq:heat}) without the Lorentz force term $\left(Pm E\right)^{-1} \left(\bvec{J} \times \bvec{B} \right)$, are solved as non-magnetic thermal convection simulations.
-The kinetic energy density is calculated for the average of $t / \tau_{\nu} = 4.5$ to 6 in viscous diffusion time as follows: 
+% To estimate the critical Rayleigh number, $Ra_{\rm crit}$, equations (\ref{eq:momentum})--(\ref{eq:heat}) without the Lorentz force term $\left(Pm E\right)^{-1} \left(\bvec{J} \times \bvec{B} \right)$, are solved as non-magnetic thermal convection simulations.
+% The kinetic energy density is calculated for the average of $t / \tau_{\nu} = 4.5$ to 6 in viscous diffusion time as follows: 
+%
+{\color{red}
+We first estimate the critical Rayleigh number, $Ra_{\rm crit}$, for the onset of thermal convection following the method by Al-Shamali {\it et al.} \shortcite{Al-Shamali:2004}.
+We carry out numerical simulations of thermal convection by solving eqs (\ref{eq:momentum})--(\ref{eq:heat}) without the Lorentz force term, $\left(Pm E\right)^{-1} \left(\bvec{J} \times \bvec{B} \right)$.
+The kinetic energy density defined by
 %
 \begin{equation}
 E_{\rm kin} = \frac{1}{V_{S}} \int_{V_{S}} \frac{1}{2} \bvec{u}^{2} dV,
 \label{eq:kinetic_energy}
 \end{equation}
 %
-where $V_{S}$ is volume of a spherical shell.
+where $V_{S}$ is volume of a spherical shell, is linearly related with the Rayleigh number being close to $Ra_{\rm crit}$.
+Therefore, we can determine $Ra_{\rm crit}$ through extrapolation of $E_{\rm kin}$ to zero kinetic energy density.
+We calculate $E_{\rm kin}$ for the time average over a quasi-steady state (1.5 viscous diffusion time, $t/\tau_\nu$),
+}
+% $E_{\rm kin}$ listed in 
+% {\color{blue} Tables~\ref{table:Rac} and \ref{table:Rac_Ek4}} is calculated as a mean over a quasi-steady state, and is found to be linearly related to, as shown in Fig. \ref{fig:fig_1}.
+{\color{red}
+Fig.~\ref{fig:fig_1} shows $E_{\rm kin}$ as a function of $Ra$, as listed in Tables \ref{table:Rac} and \ref{table:Rac_Ek4} for $E = 10^{-3}$ and $E = 10^{-4}$, respectively, for $r_i / r_o = 0.15$, $0.25$ and $0.35$.
+The critical Rayleigh numbers, $Ra_{\rm crit}$, are obtained from linear fitting of the results $E_{\rm kin}$.
+}
 
-$E_{\rm kin}$ listed in 
-{\color{blue} Tables~\ref{table:Rac} and \ref{table:Rac_Ek4}} is calculated as a mean over a quasi-steady state, and is found to be linearly related to, as shown in Fig. \ref{fig:fig_1}.
 The critical Rayleigh numbers 
-{\color{blue} for $E = 1.0 \times 10^{-3}$}
+{\color{blue} for $E = 10^{-3}$}
 are estimated as $Ra_{\rm crit} = 1.09 \times 10^5$, $0.72 \times 10^5$, and $0.56 \times 10^5$ for $r_i/r_o = 0.15$, $0.25$, and $0.35$, respectively, 
-{\color{blue} and that for $E = 1.0 \times 10^{-4}$ is  $Ra_{\rm crit} = 1.08 \times 10^6$, $0.82 \times 10^6$, and $0.70 \times 10^6$, respectively.
-The present estimations are by the same method as Al-Shamali {\it et al.} \shortcite{Al-Shamali:2004}, and}
-the obtained values of $Ra_{\rm crit}$ are almost identical to those reported in Al-Shamali {\it et al.} \shortcite{Al-Shamali:2004} for the same parameters and conditions used in this study. 
+{\color{blue} and those for $E = 10^{-4}$ are $Ra_{\rm crit} = 1.08 \times 10^6$, $0.82 \times 10^6$, and $0.70 \times 10^6$, respectively.
+% The present estimations are by the same method as Al-Shamali {\it et al.} \shortcite{Al-Shamali:2004}, and}
+}
+The obtained values of $Ra_{\rm crit}$ are almost identical to those reported in Al-Shamali {\it et al.} \shortcite{Al-Shamali:2004} for the same parameters and conditions used in this study. 
 % $Ra_{\rm crit}$ is large when the aspect ratio is smaller, indicating that convection in a rotating, thick spherical shell requires a large buoyancy.
-{\color{blue} In the both $E = 1.0 \times 10^{-3}$ and $1.0 \times 10^{-4}$ cases,}
+% {\color{blue} In the both $E = 1.0 \times 10^{-3}$ and $1.0 \times 10^{-4}$ cases,}
 {\color{red} % MM
-$Ra_{\rm crit}$ is larger when the aspect ratio is smaller. These results indicate that convection in a rotating, thicker spherical shell requires a larger buoyancy.
+$Ra_{\rm crit}$ is found to be larger when the aspect ratio is smaller in both the cases of $E = 10^{-3}$ and $E = 10^{-4}$. 
+These results indicate that convection in a rotating, thicker spherical shell requires larger buoyancy.
 }
 %
 %
 \begin{table}
-\caption{Average kinetic energy density $E_{kin}$ at the quasi-steady state \\
+\caption{Average kinetic energy density $E_{\rm kin}$ at the quasi-steady state \\
 for the thermal convection without the magnetic field with $E = 1.0 \times 10^{-3}$.}
 \begin{center}
 \begin{tabular}{|ccc|ccc|cc|}
@@ -40,12 +54,12 @@ for the thermal convection without the magnetic field with $E = 1.0 \times 10^{-
   $Ra[\times 10^5] $ &  $E_{\rm kin}$ & &
   $Ra[\times 10^5] $ &  $E_{\rm kin}$ \\
     \hline
-   1.0  &  $8.31 \times 10^{-6} $ & &  0.70 &  $8.55 \times 10^{-4}$ & &  0.55  &  $1.76 \times 10^{-4}$ \\
-   1.2  &  5.72 & & 0.75 &  2.41 & &  0.58  &  2.38\\
+   1.00  &  $8.31 \times 10^{-6} $ & &  0.70 &  $8.55 \times 10^{-4}$ & &  0.55  &  $1.76 \times 10^{-4}$ \\
+   1.20  &  5.72 & & 0.75 &  2.41 & &  0.58  &  2.38\\
    1.25 &  8.15 & &  0.78  &  4.94 & &  0.60  &  4.54\\
-   1.3  &  10.62 & &  0.80  &  6.62 & &  0.62  &  6.76  \\
+   1.30  &  10.62 & &  0.80  &  6.62 & &  0.62  &  6.76  \\
    1.35 &  13.16 & &  0.82  & 8.35 & &  0.65  &  10.22 \\
-   1.4  &  15.80 & &  0.85  &  11.02 & &  0.67  &  12.60 \\
+   1.40  &  15.80 & &  0.85  &  11.02 & &  0.67  &  12.60 \\
    1.45  &  18.54 & &  0.90  &  15.70 & &  0.70  &  16.28\\
  \hline
 \end{tabular}
@@ -55,7 +69,7 @@ for the thermal convection without the magnetic field with $E = 1.0 \times 10^{-
 
 %
 \begin{table}
-\caption{Average kinetic energy density $E_{kin}$ at the quasi-steady state \\
+\caption{Average kinetic energy density $E_{\rm kin}$ at the quasi-steady state \\
 for the thermal convection without the magnetic field with $E = 1.0 \times 10^{-4}$.}
 \begin{center}
 \begin{tabular}{|ccc|ccc|cc|}
@@ -80,31 +94,90 @@ for the thermal convection without the magnetic field with $E = 1.0 \times 10^{-
 \end{table}
 
 
-\subsection{Results of MHD simulation}
+\subsection{Results of MHD dynamo simulation}
 
 % We performed MHD dynamo simulations for various Rayleigh numbers and the radius ratios using Eqs (1)--(5).
 {\color{red}
-We perform MHD dynamo simulations for various combinations of Rayleigh, Ekman numbers and the radius ratios solving Eqs (1)--(5) for at least two magnetic diffusion time to assess whether the magnetic field is sustained or dissipated.
+To understand the geometry effect on the dynamo regime through evolution of the core, we perform magnetohydrodynaic (MHD) dynamo simulations for various combinations of Rayleigh, Ekman numbers and the radius ratios.
+We solve eqs (\ref{eq:momentum})--(\ref{eq:Gauss_B}) for at least two magnetic diffusion time to assess whether the magnetic field is sustained or dissipated.
 }
-The magnetic energy density is calculated as follows:
+{\color{red}
+Fig.~\ref{fig:fig_2} shows the time evolution of $E_{\rm kin}$ and the magnetic energy density, $E_{\rm mag}$, defined by
 %
 \begin{equation}
-E_{\rm mag} = \frac{1}{V_{S}E Pm} \int_{V_{S}} \frac{1}{2} \bvec{B}^{2} dV.
+E_{\rm mag} = \frac{1}{V_{S}E Pm} \int_{V_{S}} \frac{1}{2} \bvec{B}^{2} dV,
 \label{eq:magnetic_energy}
 \end{equation}
 %
-{\color{blue} Tables~\ref{table:Summary_15} to 8 are lists of time averaged results of the present MHD dynamo simulations.
-%\ref{table:Summary_3115} Table 8 can not show correctly. Why?
+at $Ra/Ra_{\rm crit} = 21.1$ and $E = 1.0 \times 10^{-4}$ for $r_i/r_o = 0.25$.
 }
+% The magnetic energy density is calculated as follows:
+%
+% \begin{equation}
+% E_{\rm mag} = \frac{1}{V_{S}E Pm} \int_{V_{S}} \frac{1}{2} \bvec{B}^{2} dV.
+% \label{eq:magnetic_energy}
+% \end{equation}
+% 
+% Add definision of dynamic elsasser number and magnetic Reynolds number.
+%
+% {\color{blue} Tables~\ref{table:Summary_15} to 8 are lists of time averaged results of the present MHD dynamo simulations.
+%\ref{table:Summary_3115} Table 8 can not show correctly. Why?
+% }
 %list results of MHD dynamo simulations. 
 % We performed respective numerical simulations for at least two magnetic diffusion times to assess whether the magnetic field was sustained or dissipated. 
-{\color{blue} For example, Fig.~\ref{fig:fig_2} shows the time evolution of the kinetic and magnetic energy density at $Ra/Ra_{\rm crit} = 21.1$ and $E = 1.0 \times 10^{-4}$ with $r_i/r_o = 0.25$.
-The magnetic field is found to be sustained more than the kinetic enegy in this case.
+% {\color{blue} For example, Fig.~\ref{fig:fig_2} shows the time evolution of the kinetic and magnetic energy density at $Ra/Ra_{\rm crit} = 21.1$ and $E = 1.0 \times 10^{-4}$ with $r_i/r_o = 0.25$.
+{\color{red}
+The magnetic field is found to be sustained, and the magnetic energy is larger than the kinetic energy in this parameter setting.
 }
-We calculate the time average of the kinetic and magnetic energy density, as well as the dipolarity over a 0.5 magnetic diffusion time, at the end of each simulation (see shaded area in Fig.~\ref{fig:fig_2}.
+
+% {\color{blue} Tables~\ref{table:Summary_15} to 8 are lists of time averaged results of the present MHD dynamo simulations.
+% }
+{\color{red}
+We here summarise results of the present MHD dynamo simulations in Tables~\ref{table:Summary_15}, \ref{table:Summary_25} and \ref{table:Summary_35} at $E = 10^{-3}$ and $Pm = 5$ and in  Tables~\ref{table:Summary_415}, \ref{table:Summary_25_Ek4} and \ref{table:SummaryEk4_35} at $E = 10^{-4}$ and $Pm = 2$.
+}
+% ref{#} of tables does not work well.
+{\color{red}
+$Ra$, $L_{\rm max}$ and $N_r$ are parameters adopted in respective numerical simulations.
+$E_{\rm kin}$ and $E_{\rm mag}$ are obtained as average values over a 0.5 magnetic diffusion time at the end of each simulation (see shaded are in Fig.~\ref{fig:fig_2}).
+}
+% We calculate the time average of the kinetic and magnetic energy density, as well as the dipolarity over a 0.5 magnetic diffusion time, at the end of each simulation (see shaded area in Fig.~\ref{fig:fig_2}.
 % The kinetic and magnetic energy density as a function of Rayleigh number is shown in Fig.~\ref{fig:fig_3}.
+{\color{red}
+The magnetic Reynolds number, $Rm$, is the ratio of the generation to diffusion terms in the induction equation (\ref{eq:induction}) and is calculated as
+%
+\begin{equation}
+Rm = (2 E_{\rm kin})^{1/2} Pm .
+\label{eq:Rm}
+\end{equation}
+%
+The dipolarity, $f_{\rm dip}$, represents the relative strength of the axial dipole magnetic field, which is defined by the ration of the magnetic energy of the dipole component to the total magnetic energy at the CMB as
+%
+%
+\begin{equation}
+f_{\rm dip} = 
+\left(
+\frac{E_{\rm mag}^{(l=1,m=0)} (r=r_o)}
+     {\sum_{l=1}^{L_{\rm max}}
+      \sum_{m=-l}^l E_{\rm mag}^{(l,m)} (r=r_o)}
+\right)^{1/2}.
+\label{eq:f_dip}
+\end{equation}
+%
+The magnetic energy at the CMB, $E_{\rm mag} (r=r_o)$, is calculated as
+%
+\begin{equation}
+E_{\rm mag} (r=r_o) = 
+  \frac{1}{S_o E Pm} \int_{S_o} \frac{1}{2} \bvec{B}^2 dS,
+\end{equation}
+%
+where $S_o = 4\pi r_o^2$ is the surface area of the outer core.
+Another index for the dipolar dominance, $f_{\rm mag\_fit}$, is explained and discussed in the next section.
+The dynamic Elsasser number, $\Lambda_d$, represents the relative strength of the Lorentz to Coriolis forces defined by Soderlund {\it et al.} \shortcite{Soderlund:2012}.
+$Rm$, $f_{\rm dip}$, $f_{\rm mag\_fit}$, and $\Lambda_d$ are also obtained as average values in the same way as $E_{\rm kin}$ and $E_{\rm mag}$.
+}
+
 {\color{red} % MM
-The kinetic and magnetic energy density as a function of magnetic Reynolds number is shown in Fig.~\ref{fig:fig_3}.
+Fig.~\ref{fig:fig_3} shows the kinetic and magnetic energy densities as a function of $Ra / Ra_{\rm crit}$.
 }
 %, where the black, red, and blue points are the E_kin values in the non-MHD cases, E_kin values in the MHD cases, and E_mag values in the MHD cases, respectively. The “F” denotes the failed dynamo cases. 
 % Reviewer # のコメントに従い削除
@@ -113,7 +186,7 @@ These results show that the Lorentz force caused by the intense magnetic field d
 There were differences among the three radius ratio cases. 
 % At $r_i/r_o = 0.15$, the $E_{\rm mag}$ values in the MHD cases were smaller than the $E_{\rm kin}$ values in the MHD cases for all cases. 
 {\color{red} % MM
-The $E_{\rm mag}$ values are smaller than the $E_{\rm kin}$ values in all the MHD cases at $r_i / r_o = 0,15$
+The $E_{\rm mag}$ values are smaller than the $E_{\rm kin}$ values in all the MHD cases at $r_i / r_o = 0.15$
 }
 {\color{blue}  %HM
 and $E = 1.0 \times 10^{-3}$.
@@ -131,7 +204,8 @@ the values of $E_{\rm mag}$ are larger than the values of $E_{\rm kin}$ in almos
 % From the above, it is not likely to sustain a strong magnetic field with a smaller inner core.
 
 {\color{blue}
-In the parameter regime with $E = 1.0 \times 10^{-4}$, results have similar characteristics to the results with $E = 1.0 \times 10^{-3}$ but more clearer. At the case with $r_i/r_o = 0.15$ also have a solution with $E_{\rm mag} > E_{\rm kin}$. And, as in the regime with $E = 1.0 \times 10^{-3}$, the range of $Ra / Ra_{\rm crit}$ to sustain $E_{\rm mag} > E_{\rm kin}$ decreases with decreasing the radius ratio $r_i / r_o$.
+In the parameter regime with $E = 1.0 \times 10^{-4}$, results have similar characteristics to the results with $E = 1.0 \times 10^{-3}$ but {\color{red} much} clearer.
+At the case with $r_i/r_o = 0.15$ also have a solution with $E_{\rm mag} > E_{\rm kin}$. And, as in the regime with $E = 1.0 \times 10^{-3}$, the range of $Ra / Ra_{\rm crit}$ to sustain $E_{\rm mag} > E_{\rm kin}$ decreases with decreasing the radius ratio $r_i / r_o$.
 }
 {\color{red}
 These results indicate that it is difficult to sustain a strong magnetic field with a smaller inner core.
@@ -139,11 +213,11 @@ These results indicate that it is difficult to sustain a strong magnetic field w
 %
 \begin{table*}
 % \begin{center}
-\caption{Time average of the magnetic Reynolds number $Rm$, kinetic energy $E_{\rm kin}$, magnetic energy $E_{\rm mag}$, dipolarity $f_{\rm dip}$, and {\color{red} the conventional and dynamic Elsasser number $\Lambda$ and $\Lambda_{d}$ for the cases with $E = 1.0 \times 10^{-3}$, $Pm = 5.0$, and} $r_{\rm i}/r_{\rm o} = 0.15$}
+\caption{Time average of the magnetic Reynolds number $Rm$, kinetic energy $E_{\rm kin}$, magnetic energy $E_{\rm mag}$, dipolarity $f_{\rm dip}$, and {\color{red} the conventional and dynamic Elsasser number $\Lambda$ and $\Lambda_{d}$ for the cases with $E = 1.0 \times 10^{-3}$, $Pm = 5.0$, and} $r_{\rm i}/r_{\rm o} = 0.15$.}
   \begin{tabular}{ccccccccccc}
       \hline
      $Ra[\times 10^3]$  &  $Ra/Ra_{\rm crit}$&
-     {\color{red} $L_{max}$} & {\color{red} $N_{r}$} & {\color{red} $Rm$} & $E_{\rm kin}$  &  $E_{\rm mag}$ & $f_{\rm dip}$ & $f_{\rm mag\_fit}$ & $\Lambda$ & $\Lambda_{\rm d}$\\
+     {\color{red} $L_{\rm max}$} & {\color{red} $N_{r}$} & {\color{red} $Rm$} & $E_{\rm kin}$  &  $E_{\rm mag}$ & $f_{\rm dip}$ & $f_{\rm mag\_fit}$ & $\Lambda$ & $\Lambda_{\rm d}$\\
     \hline
     $760$  & $7.0$ & 63 & 80 &  202.9 & $823.7$ & $5.193$ & $-$ & $-$ & $-$ & $-$ \\
     $870$  & $8.0$ & 63 & 80 &  200.2 & $801.4$ & $501.6$ & $0.494$ & $1.435$ & 5.016 & $0.105$\\
@@ -153,7 +227,7 @@ These results indicate that it is difficult to sustain a strong magnetic field w
     $1100$  & $10.1$ & 63 & 80 &  193.4 & $748.4$ & $444.7$ & $0.349$ & $0.860$ & 4.447  & $0.053$\\
     $1300$  & $11.9$ & 63 & 80 &  273.2 & $1493$ & $300.5$ & $0.117$ & $0.322$ & 3.005 & $0.068$\\
     $1500$  & $13.8$ & 63 & 80 &  305.5 & $1867$ & $135.6$ & $0.155$ & $0.391$ & 1.356 & $0.034$\\
-    $1700$  & $15.6$ & 63 & 80 & 327.2 & $2141$ & $234.3$ & $0.172$ & $0.420$ & 2.343 & $0.054$\\
+    $1700$  & $15.6$ & 95 & 128 & 327.2 & $2141$ & $234.3$ & $0.172$ & $0.420$ & 2.343 & $0.054$\\
      \hline
   \end{tabular}
 % \end{center}
@@ -162,11 +236,11 @@ These results indicate that it is difficult to sustain a strong magnetic field w
  
 \begin{table*}
 %\begin{center}
-\caption{Time average of the magnetic Reynolds number $Rm$, kinetic energy $E_{\rm kin}$, magnetic energy $E_{\rm mag}$, dipolarity $f_{\rm dip}$, and {\color{red} the conventional and dynamic Elsasser number $\Lambda$ and $\Lambda_{d}$ for the cases with $E = 1.0 \times 10^{-3}$, $Pm = 5.0$, and} $r_{\rm i}/r_{\rm o} = 0.25$}
+\caption{Time average of the magnetic Reynolds number $Rm$, kinetic energy $E_{\rm kin}$, magnetic energy $E_{\rm mag}$, dipolarity $f_{\rm dip}$, and {\color{red} the conventional and dynamic Elsasser number $\Lambda$ and $\Lambda_{d}$ for the cases with $E = 1.0 \times 10^{-3}$, $Pm = 5.0$, and} $r_{\rm i}/r_{\rm o} = 0.25$.}
   \begin{tabular}{ccccccccccc}
     \hline
      $Ra[\times 10^3]$  &  $Ra/Ra_{\rm crit}$& 
-     {\color{red} $L_{max}$} & {\color{red} $N_{r}$} & {\color{red} $Rm$} & $E_{\rm kin}$  &  $E_{\rm mag}$ & $f_{\rm dip}$ & $f_{\rm mag\_fit}$ & $\Lambda$ & $\Lambda_{\rm d}$\\
+     {\color{red} $L_{\rm max}$} & {\color{red} $N_{r}$} & {\color{red} $Rm$} & $E_{\rm kin}$  &  $E_{\rm mag}$ & $f_{\rm dip}$ & $f_{\rm mag\_fit}$ & $\Lambda$ & $\Lambda_{\rm d}$\\
     \hline 
     $140$  & $1.9$ & 47 & 60 & 61.92 &  $76.69$ & $-$ & $-$ & $-$ & $-$ & $-$\\
     $160$  & $2.2$ & 47 & 60 & 54.34 &  $59.05$ & $958.6$ & $0.860$ & $2.116$ & 9.586 & $0.355$\\
@@ -190,11 +264,11 @@ These results indicate that it is difficult to sustain a strong magnetic field w
  
 \begin{table*}
 % \begin{center}
-\caption{Time average of the magnetic Reynolds number $Rm$, kinetic energy $E_{\rm kin}$, magnetic energy $E_{\rm mag}$, dipolarity $f_{\rm dip}$, and {\color{red} the conventional and dynamic Elsasser number $\Lambda$ and $\Lambda_{d}$ for the cases with $E = 1.0 \times 10^{-3}$, $Pm = 5.0$, and} $r_{\rm i}/r_{\rm o} = 0.35$}
+\caption{Time average of the magnetic Reynolds number $Rm$, kinetic energy $E_{\rm kin}$, magnetic energy $E_{\rm mag}$, dipolarity $f_{\rm dip}$, and {\color{red} the conventional and dynamic Elsasser number $\Lambda$ and $\Lambda_{d}$ for the cases with $E = 1.0 \times 10^{-3}$, $Pm = 5.0$, and} $r_{\rm i}/r_{\rm o} = 0.35$.}
   \begin{tabular}{ccccccccccc}
     \hline
      $Ra[\times 10^3]$  &  $Ra/Ra_{\rm crit}$& 
-     {\color{red} $L_{max}$} & {\color{red} $N_{r}$} & {\color{red} $Rm$} & $E_{\rm kin}$  &  $E_{\rm mag}$ & $f_{\rm dip}$ & $f_{\rm mag\_fit}$ & $\Lambda$ & $\Lambda_{\rm d}$\\
+     {\color{red} $L_{\rm max}$} & {\color{red} $N_{r}$} & {\color{red} $Rm$} & $E_{\rm kin}$  &  $E_{\rm mag}$ & $f_{\rm dip}$ & $f_{\rm mag\_fit}$ & $\Lambda$ & $\Lambda_{\rm d}$\\
     \hline
       $84$  & $1.5$ & 47 & 60 & 41.89 &   $35.09$ & $-$ & $-$ & $-$ & $-$ & $-$ \\
      $110$  & $2.0$ & 47 & 60 & 46.70 &  $43.61$ & $819.6$ & $0.816$ & $4.713$ & 8.196 & $0.420$\\
@@ -227,17 +301,17 @@ These results indicate that it is difficult to sustain a strong magnetic field w
   \begin{tabular}{ccccccccccc}
     \hline
      $Ra[\times 10^6]$  &  $Ra/Ra_{\rm crit}$& 
-     $L_{max}$ & $N_{r}$ & $Rm$ 
+     $L_{\rm max}$ & $N_{r}$ & $Rm$ 
      & $E_{\rm kin}$  &  $E_{\rm mag}$ & $f_{\rm dip}$ & $f_{\rm mag\_fit}$ & $\Lambda$ & $\Lambda_{\rm d}$\\
     \hline
-      3.824 & 3.551 & 95 & 95 & 67.36 & 567.2 & $-$ & $-$ & $-$ & $-$ & $-$ \\
-      7.647 & 7.103 & 95 & 95 & 106.3 & 1422 & $-$ & $-$ & $-$ & $-$ & $-$ \\
-      9.176 & 8.523 & 95 & 95 & 118.9 & 1780 & 2277 & 0.7032 & 25.99 & 0.9109 & 0.02205 \\
-      11.47 & 10.65 & 95 & 95 & 132.8 & 2221 & 5398 & 0.7358 & 31.95 & 2.159 & 0.09387 \\
-      15.29 & 14.21 & 95 & 95 & 161.0 & 3260 & 9280 & 0.6910 & 27.39 & 3.712 & 0.1425 \\
-      26.76 & 24.86 & 95 & 95 & 252.2 & 7994 & 12906 & 0.4801 & 12.24 & 5.162 & 0.1739 \\
-      38.23 & 35.51 & 95 & 95 & 338.9 & 14424 & 12192 & 0.3553 & 9.387 & 4.877 & 0.1583 \\
-      61.18 & 56.82 & 95 & 95 & 501.9 & 31610 & 10306 & 0.02114 & 0.6084 & 4.123 & 0.1231 \\
+      3.824 & 3.551 & 95 & 128 & 67.36 & 567.2 & $-$ & $-$ & $-$ & $-$ & $-$ \\
+      7.647 & 7.103 & 95 & 128 & 106.3 & 1422 & $-$ & $-$ & $-$ & $-$ & $-$ \\
+      9.176 & 8.523 & 95 & 128 & 118.9 & 1780 & 2277 & 0.7032 & 25.99 & 0.9109 & 0.02205 \\
+      11.47 & 10.65 & 95 & 128 & 132.8 & 2221 & 5398 & 0.7358 & 31.95 & 2.159 & 0.09387 \\
+      15.29 & 14.21 & 95 & 128 & 161.0 & 3260 & 9280 & 0.6910 & 27.39 & 3.712 & 0.1425 \\
+      26.76 & 24.86 & 95 & 128 & 252.2 & 7994 & 12906 & 0.4801 & 12.24 & 5.162 & 0.1739 \\
+      38.23 & 35.51 & 95 & 128 & 338.9 & 14424 & 12192 & 0.3553 & 9.387 & 4.877 & 0.1583 \\
+      61.18 & 56.82 & 95 & 128 & 501.9 & 31610 & 10306 & 0.02114 & 0.6084 & 4.123 & 0.1231 \\
    \hline
   \end{tabular}
  }
@@ -257,7 +331,7 @@ These results indicate that it is difficult to sustain a strong magnetic field w
   \begin{tabular}{ccccccccccc}
     \hline
      $Ra[\times 10^6]$  &  $Ra/Ra_{\rm crit}$& 
-     $L_{max}$ & $N_{r}$ & $Rm$ 
+     $L_{\rm max}$ & $N_{r}$ & $Rm$ 
      & $E_{\rm kin}$  &  $E_{\rm mag}$ & $f_{\rm dip}$ & $f_{\rm mag\_fit}$ & $\Lambda$ & $\Lambda_{\rm d}$\\
     \hline
       2.60 & 3.551 & 95 & 95 & 51.99 & 338.5 & $-$ & $-$ & $-$ & $-$ & $-$ \\
@@ -283,7 +357,7 @@ These results indicate that it is difficult to sustain a strong magnetic field w
   \begin{tabular}{ccccccccccc}
     \hline
      $Ra[\times 10^6]$  &  $Ra/Ra_{\rm crit}$& 
-     $L_{max}$ & $N_{r}$ & $Rm$ 
+     $L_{\rm max}$ & $N_{r}$ & $Rm$ 
      & $E_{\rm kin}$  &  $E_{\rm mag}$ & $f_{\rm dip}$ & $f_{\rm mag\_fit}$ & $\Lambda$ & $\Lambda_{\rm d}$\\
     \hline
       2.0 & 2.876 & 95 & 95 & 52.28 & 341.7 & $-$ & $-$ & $-$ & $-$ & $-$ \\
@@ -305,6 +379,37 @@ These results indicate that it is difficult to sustain a strong magnetic field w
 %
 %
 % Fig.~\ref{fig:Snap_non_dipoler_E1-3} shows the radial component of the magnetic field at the CMB and the equatorial cross-sections of the $z$-component of the vorticity and magnetic field are plotted at $Ra/Ra_{\rm crit} = 11.9$ for $r_i/r_o = 0.15$. 
+
+{\color{blue}
+% In numerical dynamos, dipolarity is used for quantification of the magnetic field morphology at the CMB. 
+% To quantitatively evaluate the axial dipole component dominancy, we calculated the dipolarity at the CMB, which is defined as follows:
+%
+% \begin{equation}
+% f_{\rm dip} = 
+% \left(
+% \frac{E_{\rm mag}^{(l=1,m=0)} (r=r_o)}
+%      {\sum_{l=1}^{l_{\rm max}}
+%       \sum_{m=0}^l E_{\rm mag}^{(l,m)} (r=r_o)}
+% \right)^{1/2},
+% \label{eq:f_dip}
+% \end{equation}
+%
+% where the magnetic energy at the CMB, $E_{\rm mag} (r=r_o)$, is calculated as follows:
+%
+% \begin{equation}
+% E_{\rm mag} (r=r_o) = 
+%   \frac{1}{V_s E Pm} \int_S \frac{1}{2} \bvec{B}^2 dS.
+% \end{equation}
+%
+
+Fig.~\ref{fig:fdip_vs_Racratio} shows the dipolarity as a function of the Rayleigh number for $r_i/r_o = 0.15$, $0.25$, and $0.35$. 
+The dipolarity gradually decreases with an increasing Rayleigh number for $r_i/r_o = 0.25$ and $0.35$. 
+The axial dipolar component becomes weak during intense convection. 
+The dependency of the dipolarity on the Rayleigh number is similar for the two radius ratio cases, i.e., $r_i/r_o = 0.25$ and $0.35$. 
+Here, $f_{\rm dip}$ is always larger than $0.35$ at $r_i/r_o = 0.25$ and $0.35$. 
+In contrast, this tendency is different at $r_i/r_o = 0.15$. 
+Furthermore, $f_{\rm dip}$ is larger than $0.45$ at $Ra/Ra_{\rm crit} = 8.0$ and $9.0$ while $f_{dip}$ is smaller than $0.35$ at $Ra/Ra_{\rm crit} > 10.1$.
+}
 
 {\color{blue}
 Now, we compare characteristics of the field structures among cases with intense magnetic field and with weak magnetic field. We plot the temperature, $z$-comonent of the vorticity $\omega_{z}$ and magnetic field $B_{z}$, and radial magnetic field $B_{r}$ at CMB for the case with the weak and strong magnetic field with $E = 1.0 \times 10^{-3}$ in Figures \ref{fig:Snap_non_dipoler_E1-3} and \ref{fig:Snap_Dypoler_E1-3}, respectively. And the same plots with weak and strong magnetic fields int the regime $E = 1.0 \times 10^{-4}$ are shown in Figures \ref{fig:Snap_non_dipoler_E1-4} and \ref{fig:Snap_Dypoler_E1-4}
@@ -340,7 +445,10 @@ Focusing on the difference of the aspect ratio $r_i/r_o$, same characteristics c
 \]
 \end{center}
 \caption{{\color{red}
-The kinetic energy density averaged over the spherical shell as a function of the Rayleigh number with different geometries. Results for $E = 1.0 \times 10^{-3}$ and $1.0 \times 10^{-4}$ are plotted in the left and right panel, respectively. Results for each run is plotted by marks, and linear fitting of the results are drown by lines.  Results for $r_{i} / r_{o}= 0.15$, 0.25, and 0.35 are colored by Red, green, and blue, respectively.}
+% The kinetic energy density averaged over the spherical shell as a function of the Rayleigh number with different geometries. Results for $E = 1.0 \times 10^{-3}$ and $1.0 \times 10^{-4}$ are plotted in the left and right panel, respectively. Results for each run is plotted by marks, and linear fitting of the results are drown by lines.  Results for $r_{i} / r_{o}= 0.15$, 0.25, and 0.35 are colored by Red, green, and blue, respectively.}
+The kinetic energy density averaged over a spherical shell as a function of the Rayleigh number with different geometries in the left panel for $E = 10^{-3}$ and in the right for $E = 10^{-4}$. 
+Results of respective runs for $r_i/r_o = 0.15$, $0.25$ and $0.35$ are plotted by solid circles in red, solid squares in green, and solid triangles in blue, respectively. 
+}
 }
 \label{fig:fig_1}
 \end{figure}
@@ -368,25 +476,50 @@ The kinetic energy density averaged over the spherical shell as a function of th
 \begin{center}
 \[
 \begin{array}{ccc}
-\multicolumn{3}{c}{\mbox{$E = 1.0 \times 10^{-3}$}} \\
-\multicolumn{3}{c}{\includegraphics*[width=150mm]{Figures/Fig3.png}} \\
-\multicolumn{3}{c}{\mbox{$E = 1.0 \times 10^{-4}$}} \\
-\includegraphics*[width=50mm]{Figures/Ene_vs_RaRatio_015_E4.pdf} &
-\includegraphics*[width=50mm]{Figures/Ene_vs_RaRatio_025_E4.pdf} &
-\includegraphics*[width=50mm]{Figures/Ene_vs_RaRatio_035_E4.pdf}
+%\multicolumn{3}{c}{\includegraphics*[width=150mm]{Figures/Fig3.png}} \\
+\mbox{$E = 1.0 \times 10^{-3}$, $Pm = 5.0$} &
+\mbox{$E = 1.0 \times 10^{-4}$, $Pm = 2.0$} \\
+\multicolumn{2}{c}{\mbox{$r_{i} / r_{o} = 0.15$}} \\
+\includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_015_E3.pdf} &
+\includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_015_E4.pdf} \\
+\multicolumn{2}{c}{\mbox{$r_{i} / r_{o} = 0.25$}} \\
+\includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_025_E3.pdf} &
+\includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_025_E4.pdf} \\
+\multicolumn{2}{c}{\mbox{$r_{i} / r_{o} = 0.35$}} \\
+\includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_035_E3.pdf} &
+\includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_035_E4.pdf}
 \end{array}
 \]
 \end{center}
-\caption{The kinetic and magnetic energy density as a function of the ratio of Rayleigh number to the critical Rayleigh number in spherical shells with different geometries. The black, red, and blue points are the $E_{\rm kin}$ values in the non-MHD cases, $E_{\rm kin}$ values in the MHD cases, and $E_{\rm mag}$ values in the MHD cases, respectively. The “F” denotes the failed dynamo cases.
+\caption{The kinetic and magnetic energy density as a function of the ratio of Rayleigh number to the critical Rayleigh number $Ra / Ra_{\rm crit}$ in spherical shells with different geometries. The black, red, and blue points are the $E_{\rm kin}$ values in the non-MHD cases, $E_{\rm kin}$ values in the MHD cases, and $E_{\rm mag}$ values in the MHD cases, respectively. The magnetic energy for failed dynamo cases is plotted in the shaded area. Results for the regimes with $E = 1.0 \times 10^{-3}$, $Pm = 5.0$ are shown in the left columns, and results for the regimes with $E = 1.0 \times 10^{-4}$, $Pm = 2.0$ are shown in the right columns.
 }
 \label{fig:fig_3}
 \end{figure*}
+%
+%
+\begin{figure}
+\begin{center}
+\[
+\begin{array}{cc}
+\mbox{$E = 1.0 \times 10^{-3}$} &
+\mbox{$E = 1.0 \times 10^{-4}$} \\
+\includegraphics*[width=70mm]{Figures/fdip_vs_RacRatio_Ek3.pdf} &
+\includegraphics*[width=70mm]{Figures/fdip_vs_RacRatio_Ek4.pdf}
+\end{array}
+% \includegraphics*[width=80mm]{Figures/Fig7.png}
+\]
+\end{center}
+\caption{Dipolarity $f_{\rm dip}$ as a function of the magnetic Reynolds number $Rm$ for different spherical shell geometries. The cases with $E = 1.0 \times 10^{-3}$ and $Pm = 5.0$ are plotted in the left panel, and the cases with $E = 1.0 \times 10^{-4}$ and $Pm = 2.0$ are plotted in the right panel. The blue, green, and red marks indicate the cases of $r_{i} / r_{o} = 0.15$, 0,25, and 0.35, lfailed dynamo cases are plottes as negative value (-0.2). %The bar represents the standard deviation.
+}
+\label{fig:fdip_vs_Racratio}
+\end{figure}
 %
 %
 \begin{figure*}
 \begin{center}
 \[
 \begin{array}{c}
+ \includegraphics*[width=150mm]{Figures/label.png} \\
  \mbox{$Ra / Ra_{\rm crit} = 11.9$, $r_{i} / r_{o} = 0.15$} \\
  \includegraphics*[width=150mm]{Figures/A15_image_4.png} \\
   \mbox{$Ra / Ra_{\rm crit} = 9.722$, $r_{i} / r_{o} = 0.25$} \\
@@ -397,7 +530,7 @@ The kinetic energy density averaged over the spherical shell as a function of th
 %\includegraphics*[width=160mm]{Figures/A15_image_4}
 \]
 \end{center}
-\caption{Spatial pattern of the temperature, flow,  and magnetic fields for the cases with non-dipolar solution and $E = 1.0 \times 10^{-3}$. The temperature (a), $z$-component of the vorticity $\omega_{z}$ (b) and magnetic field $B_{z}$ (c) at the equatorial plane, and the radial magnetic field $B_{r}$ at the CMB (d) are plotted, respectively.
+\caption{Spatial pattern of the temperature, flow,  and magnetic fields for the cases with non-dipolar solution and $E = 1.0 \times 10^{-3}$. The temperature (column a), $z$-component of the vorticity $\omega_{z}$ (column b) and magnetic field $B_{z}$ (column c) at the equatorial plane, and the radial magnetic field $B_{r}$ at the CMB (column d) are plotted, respectively.
 }
 \label{fig:Snap_non_dipoler_E1-3}
 \end{figure*}
@@ -407,6 +540,7 @@ The kinetic energy density averaged over the spherical shell as a function of th
 \begin{center}
 \[
 \begin{array}{c}
+ \includegraphics*[width=150mm]{Figures/label.png} \\
  \mbox{$Ra / Ra_{\rm crit} = 3.055$, $r_{i} / r_{o} = 0.25$} \\
  \includegraphics*[width=150mm]{Figures/A25_image_4.png} \\
  \mbox{$Ra / Ra_{\rm crit} = 3.036$, $r_{i} / r_{o} = 0.35$} \\
@@ -415,7 +549,7 @@ The kinetic energy density averaged over the spherical shell as a function of th
 %\includegraphics*[width=160mm]{Figures/Fig5.png}
 \]
 \end{center}
-\caption{Spatial pattern of the temperature, flow,  and magnetic fields for the cases with dipolar solution and $E = 1.0 \times 10^{-3}$. The temperature (a), $z$-component of the vorticity $\omega_{z}$ (b) and magnetic field $B_{z}$ (c) at the equatorial plane, and the radial magnetic field $B_{r}$ at the CMB (d) are plotted, respectively.
+\caption{Spatial pattern of the temperature, flow,  and magnetic fields for the cases with dipolar solution and $E = 1.0 \times 10^{-3}$. The temperature (column a), $z$-component of the vorticity $\omega_{z}$ (column b) and magnetic field $B_{z}$ (column c) at the equatorial plane, and the radial magnetic field $B_{r}$ at the CMB (column d) are plotted, respectively.
 }
 \label{fig:Snap_Dypoler_E1-3}
 \end{figure*}
@@ -425,19 +559,18 @@ The kinetic energy density averaged over the spherical shell as a function of th
 \begin{center}
 \[
 \begin{array}{c}
-\begin{array}{c}
+ \includegraphics*[width=150mm]{Figures/label.png} \\
  \mbox{$Ra / Ra_{\rm crit} = 56.82$, $r_{i} / r_{o} = 0.15$} \\
  \includegraphics*[width=150mm]{Figures/sph_shell_376_2963.png} \\
  \mbox{$Ra / Ra_{\rm crit} = 42.22$, $r_{i} / r_{o} = 0.25$} \\
  \includegraphics*[width=150mm]{Figures/sph_shell_384_4800.png} \\
  \mbox{$Ra / Ra_{\rm crit} = 28.76$, $r_{i} / r_{o} = 0.35$} \\
  \includegraphics*[width=150mm]{Figures/sph_shell_393_2384.png}
-\end{array}
 %\includegraphics*[width=160mm]{Figures/Fig6.png}
 \end{array}
 \]
 \end{center}
-\caption{Spatial pattern of the temperature, flow,  and magnetic fields for the cases with non-dipolar solution and $E = 1.0 \times 10^{-4}$. The temperature (a), $z$-component of the vorticity $\omega_{z}$ (b) and magnetic field $B_{z}$ (c) at the equatorial plane, and the radial magnetic field $B_{r}$ at the CMB (d) are plotted, respectively.
+\caption{Spatial pattern of the temperature, flow,  and magnetic fields for the cases with non-dipolar solution and $E = 1.0 \times 10^{-4}$. The temperature (column a), $z$-component of the vorticity $\omega_{z}$ (column b) and magnetic field $B_{z}$ (column c) at the equatorial plane, and the radial magnetic field $B_{r}$ at the CMB (column d) are plotted, respectively.
 }
 \label{fig:Snap_non_dipoler_E1-4}
 \end{figure*}
@@ -447,6 +580,7 @@ The kinetic energy density averaged over the spherical shell as a function of th
 \begin{center}
 \[
 \begin{array}{c}
+ \includegraphics*[width=150mm]{Figures/label.png} \\
   \mbox{$Ra / Ra_{\rm crit} = 10.65$, $r_{i} / r_{o} = 0.15$} \\
 \includegraphics*[width=150mm]{Figures/sph_shell_377_1250.png} \\
  \mbox{$Ra / Ra_{\rm crit} = 7.917$, $r_{i} / r_{o} = 0.25$} \\
@@ -457,7 +591,7 @@ The kinetic energy density averaged over the spherical shell as a function of th
 %\includegraphics*[width=160mm]{Figures/Fig6.png}
 \]
 \end{center}
-\caption{Spatial pattern of the temperature, flow,  and magnetic fields for the cases with dipolar solution and $E = 1.0 \times 10^{-4}$. The temperature (a), $z$-component of the vorticity $\omega_{z}$ (b) and magnetic field $B_{z}$ (c) at the equatorial plane, and the radial magnetic field $B_{r}$ at the CMB (d) are plotted, respectively.
+\caption{Spatial pattern of the temperature, flow,  and magnetic fields for the cases with dipolar solution and $E = 1.0 \times 10^{-4}$. The temperature (column a), $z$-component of the vorticity $\omega_{z}$ (column b) and magnetic field $B_{z}$ (column c) at the equatorial plane, and the radial magnetic field $B_{r}$ at the CMB (column d) are plotted, respectively.
 }
 \label{fig:Snap_Dypoler_E1-4}
 \end{figure*}
