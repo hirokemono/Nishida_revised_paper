@@ -4,8 +4,25 @@ As the inner core has been growing for approximately one billion years, sustaine
 To understand the geometry effect, we performed numerical dynamo simulations with three different radius ratios: $r_i/r_o = 0.15$, $0.25$, and $0.35$. 
 To evaluate the morphology of the magnetic field, especially the dipole component dominancy, we combined two indices: (i) dipolarity, which is widely used for assessing the relative dipole strength in numerical dynamos, and (ii) the ratio of a dipolar extrapolation from the fitting curve of higher degrees; this method is often used to explain Earth’s observed dipolar-dominated field. 
 We verified that the ratio of extrapolation from fitting was valid for determining the dynamo regime. Around the transition between the dipolar and non-dipolar regimes ($f_{\rm dip} \approx 0.35$), we assessed the dipolar dominance using the ratio of extrapolation from fitting. 
-Based on dipolarity and the ratio of extrapolation from fitting, we limited the Ra range of the sustained dynamo for all radius ratios. 
-We found that the Ra range for the strong dipole became narrower with a smaller inner core size. While the dependence of dipolarity on the Rayleigh number is similar at $r_i/r_o = 0.25$ and $0.35$, the dipolar dominance becomes weaker with the smaller inner core. 
-There were no strong dipolar dynamos but non-dipolar dynamos at $10.1 < Ra/Ra_{\rm crit} < 15.6$, only at $r_i/r_o = 0.15$. 
+Based on dipolarity and the ratio of extrapolation from fitting, we limited the magnetic Reynolds number $Rm$ range of the sustained dynamo for all radius ratios. 
+{\color{blue}
+The upper limit of $Rm$ to sustain the intense dipole magnetic field does not depend on the radious ratio, but controlled by the amplitude ratio between the Lorentz force and advection. On the other hand, the lower limit of $Rm$ depends increases with the smaller inner core because the number of convection columns decreases with the smaller inner core. Consequently, 
+}
+%We found that
+the $Rm$ range for the strong dipole became narrower with a smaller inner core size. 
+While the dependence of dipolarity on the Rayleigh number $Ra$ is similar at $r_i/r_o = 0.25$ and $0.35$, the dipolar dominance becomes weaker with the smaller inner core 
+{\color{blue}
+because the critical Rayleigh number $Ra$ increases with the smaller inner core.
+}
+There were no strong dipolar dynamos but non-dipolar dynamos at $10.1 < Ra/Ra_{\rm crit} < 15.6$, only at $r_i/r_o = 0.15$ 
+{\color{blue} in the Ekman naumber $E = 10^{-3}$ regime because the lower limit of $Rm$ to sustain the dynamo becomes larger than the upper limit of $Rm$ to sustain dipolar magnetic field. 
+}
+
 Our results indicate that changes in the radius ratio largely influence the dynamo regime in numerical dynamos with a fixed temperature boundary condition. 
 Further numerical dynamo simulations, by applying different thermal boundary conditions, are required to determine if the intense dipolar magnetic field was sustained in the past Earth with a smaller inner core or entirely without an inner core.
+
+
+
+\begin{acknowledgments}
+This study used the computational resources of the HPCI system provided by the Research Institute for Information Technology, Kyushu University and the Cyberscience Center, Tohoku University through the HPCI System Research Project (Project IDs: hp210022 and hp220040). This research was also supported by the “Computational Joint Research Program (Collaborative Research Project on Computer Science with High-Performance Computing)” at the Institute for Space-Earth Environmental Research, Nagoya University.
+\end{acknowledgments}

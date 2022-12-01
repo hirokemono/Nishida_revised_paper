@@ -25,6 +25,7 @@ We calculate $E_{\rm kin}$ for the time average over a quasi-steady state (1.5 v
 Fig.~\ref{fig:fig_1} shows $E_{\rm kin}$ as a function of $Ra$, as listed in Tables \ref{table:Rac} and \ref{table:Rac_Ek4} for $E = 10^{-3}$ and $E = 10^{-4}$, respectively, for $r_i / r_o = 0.15$, $0.25$ and $0.35$.
 The critical Rayleigh numbers, $Ra_{\rm crit}$, are obtained from linear fitting of the results $E_{\rm kin}$.
 }
+\input fig01
 
 The critical Rayleigh numbers 
 {\color{blue} for $E = 10^{-3}$}
@@ -152,6 +153,7 @@ Rm = (2 E_{\rm kin})^{1/2} Pm .
 %
 The dipolarity, $f_{\rm dip}$, represents the relative strength of the axial dipole magnetic field, which is defined by the ration of the magnetic energy of the dipole component to the total magnetic energy at the CMB as
 %
+\input fig02
 %
 \begin{equation}
 f_{\rm dip} = 
@@ -181,35 +183,44 @@ Fig.~\ref{fig:fig_3} shows the kinetic and magnetic energy densities as a functi
 }
 %, where the black, red, and blue points are the E_kin values in the non-MHD cases, E_kin values in the MHD cases, and E_mag values in the MHD cases, respectively. The “F” denotes the failed dynamo cases. 
 % Reviewer # のコメントに従い削除
-In each radius ratio case with a sustained magnetic field, the $E_{\rm kin}$ values in the MHD cases are smaller than the $E_{\rm kin}$ values in the corresponding non-MHD cases. 
-These results show that the Lorentz force caused by the intense magnetic field disturbs convection.
-There were differences among the three radius ratio cases. 
-% At $r_i/r_o = 0.15$, the $E_{\rm mag}$ values in the MHD cases were smaller than the $E_{\rm kin}$ values in the MHD cases for all cases. 
+% In each radius ratio case with a sustained magnetic field, the $E_{\rm kin}$ values in the MHD cases are smaller than the $E_{\rm kin}$ values in the corresponding non-MHD cases. 
+% These results show that the Lorentz force caused by the intense magnetic field disturbs convection.
 {\color{red} % MM
-The $E_{\rm mag}$ values are smaller than the $E_{\rm kin}$ values in all the MHD cases at $r_i / r_o = 0.15$
+The $E_{\rm kin}$ values at each Rayleigh number in the MHD dynamo and non-MHD (thermal convection) cases are close to each other.
+However, those in the MHD case are found to be smaller than those in the non-MHD case whenever the magnetic field is sustained by the dynamo action irrespective of spherical shell ratios.
+The $E_{\rm mag}$ values can be larger than the $E_{\rm kin}$ values, and the relation depends on the Rayleigh number as well as spherical shell ratios; the smaller $r_i / r_o$ is, the narrower the range of $Ra$ is, as a whole.
+In fact, all the $E_{\rm mag}$ values are smaller than the $E_{\rm kin}$ values at $E = 10^{-3}$ for $r_i / r_o = 0.15$.
+This is consistent with a result of Heimpell {\it et al.} \shortcite{Heimpel:2005}, where all the $E_{\rm mag}$ values are also smaller than the $E_{\rm kin}$ values at $E = 4.0 \times 10^{-4}$ and $Pm = 5$ for $r_i / r_o = 0.15$.
+It should be pointed out that at a smaller Ekman number, $E = 10^{-4}$, the $E_{\rm mag}$ values can be larger than the $E_{\rm kin}$ values at a limited range of $Ra$ for $r_i / r_o = 0.15$.
 }
-{\color{blue}  %HM
-and $E = 1.0 \times 10^{-3}$.
-}
-This trend is consistent with the results of Heimpel {\it et al.} \shortcite{Heimpel:2005}, whose simulations were performed around dynamo onset. 
-At $r_i/r_o = 0.25$ and $E = 1.0 \times 10^{-3}$, the values of $E_{\rm mag}$ in the MHD cases are either smaller or larger than the $E_{\rm kin}$ values in the MHD.
-For cases of $Ra/Ra_{\rm crit}  = 3.6$ and $4.0$, the $E_{\rm mag}$ values are significantly smaller than those for the cases of other Rayleigh numbers.
-Although the trend in the magnetic energy spectrum did not change, there was a decrease in the amplitude.
+\input fig03
+% There were differences among the three radius ratio cases. 
+% At $r_i/r_o = 0.15$, the $E_{\rm mag}$ values in the MHD cases were smaller than the $E_{\rm kin}$ values in the MHD cases for all cases. 
+% {\color{red} % MM
+% The $E_{\rm mag}$ values are smaller than the $E_{\rm kin}$ values in all the MHD cases at $r_i / r_o = 0.15$
+% }
+% {\color{blue}  %HM
+% and $E = 1.0 \times 10^{-3}$.
+% }
+% This trend is consistent with the results of Heimpel {\it et al.} \shortcite{Heimpel:2005}, whose simulations were performed around dynamo onset. 
+% At $r_i/r_o = 0.25$ and $E = 1.0 \times 10^{-3}$, the values of $E_{\rm mag}$ in the MHD cases are either smaller or larger than the $E_{\rm kin}$ values in the MHD.
+% For cases of $Ra/Ra_{\rm crit}  = 3.6$ and $4.0$, the $E_{\rm mag}$ values are significantly smaller than those for the cases of other Rayleigh numbers.
+% Although the trend in the magnetic energy spectrum did not change, there was a decrease in the amplitude.
 % At $r_i/r_o = 0.35$, the values of $E_{\rm mag}$ in the MHD cases were larger than the values of $E_{\rm kin}$ in the MHD cases for almost all cases. 
-{\color{blue} At $r_i/r_o = 0.35$ and $E = 10^{-3}$, 
-}
-{\color{red}
-the values of $E_{\rm mag}$ are larger than the values of $E_{\rm kin}$ in almost all the MHD cases.
-}
+% {\color{blue} At $r_i/r_o = 0.35$ and $E = 10^{-3}$, 
+% }
+% {\color{red}
+% the values of $E_{\rm mag}$ are larger than the values of $E_{\rm kin}$ in almost all the MHD cases.
+% }
 % From the above, it is not likely to sustain a strong magnetic field with a smaller inner core.
+% {\color{blue}
+% In the parameter regime with $E = 1.0 \times 10^{-4}$, results have similar characteristics to the results with $E = 1.0 \times 10^{-3}$ but {\color{red} much} clearer.
+% At the case with $r_i/r_o = 0.15$ also have a solution with $E_{\rm mag} > E_{\rm kin}$. And, as in the regime with $E = 1.0 \times 10^{-3}$, the range of $Ra / Ra_{\rm crit}$ to sustain $E_{\rm mag} > E_{\rm kin}$ decreases with decreasing the radius ratio $r_i / r_o$.
+% }
+% {\color{red}
+% These results indicate that it is difficult to sustain a strong magnetic field with a smaller inner core.
+% }
 
-{\color{blue}
-In the parameter regime with $E = 1.0 \times 10^{-4}$, results have similar characteristics to the results with $E = 1.0 \times 10^{-3}$ but {\color{red} much} clearer.
-At the case with $r_i/r_o = 0.15$ also have a solution with $E_{\rm mag} > E_{\rm kin}$. And, as in the regime with $E = 1.0 \times 10^{-3}$, the range of $Ra / Ra_{\rm crit}$ to sustain $E_{\rm mag} > E_{\rm kin}$ decreases with decreasing the radius ratio $r_i / r_o$.
-}
-{\color{red}
-These results indicate that it is difficult to sustain a strong magnetic field with a smaller inner core.
-}
 %
 \begin{table*}
 % \begin{center}
@@ -380,7 +391,7 @@ These results indicate that it is difficult to sustain a strong magnetic field w
 %
 % Fig.~\ref{fig:Snap_non_dipoler_E1-3} shows the radial component of the magnetic field at the CMB and the equatorial cross-sections of the $z$-component of the vorticity and magnetic field are plotted at $Ra/Ra_{\rm crit} = 11.9$ for $r_i/r_o = 0.15$. 
 
-{\color{blue}
+% {\color{blue}
 % In numerical dynamos, dipolarity is used for quantification of the magnetic field morphology at the CMB. 
 % To quantitatively evaluate the axial dipole component dominancy, we calculated the dipolarity at the CMB, which is defined as follows:
 %
@@ -401,18 +412,32 @@ These results indicate that it is difficult to sustain a strong magnetic field w
 %   \frac{1}{V_s E Pm} \int_S \frac{1}{2} \bvec{B}^2 dS.
 % \end{equation}
 %
+% }
 
-Fig.~\ref{fig:fdip_vs_Racratio} shows the dipolarity as a function of the Rayleigh number for $r_i/r_o = 0.15$, $0.25$, and $0.35$. 
-The dipolarity gradually decreases with an increasing Rayleigh number for $r_i/r_o = 0.25$ and $0.35$. 
-The axial dipolar component becomes weak during intense convection. 
-The dependency of the dipolarity on the Rayleigh number is similar for the two radius ratio cases, i.e., $r_i/r_o = 0.25$ and $0.35$. 
-Here, $f_{\rm dip}$ is always larger than $0.35$ at $r_i/r_o = 0.25$ and $0.35$. 
-In contrast, this tendency is different at $r_i/r_o = 0.15$. 
-Furthermore, $f_{\rm dip}$ is larger than $0.45$ at $Ra/Ra_{\rm crit} = 8.0$ and $9.0$ while $f_{dip}$ is smaller than $0.35$ at $Ra/Ra_{\rm crit} > 10.1$.
+{\color{red}
+% Fig.~\ref{fig:fdip_vs_Racratio} shows the dipolarity as a function of the Rayleigh number for $r_i/r_o = 0.15$, $0.25$, and $0.35$.
+Fig.~\ref{fig:fdip_vs_Racratio} shows the dipolarity, $f_{\rm dip}$, as a function of $Ra_{\rm crit}$.
+Thermal convection in a rotating spherical shell occurs when the Rayleigh number exceeds the critical Rayleigh number, $Ra_{\rm crit}$, as found in Fig.~\ref{fig:fig_1}.
+Once the Rayleigh number exceeds another critical value for the onset of dynamo action, the magnetic field can be generated and the dipolarity reaches around 0.7 except for the case at $E = 1.0 \times 10^{-3}$ for $r_i/r_o = 0.15$, in which the dipolarity does not exceed 0.6.
+% The dipolarity gradually decreases with an increasing Rayleigh number for $r_i/r_o = 0.25$ and $0.35$. 
+The dipolarity gradually decreases with increase of $Ra / Ra_{\rm crit}$.
+% The axial dipolar component becomes weak during intense convection. 
+% The dependency of the dipolarity on the Rayleigh number is similar for the two radius ratio cases, i.e., $r_i/r_o = 0.25$ and $0.35$. 
+% Here, $f_{\rm dip}$ is always larger than $0.35$ at $r_i/r_o = 0.25$ and $0.35$. 
+% In contrast, this tendency is different at $r_i/r_o = 0.15$. 
+% Furthermore, $f_{\rm dip}$ is larger than $0.45$ at $Ra/Ra_{\rm crit} = 8.0$ and $9.0$ while $f_{dip}$ is smaller than $0.35$ at $Ra/Ra_{\rm crit} > 10.1$.
+This suggests that the magnetic field with smaller length-scale is effective generated by convective motions with smaller length-scale.
+These characteristics can be found in the followings.
 }
 
+\input fig04
+
 {\color{blue}
-Now, we compare characteristics of the field structures among cases with intense magnetic field and with weak magnetic field. We plot the temperature, $z$-comonent of the vorticity $\omega_{z}$ and magnetic field $B_{z}$, and radial magnetic field $B_{r}$ at CMB for the case with the weak and strong magnetic field with $E = 1.0 \times 10^{-3}$ in Figures \ref{fig:Snap_non_dipoler_E1-3} and \ref{fig:Snap_Dypoler_E1-3}, respectively. And the same plots with weak and strong magnetic fields int the regime $E = 1.0 \times 10^{-4}$ are shown in Figures \ref{fig:Snap_non_dipoler_E1-4} and \ref{fig:Snap_Dypoler_E1-4}
+% Now, we compare characteristics of the field structures among cases with intense magnetic field and with weak magnetic field. 
+Next, we investigate characteristics of the field structures.
+% We plot the temperature, $z$-component of the vorticity $\omega_{z}$ and magnetic field $B_{z}$, and radial magnetic field $B_{r}$ at CMB for the case with the weak and strong magnetic field with $E = 1.0 \times 10^{-3}$ in Figures \ref{fig:Snap_non_dipoler_E1-3} and \ref{fig:Snap_Dypoler_E1-3}, respectively. And the same plots with weak and strong magnetic fields in the regime $E = 1.0 \times 10^{-4}$ are shown in Figures \ref{fig:Snap_non_dipoler_E1-4} and \ref{fig:Snap_Dypoler_E1-4}
+Figs~\ref{fig:Snap_non_dipoler_E1-3} and \ref{fig:Snap_Dipoler_E1-3} show spatial structures of the temperature, the $z$-component of the vorticity, $\omega_z$, that of the magnetic field, $B_z$, on the equatorial plane, and the radial magnetic field, $B_r$, at the CMB for cases of small and large $f_{\rm dip}$, respectively, at $E = 1.0 \times 10^{-3}$.
+The same structures for small and large $f_{\rm dip}$ at $E = 1.0 \times 10^{-4}$ are shown in Figs~\ref{fig:Snap_non_dipoler_E1-4} and \ref{fig:Snap_Dipoler_E1-4}, respectively.
 }
 %{\color{red} % MM
 %Fig.~\ref{fig:Snap_non_dipoler_E1-3} shows the radial component of the magnetic field at the CMB, and the $z$-component of the vorticity and magnetic field on the equatorial cross-sections at $Ra/Ra_{\rm crit} = 11.9$ for $r_i/r_o = 0.15$. 
@@ -420,99 +445,110 @@ Now, we compare characteristics of the field structures among cases with intense
 %The same plots at $Ra/Ra_{\rm crit} = 3.1$ for $r_i/r_o = 0.25$ and at $Ra/Ra_{\rm crit} = 3.0$ for $r_i/r_o = 0.35$ are shown in Figs~\ref{fig:fig_5} and \ref{fig:fig_6}, respectively. 
 % At the equatorial plane, the magnetic field is concentrated in the anti-cyclone columns to generate a dipolar field at $r_i/r_o = 0.25$ and $0.35$; intense magnetic patches are located near the tangent cylinder, which is an imaginary cylinder tangent to the inner-core equator and coaxial with the rotation axis. 
 {\color{blue}
-The magnetic field on the equatorial plane is concentrated in the anti-cyclonic columns to generate a dipolar field at cases with large dipolarity cases in Figs.~\ref{fig:Snap_Dypoler_E1-3} and \ref{fig:Snap_Dypoler_E1-4}; intense magnetic patches are located near the tangent cylinder, which is an imaginary cylinder tangent to the inner-core at the equator and coaxial with the rotation axis. 
-
-In the cases with small dipolarity in Figs.~\ref{fig:Snap_non_dipoler_E1-3} and \ref{fig:Snap_non_dipoler_E1-4},
+% The magnetic field on the equatorial plane is concentrated in the anti-cyclonic columns to generate a dipolar field at cases with large dipolarity cases in Figs.~\ref{fig:Snap_Dipoler_E1-3poler_E1-3} and \ref{fig:Snap_Dipoler_E1-4poler_E1-4}; intense magnetic patches are located near the tangent cylinder, which is an imaginary cylinder tangent to the inner-core at the equator and coaxial with the rotation axis. 
+The magnetic field on the equatorial plane for large $f_{\rm dip}$ is concentrated in the anti-cyclonic convection columns as seen if Figs~\ref{fig:Snap_Dipoler_E1-3} and \ref{fig:Snap_Dipoler_E1-4}, and a strong axial dipole magnetic field is maintained; intense magnetic patches on the equatorial plane are found to be located near the ICB.
+%
+%In the cases with small dipolarity in Figs.~\ref{fig:Snap_non_dipoler_E1-3} and \ref{fig:Snap_non_dipoler_E1-4},
+On the other hand, as found in Figs~\ref{fig:Snap_non_dipoler_E1-3} and \ref{fig:Snap_non_dipoler_E1-4} for small $f_{\rm dip}$,
 }
-strong convection is generated locally, where strong $B_{z}$ convection is generated between the cyclonic and anti-cyclonic columns at the equatorial plane.
-As these intense magnetic fields are not concentrated in the convection columns, the radial magnetic field at the CMB near the tangent cylinder has a quadrupolar (symmetric with respect to the equator) and is smaller than that of the cases with different aspect ratios.
-
+% strong convection is generated locally, where strong $B_{z}$ convection is generated between the cyclonic and anti-cyclonic columns at the equatorial plane.
+strong convection occurs locally, where a strong magnetic field is generated between the cyclonic and anti-cyclonic convective columns.
+%
+{\color{green} % よくわからない
+As these intense magnetic fields are not concentrated in the  convection columns, the radial magnetic field at the CMB near the tangent cylinder has a quadrupolar (symmetric with respect to the equator) and is smaller than that of the cases with different aspect ratios.
+}
+%
 {\color{blue}
-Focusing on the difference of the aspect ratio $r_i/r_o$, same characteristics can be found in Figs.~\ref{fig:Snap_non_dipoler_E1-3} to \ref{fig:Snap_Dypoler_E1-4}. Number of hot upward ({\it i.e.} high temperature region) around the inner boundary decreases with small $r_i/r_o$. As a results, intense convection columns is more localized with smaller $r_i/r_o$.
+% Focusing on the difference of the aspect ratio $r_i/r_o$, same characteristics can be found in Figs.~\ref{fig:Snap_non_dipoler_E1-3} to \ref{fig:Snap_Dypoler_E1-4}. Number of hot upward ({\it i.e.} high temperature region) around the inner boundary decreases with small $r_i/r_o$. As a results, intense convection columns is more localized with smaller $r_i/r_o$.
+}
+%
+{\color{red}
+The number of high temperature regions around the inner boundary from which fluid flow conveys heat upward decreases with decrease of the aspect ratio, $r_i / r_o$.
+This would arise from a nature that there exists a typical length scale for locations of upward flows at the ICB.
+As a result, intense convective columns are more localised with smaller $r_i / r_o$.
 }
 %
 %
 %
+% \begin{figure}
+% \begin{center}
+% \[
+% \begin{array}{cc}
+% \mbox{$E = 1.0 \times 10^{-3}$} & \mbox{$E = 1.0 \times 10^{-4}$} \\
+% \includegraphics*[width=70mm]{Figures/Rac_Ek3.pdf} &
+% \includegraphics*[width=70mm]{Figures/Rac_Ek4.pdf}
+% \end{array}
+% \]
+% \end{center}
+% \caption{{\color{red}
+% % The kinetic energy density averaged over the spherical shell as a function of the Rayleigh number with different geometries. Results for $E = 1.0 \times 10^{-3}$ and $1.0 \times 10^{-4}$ are plotted in the left and right panel, respectively. Results for each run is plotted by marks, and linear fitting of the results are drown by lines.  Results for $r_{i} / r_{o}= 0.15$, 0.25, and 0.35 are colored by Red, green, and blue, respectively.}
+% The kinetic energy density averaged over a spherical shell as a function of the Rayleigh number with different geometries in the left panel for $E = 10^{-3}$ and in the right for $E = 10^{-4}$. 
+% Results of respective runs for $r_i/r_o = 0.15$, $0.25$ and $0.35$ are plotted by solid circles in red, solid squares in green, and solid triangles in blue, respectively. 
+% }
+% }
+% \label{fig:fig_1}
+% \end{figure}
 %
-\begin{figure}
-\begin{center}
-\[
-\begin{array}{cc}
-\mbox{$E = 1.0 \times 10^{-3}$} & \mbox{$E = 1.0 \times 10^{-4}$} \\
-\includegraphics*[width=70mm]{Figures/Rac_Ek3.pdf} &
-\includegraphics*[width=70mm]{Figures/Rac_Ek4.pdf}
-\end{array}
-\]
-\end{center}
-\caption{{\color{red}
-% The kinetic energy density averaged over the spherical shell as a function of the Rayleigh number with different geometries. Results for $E = 1.0 \times 10^{-3}$ and $1.0 \times 10^{-4}$ are plotted in the left and right panel, respectively. Results for each run is plotted by marks, and linear fitting of the results are drown by lines.  Results for $r_{i} / r_{o}= 0.15$, 0.25, and 0.35 are colored by Red, green, and blue, respectively.}
-The kinetic energy density averaged over a spherical shell as a function of the Rayleigh number with different geometries in the left panel for $E = 10^{-3}$ and in the right for $E = 10^{-4}$. 
-Results of respective runs for $r_i/r_o = 0.15$, $0.25$ and $0.35$ are plotted by solid circles in red, solid squares in green, and solid triangles in blue, respectively. 
-}
-}
-\label{fig:fig_1}
-\end{figure}
-%
-\begin{figure}
-\begin{center}
-\[
-\begin{array}{c}
-\includegraphics*[width=80mm]{Figures/sph_shell_383_ene.pdf}
-%\includegraphics*[width=70mm]{Figures/sph_shell_378_ene.pdf}
-\end{array}
-%\includegraphics*[width=80mm]{Figures/Fig2.png}
-\]
-\end{center}
-%\caption{Time evolution of the kinetic and magnetic energy densities in the case of sustained dynamo at $Ra / Ra_{\rm crit} = 2.8$ with $r_{i} / r_{o} = 0.25$ . The red and blue lines mean the kinetic and magnetic energy density, respectively.
-%}
-\caption{
-\color{blue} Time evolution of the kinetic and magnetic energy densities in the case of sustained dynamo at $E = 1.0 \times 10^{-4}$, $Ra / Ra_{\rm crit} = 21.1$ with $r_{i} / r_{o} = 0.25$. The red and blue lines mean the kinetic and magnetic energy density, respectively. The time average is taken at the end of each simulation for 0.5 times of the magnetic diffusion time which is shown by gray.
-}
-\label{fig:fig_2}
-\end{figure}
-%
-%
-\begin{figure*}
-\begin{center}
-\[
-\begin{array}{ccc}
-%\multicolumn{3}{c}{\includegraphics*[width=150mm]{Figures/Fig3.png}} \\
-\mbox{$E = 1.0 \times 10^{-3}$, $Pm = 5.0$} &
-\mbox{$E = 1.0 \times 10^{-4}$, $Pm = 2.0$} \\
-\multicolumn{2}{c}{\mbox{$r_{i} / r_{o} = 0.15$}} \\
-\includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_015_E3.pdf} &
-\includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_015_E4.pdf} \\
-\multicolumn{2}{c}{\mbox{$r_{i} / r_{o} = 0.25$}} \\
-\includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_025_E3.pdf} &
-\includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_025_E4.pdf} \\
-\multicolumn{2}{c}{\mbox{$r_{i} / r_{o} = 0.35$}} \\
-\includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_035_E3.pdf} &
-\includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_035_E4.pdf}
-\end{array}
-\]
-\end{center}
-\caption{The kinetic and magnetic energy density as a function of the ratio of Rayleigh number to the critical Rayleigh number $Ra / Ra_{\rm crit}$ in spherical shells with different geometries. The black, red, and blue points are the $E_{\rm kin}$ values in the non-MHD cases, $E_{\rm kin}$ values in the MHD cases, and $E_{\rm mag}$ values in the MHD cases, respectively. The magnetic energy for failed dynamo cases is plotted in the shaded area. Results for the regimes with $E = 1.0 \times 10^{-3}$, $Pm = 5.0$ are shown in the left columns, and results for the regimes with $E = 1.0 \times 10^{-4}$, $Pm = 2.0$ are shown in the right columns.
-}
-\label{fig:fig_3}
-\end{figure*}
+% \begin{figure}
+% \begin{center}
+% \[
+% \begin{array}{c}
+% \includegraphics*[width=80mm]{Figures/sph_shell_383_ene.pdf}
+% %\includegraphics*[width=70mm]{Figures/sph_shell_378_ene.pdf}
+% \end{array}
+% %\includegraphics*[width=80mm]{Figures/Fig2.png}
+% \]
+% \end{center}
+% %\caption{Time evolution of the kinetic and magnetic energy densities in the case of sustained dynamo at $Ra / Ra_{\rm crit} = 2.8$ with $r_{i} / r_{o} = 0.25$ . The red and blue lines mean the kinetic and magnetic energy density, respectively.
+% %}
+% \caption{
+% \color{blue} Time evolution of the kinetic and magnetic energy densities in the case of sustained dynamo at $E = 1.0 \times 10^{-4}$, $Ra / Ra_{\rm crit} = 21.1$ with $r_{i} / r_{o} = 0.25$. The red and blue lines mean the kinetic and magnetic energy density, respectively. The time average is taken at the end of each simulation for 0.5 times of the magnetic diffusion time which is shown by gray.
+% }
+% \label{fig:fig_2}
+% \end{figure}
 %
 %
-\begin{figure}
-\begin{center}
-\[
-\begin{array}{cc}
-\mbox{$E = 1.0 \times 10^{-3}$} &
-\mbox{$E = 1.0 \times 10^{-4}$} \\
-\includegraphics*[width=70mm]{Figures/fdip_vs_RacRatio_Ek3.pdf} &
-\includegraphics*[width=70mm]{Figures/fdip_vs_RacRatio_Ek4.pdf}
-\end{array}
-% \includegraphics*[width=80mm]{Figures/Fig7.png}
-\]
-\end{center}
-\caption{Dipolarity $f_{\rm dip}$ as a function of the magnetic Reynolds number $Rm$ for different spherical shell geometries. The cases with $E = 1.0 \times 10^{-3}$ and $Pm = 5.0$ are plotted in the left panel, and the cases with $E = 1.0 \times 10^{-4}$ and $Pm = 2.0$ are plotted in the right panel. The blue, green, and red marks indicate the cases of $r_{i} / r_{o} = 0.15$, 0,25, and 0.35, lfailed dynamo cases are plottes as negative value (-0.2). %The bar represents the standard deviation.
-}
-\label{fig:fdip_vs_Racratio}
-\end{figure}
+% \begin{figure*}
+% \begin{center}
+% \[
+% \begin{array}{ccc}
+% %\multicolumn{3}{c}{\includegraphics*[width=150mm]{Figures/Fig3.png}} \\
+% \mbox{$E = 1.0 \times 10^{-3}$, $Pm = 5.0$} &
+% \mbox{$E = 1.0 \times 10^{-4}$, $Pm = 2.0$} \\
+% \multicolumn{2}{c}{\mbox{$r_{i} / r_{o} = 0.15$}} \\
+% \includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_015_E3.pdf} &
+% \includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_015_E4.pdf} \\
+% \multicolumn{2}{c}{\mbox{$r_{i} / r_{o} = 0.25$}} \\
+% \includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_025_E3.pdf} &
+% \includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_025_E4.pdf} \\
+% \multicolumn{2}{c}{\mbox{$r_{i} / r_{o} = 0.35$}} \\
+% \includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_035_E3.pdf} &
+% \includegraphics*[width=75mm]{Figures/Ene_vs_RaRatio_035_E4.pdf}
+% \end{array}
+% \]
+% \end{center}
+% \caption{The kinetic and magnetic energy densities as a function of the ratio of Rayleigh number to the critical Rayleigh number $Ra / Ra_{\rm crit}$ in spherical shells with different geometries. The black, red, and blue points are the $E_{\rm kin}$ values in the non-MHD cases, $E_{\rm kin}$ values in the MHD cases, and $E_{\rm mag}$ values in the MHD cases, respectively. The magnetic energy for failed dynamo cases is plotted in the shaded area. Results for the regimes with $E = 1.0 \times 10^{-3}$, $Pm = 5.0$ are shown in the left columns, and results for the regimes with $E = 1.0 \times 10^{-4}$, $Pm = 2.0$ are shown in the right columns.
+% }
+% \label{fig:fig_3}
+% \end{figure*}
+%
+%
+% \begin{figure}
+% \begin{center}
+% \[
+% \begin{array}{cc}
+% \mbox{$E = 1.0 \times 10^{-3}$} &
+% \mbox{$E = 1.0 \times 10^{-4}$} \\
+% \includegraphics*[width=70mm]{Figures/fdip_vs_RacRatio_Ek3.pdf} &
+% \includegraphics*[width=70mm]{Figures/fdip_vs_RacRatio_Ek4.pdf}
+% \end{array}
+% % \includegraphics*[width=80mm]{Figures/Fig7.png}
+% \]
+% \end{center}
+% \caption{Dipolarity $f_{\rm dip}$ as a function of the magnetic Reynolds number $Rm$ for different spherical shell geometries. The cases with $E = 1.0 \times 10^{-3}$ and $Pm = 5.0$ are plotted in the left panel, and the cases with $E = 1.0 \times 10^{-4}$ and $Pm = 2.0$ are plotted in the right panel. The blue, green, and red marks indicate the cases of $r_{i} / r_{o} = 0.15$, 0,25, and 0.35, lfailed dynamo cases are plottes as negative value (-0.2). %The bar represents the standard deviation.
+% }
+% \label{fig:fdip_vs_Racratio}
+% \end{figure}
 %
 %
 \begin{figure*}
@@ -551,7 +587,7 @@ Results of respective runs for $r_i/r_o = 0.15$, $0.25$ and $0.35$ are plotted b
 \end{center}
 \caption{Spatial pattern of the temperature, flow,  and magnetic fields for the cases with dipolar solution and $E = 1.0 \times 10^{-3}$. The temperature (column a), $z$-component of the vorticity $\omega_{z}$ (column b) and magnetic field $B_{z}$ (column c) at the equatorial plane, and the radial magnetic field $B_{r}$ at the CMB (column d) are plotted, respectively.
 }
-\label{fig:Snap_Dypoler_E1-3}
+\label{fig:Snap_Dipoler_E1-3}
 \end{figure*}
 %
 %
@@ -593,7 +629,7 @@ Results of respective runs for $r_i/r_o = 0.15$, $0.25$ and $0.35$ are plotted b
 \end{center}
 \caption{Spatial pattern of the temperature, flow,  and magnetic fields for the cases with dipolar solution and $E = 1.0 \times 10^{-4}$. The temperature (column a), $z$-component of the vorticity $\omega_{z}$ (column b) and magnetic field $B_{z}$ (column c) at the equatorial plane, and the radial magnetic field $B_{r}$ at the CMB (column d) are plotted, respectively.
 }
-\label{fig:Snap_Dypoler_E1-4}
+\label{fig:Snap_Dipoler_E1-4}
 \end{figure*}
 %
 %
