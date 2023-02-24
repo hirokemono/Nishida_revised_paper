@@ -1,4 +1,5 @@
 \section{INTRODUCTION}
+
 % The Earth has an intrinsic magnetic field.
 % The dynamo action of liquid iron alloy convection in the outer core generates the geomagnetic field.
 {\color{red} % MM
@@ -14,14 +15,14 @@ The convective motions can be caused by thermal buoyancy from the Earth's coolin
 Compositional convection, which is associated with the growth of the inner core, is another source of convection in the outer core.
 }
 Recent thermochemical calculations suggest that the inner core formed approximately one billion years ago and that the inner core has been continuously growing to its present size \cite{Labrosse:2001}.
-Although the size of the inner core has been changing across the geological time scale, the geomagnetic field described by the virtual dipole moment (VDM) has maintained its present intensity for more than 3.5 billion years based on paleomagnetic observations \cite{Biggin:2015}; the geodynamo has been sustained during this period.
+Although the size of the inner core has been changing across the geological time scale, the geomagnetic field described by the virtual dipole moment (VDM) has been maintained at its present intensity for more than 3.5 billion years based on palaeomagnetic studies \cite{Biggin:2015}; the geodynamo has been sustained during this period.
 
 % Previous studies have performed a number of numerical dynamo simulations under the assumption of the present geometry of the Earth’s core; the aspect ratio of the inner core radius, $r_{i}$, to the outer core radius, $r_{o}$, is $r_{i} / r_{o} = 0.35$.
 {\color{red}
 Many numerical dynamo simulations have been performed under the assumption of the present geometry of the Earth’s core; the aspect ratio of the inner core radius, $r_{i}$, to the outer core radius, $r_{o}$, is $r_{i} / r_{o} = 0.35$.
 }
 For example, Christensen \& Aubert \shortcite{Uli:2006} revealed, in detail, sustained dynamo conditions for various control parameters. 
-They clarified dipolar and non-dipolar dynamo cases.
+They clarified dipolar and non-dipolar dynamo regimes.
 The dynamo regime can change from stable dipolar to reversing non-dipolar with increase of the Rayleigh number \cite{Kutzner:2002,Olson:2011}.
 
 % In the smaller inner core setting, as compared with the present size, however, there have been a few attempts at a numerical dynamo. 
@@ -30,29 +31,57 @@ In an inner core setting smaller than the present size, however, there have been
 }
 Some numerical dynamo studies have shown that the geometry effect on the dynamo regime is small. 
 Hori {\it et al.} \shortcite{Hori:2010} investigated the morphology of a magnetic field with fixed temperature (FT) and fixed heat flux (FF) boundary conditions for two spherical shell radius ratios: $r_{i} / r_{o} = 0.10$ and 0.35. 
-Regardless of the difference in radius ratios, they found that sustained dynamos were dipolar under the FF boundary condition and non-dipolar under the FT boundary condition. 
-Driscoll \shortcite{Driscoll:2016} carried out numerical simulations of geodynamo for eleven patterns of radius ratios in the range of $0.10 < r_{i} / r_{o} < 0.35$.% and core power derived from a thermal evolution model.
-Driscoll \shortcite{Driscoll:2016} found that the total magnetic energy in a spherical shell increased with increase of the ratios $r_{i} / r_{o}$ and that sustained dynamos were characterized by a strong dipole magnetic field.
+They found that sustained dynamos were dipolar under the FF boundary condition and non-dipolar under the FT boundary condition regardless of the difference in radius ratios. 
+Driscoll \shortcite{Driscoll:2016} carried out numerical simulations of geodynamo for eleven patterns of radius ratios in the range of % $0.10 < r_{i} / r_{o} < 0.35$.
+{\color{red} $0.10 \le r_{i} / r_{o} \le 0.35$}.
+% and core power derived from a thermal evolution model.
+Driscoll \shortcite{Driscoll:2016} found that the total magnetic energy in a spherical shell increased with increase of the ratios $r_{i} / r_{o}$ and that sustained dynamos were characterised by a strong dipole magnetic field.
 
-Other numerical dynamo studies have shown that the inner core size influences dipolar dominance. Heimpel {\it et al.} \shortcite{Heimpel:2005} investigated dynamo onset conditions for six spherical shell radius ratios: $0.15 < r_{i} / r_{o} < 0.65$. 
-They found that the dipolar and total magnetic energy at the core–mantle boundary (CMB) decreases with decrease of $r_{i} / r_{o}$ values for $r_{i} / r_{o} < 0.45$. 
-Lhuillier {\it et al.} \shortcite{Lhuillier:2019} also reported on the effect of geometry on the dynamo regime. 
-They performed chemically driven geodynamo simulations by changing ten patterns of radius ratios in the range of $0.10 < r_{i} / r_{o} < 0.44$. 
-They found that sustained magnetic fields were dipolar for  $r_{i} / r_{o} < 0.18$ and  $r_{i} / r_{o} > 0.26$, whereas they were less dipolar for $0.20 < r_{i} / r_{o} < 0.22$. 
-Although some studies have attempted to reveal the dependence of the dynamo regime on the spherical shell radius ratio, we do not yet fully understand how the morphology of the magnetic field is determined.
+Other numerical dynamo studies have shown that the inner core size influences dipolar dominance. 
+{\color{red}
+Roberts \& Glatzmaier \shortcite{RG:2001} examined the geodynamo in the past ($r_i / r_o = 0.88$), present ($r_i / r_o = 0.35$) and future ($r_i / r_o = 0.70$) by adopting respective physical states in the Earth, such as the inner core size, the rotation rate, the energy source, and so on.
+They pointed out that the dipole dominance and axisymmetry of the magnetic field depend strongly on $r_i$.
+}
+Heimpel {\it et al.} \shortcite{Heimpel:2005} investigated dynamo onset conditions for six spherical shell radius ratios: % $0.15 < r_{i} / r_{o} < 0.65$.
+{\color{red}$0.15 \le r_{i} / r_{o} \le 0.65$.}
+They found that the dipolar and total magnetic energy at the core–mantle boundary (CMB) decreases with decrease of $r_{i} / r_{o}$ values for % $r_{i} / r_{o} < 0.45$. 
+{\color{red}$r_{i} / r_{o} \le 0.45$.}
+Lhuillier {\it et al.} \shortcite{Lhuillier:2019} also reported the effect of geometry on the dynamo regime. 
+They performed chemically driven geodynamo simulations for ten patterns of radius ratios in the range of % $0.10 < r_{i} / r_{o} < 0.44$. 
+{\color{red}$0.10 \le r_{i} / r_{o} \le 0.44$.}
+% They found that 
+Sustained magnetic fields were {\color{red}found to be} dipolar for  $r_{i} / r_{o} \le 0.18$ and  $r_{i} / r_{o} > 0.26$, whereas they were less dipolar for $0.20 \le r_{i} / r_{o} \le 0.22$. 
+Thus, some studies have attempted to reveal the dependence of the dynamo regime on the spherical shell radius ratio.
+% but 
+{\color{red}However,} we do not yet fully understand how the morphology of the magnetic field is determined in relation to spherical shell radius ratios.
 
 In recent numerical dynamos, the dipolarity, $f_{\rm dip}$, which is defined as the ratio of the dipole field strength to the total field strength at the CMB \cite{Uli:2006}, has been widely used as an index for assessing the morphology of geomagnetic field. 
 Christensen \& Aubert \shortcite{Uli:2006} mentioned that the magnetic field is dipolar-dominated when $f_{\rm dip}$ exceeds 0.35. 
-This criterion for the dynamo regime is valid when dynamos can be categorized into large and small $f_{\rm dip}$ groups \cite{Soderlund:2012}. However, this criterion is not valid when dynamos are not categorized by dipolarity \cite{Aubert:2009}. 
+This criterion for the dynamo regime is valid when dynamos can be categorised into large and small $f_{\rm dip}$ groups \cite{Soderlund:2012}. However, this criterion is not valid when dynamos are not categorised by the dipolarity \cite{Aubert:2009}. 
 
-The observed geomagnetic field can be expressed in terms of the magnetic power spectrum at the Earth’s surface \cite{Lowes:1974} and at the CMB \cite{Langel:1982}. 
-While Kono \& Roberts \shortcite{Kono:2002} compared a power spectrum of the observed geomagnetic field with that of numerical dynamos, there was a lack of quantitative evaluation of the dipolar dominance. 
-As the dipolarity has no information of magnetic power spectrum in higher degrees, we require not only the dipolarity, but also another index that represents dipolar dominance assessed from the spectrum distribution.
+The geomagnetic field can be expressed in terms of the magnetic power spectrum at the Earth’s surface \cite{Lowes:1974} and at the CMB \cite{Langel:1982}. 
+While Kono \& Roberts \shortcite{Kono:2002} compared a power spectrum of the geomagnetic field with that of numerical dynamos, there was a lack of quantitative evaluation of the dipolar dominance. 
+Since the dipolarity 
+% has no 
+{\color{red}is computed without} information of magnetic power spectrum in higher degrees, we require not only the dipolarity, but also another index that represents dipolar dominance assessed from the spectrum distribution.
 
-Although numerical dynamo simulations are useful to investigate magnetic field intensity and structure in the past Earth environment, previous studies have not yet established the criterion to evaluate dipolar dominance. 
-The purpose of this study is to investigate the dynamo conditions of a sustained dipolar or non-dipolar dynamo for some spherical shell radius ratios based on an evaluation of dipolar dominance.
-Hence, we carry out numerical simulations of geodynamo for three spherical shell radius ratios, i.e., $r_{i} / r_{o} = 0.15$, 0.25, and 0.35. 
+% Although numerical dynamo simulations are useful to investigate magnetic field intensity and structure in the past Earth environment, previous studies have not yet established the criterion to evaluate dipolar dominance. 
+% The purpose of this study is to investigate the dynamo conditions of a sustained dipolar or non-dipolar dynamo for some spherical shell radius ratios based on an evaluation of dipolar dominance.
+{\color{red}
+The purpose of this study is to understand the effect of the inner core size on the dynamo regime based on an evaluation of dipolar dominance.
+}
+Hence, we carry out numerical simulations of geodynamo for three spherical shell radius ratios, %i.e., 
+$r_{i} / r_{o} = 0.15$, 0.25 and 0.35. 
 % To focus on how convection occurs, the Rayleigh number ($Ra$) was only treated as a variable.
-The $Ra$ is a parameter related to buoyancy, which is the driving force of convection.
-By simulating a wider range in the $Ra$ than previous studies, we can compare cases of a small inner core size setting with those of the present size. 
-A combination of the dipolarity at the CMB, as well as the magnetic energy spectrum at the CMB in the spherical harmonic degree expansion, reveals the range in the $Ra$ in the sustained dipolar or non-dipolar dynamo for each radius ratio.
+% The Rayleigh number is a parameter related to buoyancy, which is the driving force of convection.
+{\color{red}
+% By simulating a wider range in the $Ra$ than previous studies, we can compare cases of a small inner core size setting with those of the present size. 
+% By performing numerical simulations of geodynamo for a range of the Rayleigh number wider than those of previous studies, we can compare cases of a small inner core size setting with those of the present size.
+In the numerical simulations, we adopt a wider range of Rayleigh numbers, which are related to buoyance as driving force of convection, than those in previous studies.
+% IS THE NEXT SENTENCE NECESSARY? NO (by MM)
+% In other words, we examine a wide range of the magnetic Reynolds number.
+A combination of the dipolarity % at the CMB, as well as 
+and the magnetic energy spectrum at the CMB % in the spherical harmonic degree expansion, 
+reveals the range of the Rayleigh number % in the sustained 
+to sustain dipolar or non-dipolar dynamos for each radius ratio.
+}

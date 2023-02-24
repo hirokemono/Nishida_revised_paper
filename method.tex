@@ -1,6 +1,6 @@
 \section{METHOD}
 
-A numerical geodynamo model is given by an electrically conducting Boussinesq fluid in a rotating spherical shell. The governing equations of the geodynamo in the outer core are described by the momentum equation, heat equation, continuity equation, magnetic induction equation, and Gauss's law for the magnetic field, which are respectively given as
+A numerical geodynamo model is given by an electrically conducting Boussinesq fluid in a rotating spherical shell. The governing equations of the geodynamo in the outer core are described by the momentum equation, continuity equation, heat equation, magnetic induction equation, and Gauss's law for the magnetic field, which are respectively given as
 %
 \begin{equation}
 \begin{array}{l}
@@ -41,11 +41,11 @@ and
 \label{eq:Gauss_B}
 \end{equation}
 %
-where $\bvec{u}$, $P$, $T$, $\bvec{B}$, and $\hat{\bvec{z}}$ are the velocity, reduced pressure, temperature, magnetic field, and unit vector along the rotation axis, respectively.
+where $\bvec{u}$, $t$, $P$, $T$, $\bvec{B}$, $\bvec{r}$, and $\hat{\bvec{z}}$ are the velocity, time, reduced pressure, temperature, magnetic field, position vector, and unit vector along the rotation axis, respectively.
 % $\bvec{\omega} = \nabla \times \bvec{u}$ and $\bvec{J} = \nabla \times \bvec{B} / \mu_0$ are the vorticity and current density, respectively.
-In eq.~(\ref{eq:momentum}, $\bvec{\omega} = \nabla \times \bvec{u}$ is the vorticity, and $\bvec{J} = \nabla \times \bvec{B} / \mu_0$ in the dimensional form is the current density, where $\mu_0$ is the magnetic permeability of vacuum.
-In eqs~(\ref{eq:momentum})--(\ref{eq:Gauss_B}), the length and temperature are normalized by the outer core thickness, $L = r_{o} - r_{i}$ and average temperature difference between the inner core boundary (ICB) and the CMB, $\Delta T$, respectively. 
-The time is normalized by the kinematic viscosity diffusion time, $\tau_{\nu}  = L^{2} / \nu$, where $\nu$ is the kinetic viscosity, and the magnetic field is normalized by $\sqrt{\rho_{0} \mu_{0} \eta \Omega}$, where $\rho_{0}$, $\eta$, and $\Omega$ are the average density of core fluid, the magnetic diffusivity, and the angular velocity of system's rotation, respectively.
+In eq.~(\ref{eq:momentum}), $\bvec{\omega} = \nabla \times \bvec{u}$ is the vorticity, and $\bvec{J} = \nabla \times \bvec{B} / \mu_0$ in the dimensional form is the current density, where $\mu_0$ is the magnetic permeability of vacuum.
+In eqs~(\ref{eq:momentum})--(\ref{eq:Gauss_B}), the length and temperature are normalised by the outer core thickness, $L = r_{o} - r_{i}$ and average temperature difference between the inner core boundary (ICB) and the CMB, $\Delta T$, respectively. 
+The time is normalised by the kinematic viscosity diffusion time, $\tau_{\nu}  = L^{2} / \nu$, where $\nu$ is the kinetic viscosity, and the magnetic field is normalised by $\sqrt{\rho_{0} \mu_{0} \eta \Omega}$, where $\rho_{0}$, $\eta$, and $\Omega$ are the average density of core fluid, the magnetic diffusivity, and the angular velocity of system's rotation, respectively.
 The Rayleigh number, $Ra$, the Ekman number, $E$, the Prandtl number, $Pr$, and the magnetic Prandtl number, $Pm$, are respectively defined as follows:
 %
 \begin{equation}
@@ -62,63 +62,78 @@ where, $\alpha$, $g_o$, and $\kappa$ are the thermal expansion coefficient, the 
 % We used the numerical dynamo code Calypso \cite{Matsui:2014}. 
 % In Calypso, the spherical harmonic expansion method is used in the horizontal discretization, and the second-order finite differences are used in the radial discretization. 
 % For the time integrations, the Crank-Nicolson method was used in the linear diffusive terms and the second order Adams-Bashforth method was used in the other terms.
-{\color{red} % MM
+%
+% MM back to black
 We use a numerical dynamo code Calypso \cite{Matsui:2014}, in which numerical simulations are carried out in the spherical coordinates, $(r, \theta, \phi)$.
-Solenoidal vector fields, $\bvec{u}$ and $\bvec{B}$, are decomposed into the toroidal and poloidal constituents.
-Their scalar functions as well as the temperature, $T$, are expanded into spherical harmonics as follows:
+Solenoidal vector fields, $\bvec{u}$ and $\bvec{B}$, are decomposed into the toroidal and poloidal constituents {\color{red}as
 %
 \begin{equation}
-\bvec{u}(\bvec{r}, t) = \nabla \times (u_T \hat{\bvec{r}} ) + \nabla \times \nabla \times (u_S \hat{\bvec{r}} ) ,
+\bvec{u}(\bvec{r}, t) = \nabla \times (u_T (\bvec{r}, t) \hat{\bvec{r}} ) + \nabla \times \nabla \times (u_S (\bvec{r}, t) \hat{\bvec{r}} ) ,
 \label{eq:u_uT_uS}
 \end{equation}
 %
 \begin{equation}
-\bvec{B}(\bvec{r}, t) = \nabla \times (B_T \hat{\bvec{r}} ) + \nabla \times \nabla \times (B_S \hat{\bvec{r}} ) ,
+\bvec{B}(\bvec{r}, t) = \nabla \times (B_T (\bvec{r}, t) \hat{\bvec{r}} ) + \nabla \times \nabla \times (B_S (\bvec{r}, t) \hat{\bvec{r}} ) ,
 \label{eq:B_BT_BS}
 \end{equation}
 %
+where $\hat{\bvec{r}}$ is the radial unit vector.
+Todoidal and poloidal scalar functions for the velocity and magnetic fields, $u_T(\bvec{r}, t)$, $u_S(\bvec{r}, t)$, $B_T(\bvec{r}, t)$, and $B_S(\bvec{r}, t)$ are expanded into spherical harmonics.
+As an example, $u_T (\bvec{r}, t)$ is expanded as
+%
 \begin{equation}
-T (\bvec{r}, t) = \sum_{l = 1}^{L_{\rm max}} \sum_{m=-l}^{l} T_l^m(r, t) Y_l^m (\theta, \phi) ,
-\label{eq:T_Ylm}
+u_T (\bvec{r}, t) = \sum_{l = 1}^{L_{\rm max}} \sum_{m=-l}^{l} u_{T l}^{\ m} (r, t) Y_l^{|m|} (\theta, \phi) ,
+\label{eq:uT_Ylm}
 \end{equation}
 %
-where
-$L_{\rm max}$ is the truncation of spherical harmonics, and
+where $L_{\rm max}$ is the truncation of spherical harmonics, and
+%
 \begin{equation}
-Y_l^m (\theta, \phi) = \left\{
+Y_l^{|m|} (\theta, \phi) = \left\{
  \begin{array}{ll}
  P_l^m(\cos\theta)\cos m\phi & (m = 0, 1, 2, \cdots, l)
  \\
- P_l^m(\cos\theta)\sin m\phi & (m = -1, -2, \cdots, -l) .
+ P_l^{|m|}(\cos\theta)\sin |m|\phi & (m = -1, -2, \cdots, -l) .
  \end{array}
 \right.
 \label{eq:def_of_Ylm}
 \end{equation}
 %
-$P_l^m(\cos\theta)$ is a fully-normalized associated Legendre polynomial with degree $l$ and order $m$.
-$u_T(\bvec{r}, t)$, $u_S(\bvec{r}, t)$, $B_T(\bvec{r}, t)$, and $B_S(\bvec{r}, t)$ are also expanded in the same way as $T(\bvec{r}, t)$.
+$P_l^m(\cos\theta)$ is a Schmidt-normalised associated Legendre polynomial with degree $l$ and order $m$.
+The temperature, $T(\bvec{r}, t)$, is also expanded into spherical harmonics as
+%
+\begin{equation}
+T (\bvec{r}, t) = \sum_{l = 0}^{L_{\rm max}} \sum_{m=-l}^{l} T_l^m(r, t) Y_l^{|m|} (\theta, \phi) .
+\label{eq:T_Ylm}
+\end{equation}
+%
+}
+
 The radial grid points are defined as
 %
 \begin{equation}
-r_n = r_i + \frac{r_o - r_i}{2} \left\{ 1 - \cos \left( \pi \frac{n-1}{N_r-1} \right) \right\} ~~ n = 1, \cdots , N_r ,
+r_n = r_i + \frac{r_o - r_i}{2} \left\{ 1 - \cos \left( \pi \frac{n-1}{N_r-1} \right) \right\} ~~\;\;\;\; (n = 1, \cdots , N_r) ,
 \label{eq:def_of_rn}
 \end{equation}
 %
 where $N_r$ is the number of radial grids, and spatial resolution near the boundary surfaces is expected to be high enough.
 The second-order finite differences are used for the partial differentiation in the radial direction.
-For the time integration, the Crank-Nicolson method is used in the diffusive and other linear terms, and the second order Adams-Bashforth method is used in the other terms.
-}% for \color
+For the time integration, the Crank-Nicolson method is used in the diffusion and other linear terms, and the second order Adams-Bashforth method is used in the other terms.
 
-As the initial condition, temperature perturbation is applied to all the sectorial modes, $(l = m)$. 
+As the initial condition, temperature perturbation is applied to all the sectorial modes $(l = m)$. 
 The initial magnetic field is set as an axial dipole field and zonal toroidal field with degree $l=2$ adopted by Christensen {\it et al.} \shortcite{Uli:2001}. 
 For the boundary condition, the non-dimensional temperatures at the CMB and ICB are fixed as $T(r_{o}) = 0$ and  $T(r_{i}) = 1$, respectively. 
 The mantle and inner core are assumed to be co-rotating, and a non-slip boundary ($\bvec{u} = \bvec{0}$) is applied to the CMB and ICB. 
-The mantle and inner core are assumed to be electrically insulated, and the magnetic field at the boundaries is connected to the potential field.
-In the parameter setting, 
+The mantle and inner core are also assumed to be electrically insulated, and the magnetic field at the boundaries is connected to the potential field.
+% In the parameter setting, 
 {\color{blue}
-we choose two parameter regimes for the Ekman, Parndtl, and magnetic Prandtl numbers. In one regime the Ekman, Prandtl, and magnetic Prandtl numbers are fixed at $E = 10^{-3}$, $Pr = 1$, and $Pm = 5$, and  $E = 10^{-4}$, $Pr = 1$, and $Pm = 2$ are chosen in the other regime. To investigate the effects of different inner core sizes, the ratios of the inner core radius to the outer core radius are set as $r_{i} / r_{o} = 0.15$, $0.25$, and $0.35$ for each parameter regime, and $Ra$ is also changed in each regime. Parameters and spatial resolution, $L_{\rm max}$ and $N_{r}$, are listed in Tables \ref{table:Summary_15} to 8 
+We choose two parameter settings; % for the Ekman, Parndtl, and magnetic Prandtl numbers. 
+in one setting, the Ekman, Prandtl, and magnetic Prandtl numbers are fixed at $E = 10^{-3}$, $Pr = 1$, and $Pm = 5$, and in the other, $E = 10^{-4}$, $Pr = 1$, and $Pm = 2$ are chosen. 
+To investigate the effects of different inner core sizes, the ratios of the inner core radius to the outer core radius are set as $r_{i} / r_{o} = 0.15$, $0.25$ and $0.35$ for each parameter setting, and $Ra$ is also changed in each setting. 
+Parameters and spatial resolution, $L_{\rm max}$ and $N_{r}$, are listed in Tables \ref{table:Summary_15} to 8 
 % \ref{table:SummaryEk4_35}.  (Table 6 to 8 cannot be referred. Why??)
-in the next section. To eliminate aliasing in the spherical harmonic expansion, number of meridional and zonal grids are set to $1.5 L_{\rm max}$ and $3 L_{\rm max}$, respectively.
+in the next section. 
+To eliminate aliasing in the spherical harmonic expansion, the number of meridional and zonal grids are set to $1.5 L_{\rm max}$ and $3 L_{\rm max}$, respectively.
 }
 %$Ra$ is changed among the cases; the Ekman, Prandtl, and magnetic Prandtl numbers are fixed at $E = 10^{-3}$, $Pr = 1$, and $Pm = 5$ in all simulation cases. 
 %The truncation of the spherical harmonics and the radial grid points were set to $L_{\rm max} = 47$ and $N_{r} = 63$, respectively. 

@@ -1508,11 +1508,11 @@ to \linewidth\bgroup\@eqnsel\hskip\@centering$\displaystyle\tabskip\z@
 \newcommand{\bssa}{\textit{Bull.\ seism.\ Soc.\ Am.}, }
 \newcommand{\eos}{\textit{Eos Trans.\ AGU}, } 
 \newcommand{\eps}{\textit{Earth~Planets~Space},}
-\newcommand{\epsl}{\textit{Earth~Planet.\ Sci.\ Lett.}, }
+\newcommand{\epsl}{\textit{Earth planet.\ Sci.\ Lett.}, }
 \newcommand{\gca}{\textit{Geochim.\ Cosmochim.\ Acta}, }
 \newcommand{\geo}{\textit{Geology}, }
 \newcommand{\geop}{\textit{Geophysics}, }
-\newcommand{\gji}{\textit{Geophys.\ J\ Int.}, }
+\newcommand{\gji}{\textit{Geophys.\ J.\ Int.}, }
 \newcommand{\gjras}{\textit{Geophys.\ J.\ R.\ astr.\ Soc.}, }
 \newcommand{\grl}{\textit{Geophys.\ Res.\ Lett.}, }
 \newcommand{\gsab}{\textit{Geol.\ Soc.\ Am.\ Bull.},}
@@ -1522,7 +1522,7 @@ to \linewidth\bgroup\@eqnsel\hskip\@centering$\displaystyle\tabskip\z@
 \newcommand{\jseis}{\textit{J.~Seismology}, }
 \newcommand{\mnras}{\textit{Mon.\ Not.\ R.\ astr.\ Soc.}, } 
 \newcommand{\pag}{\textit{Pure Appl.\ Geophys.},}
-\newcommand{\pepi}{\textit{Phys.\ Earth Planet.\ Inter.}, }
+\newcommand{\pepi}{\textit{Phys.\ Earth planet.\ Inter.}, }
 \newcommand{\rg}{\textit{Rev.\ Geophys.}, }
 \newcommand{\tecto}{\textit{Tectonophysics}, }
 
