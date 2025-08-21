@@ -42,9 +42,8 @@ and
 \end{equation}
 %
 where $\bvec{u}$, $t$, $P$, $T$, $\bvec{B}$, $\bvec{r}$, and $\hat{\bvec{z}}$ are the velocity, time, reduced pressure, temperature, magnetic field, position vector, and unit vector along the rotation axis, respectively.
-% $\bvec{\omega} = \nabla \times \bvec{u}$ and $\bvec{J} = \nabla \times \bvec{B} / \mu_0$ are the vorticity and current density, respectively.
 In eq.~(\ref{eq:momentum}), $\bvec{\omega} = \nabla \times \bvec{u}$ is the vorticity, and $\bvec{J} = \nabla \times \bvec{B} / \mu_0$ in the dimensional form is the current density, where $\mu_0$ is the magnetic permeability of vacuum.
-In eqs~(\ref{eq:momentum})--(\ref{eq:Gauss_B}), the length and temperature are normalised by the outer core thickness, $L = r_{o} - r_{i}$ and average temperature difference between the inner core boundary (ICB) and the CMB, $\Delta T$, respectively. 
+In eqs.~(\ref{eq:momentum})--(\ref{eq:Gauss_B}), the length and temperature are normalised by the outer core thickness, $L = r_{o} - r_{i}$ and average temperature difference between the inner core boundary (ICB) and the CMB, $\Delta T$, respectively. 
 The time is normalised by the kinematic viscosity diffusion time, $\tau_{\nu}  = L^{2} / \nu$, where $\nu$ is the kinetic viscosity, and the magnetic field is normalised by $\sqrt{\rho_{0} \mu_{0} \eta \Omega}$, where $\rho_{0}$, $\eta$, and $\Omega$ are the average density of core fluid, the magnetic diffusivity, and the angular velocity of system's rotation, respectively.
 The Rayleigh number, $Ra$, the Ekman number, $E$, the Prandtl number, $Pr$, and the magnetic Prandtl number, $Pm$, are respectively defined as follows:
 %
@@ -59,13 +58,9 @@ Pm = \displaystyle{ \frac{\nu}{\eta} },
 %
 where, $\alpha$, $g_o$, and $\kappa$ are the thermal expansion coefficient, the gravitational acceleration at the CMB, and the thermal diffusivity, respectively.
 
-% We used the numerical dynamo code Calypso \cite{Matsui:2014}. 
-% In Calypso, the spherical harmonic expansion method is used in the horizontal discretization, and the second-order finite differences are used in the radial discretization. 
-% For the time integrations, the Crank-Nicolson method was used in the linear diffusive terms and the second order Adams-Bashforth method was used in the other terms.
-%
-% MM back to black
 We use a numerical dynamo code Calypso \cite{Matsui:2014}, in which numerical simulations are carried out in the spherical coordinates, $(r, \theta, \phi)$.
-Solenoidal vector fields, $\bvec{u}$ and $\bvec{B}$, are decomposed into the toroidal and poloidal constituents {\color{red}as
+Solenoidal vector fields, $\bvec{u}$ and $\bvec{B}$, are decomposed into the toroidal and poloidal constituents as
+%{\color{red}
 %
 \begin{equation}
 \bvec{u}(\bvec{r}, t) = \nabla \times (u_T (\bvec{r}, t) \hat{\bvec{r}} ) + \nabla \times \nabla \times (u_S (\bvec{r}, t) \hat{\bvec{r}} ) ,
@@ -107,7 +102,7 @@ T (\bvec{r}, t) = \sum_{l = 0}^{L_{\rm max}} \sum_{m=-l}^{l} T_l^m(r, t) Y_l^{|m
 \label{eq:T_Ylm}
 \end{equation}
 %
-}
+%}
 
 The radial grid points are defined as
 %
@@ -125,8 +120,7 @@ The initial magnetic field is set as an axial dipole field and zonal toroidal fi
 For the boundary condition, the non-dimensional temperatures at the CMB and ICB are fixed as $T(r_{o}) = 0$ and  $T(r_{i}) = 1$, respectively. 
 The mantle and inner core are assumed to be co-rotating, and a non-slip boundary ($\bvec{u} = \bvec{0}$) is applied to the CMB and ICB. 
 The mantle and inner core are also assumed to be electrically insulated, and the magnetic field at the boundaries is connected to the potential field.
-% In the parameter setting, 
-{\color{blue}
+%{\color{blue}
 We choose two parameter settings; % for the Ekman, Parndtl, and magnetic Prandtl numbers. 
 in one setting, the Ekman, Prandtl, and magnetic Prandtl numbers are fixed at $E = 10^{-3}$, $Pr = 1$, and $Pm = 5$, and in the other, $E = 10^{-4}$, $Pr = 1$, and $Pm = 2$ are chosen. 
 To investigate the effects of different inner core sizes, the ratios of the inner core radius to the outer core radius are set as $r_{i} / r_{o} = 0.15$, $0.25$ and $0.35$ for each parameter setting, and $Ra$ is also changed in each setting. 
@@ -134,13 +128,12 @@ Parameters and spatial resolution, $L_{\rm max}$ and $N_{r}$, are listed in Tabl
 % \ref{table:SummaryEk4_35}.  (Table 6 to 8 cannot be referred. Why??)
 in the next section. 
 To eliminate aliasing in the spherical harmonic expansion, the number of meridional and zonal grids are set to $1.5 L_{\rm max}$ and $3 L_{\rm max}$, respectively.
+{\color{red}
+Spatial resolutions are confirmed through kinetic and magnetic energy spectra.
+Temporal resolutions and 
+{\color{blue} 
+computational
+} 
+duration are found to be sufficient through evaluation of temporal variations in kinetic and magnetic energies.
 }
-%$Ra$ is changed among the cases; the Ekman, Prandtl, and magnetic Prandtl numbers are fixed at $E = 10^{-3}$, $Pr = 1$, and $Pm = 5$ in all simulation cases. 
-%The truncation of the spherical harmonics and the radial grid points were set to $L_{\rm max} = 47$ and $N_{r} = 63$, respectively. 
-%To eliminate aliasing in the spherical harmonic expansion, horizontal grids are set to $(N_{\theta}, N_{\phi}) = (72, 144)$.
-% To investigate the effects of different inner core sizes, the spherical shell radius ratios of the inner core radius to the outer core radius are set as $r_{i} / r_{i} = 0.15$, 0.25, and 0.35. 
-% First, we perform numerical simulations of non-magnetic thermal convection in rotating spherical shells to estimate the critical Rayleigh number, $Ra_{\rm crit}$, for the onset of thermal convection. 
-% We then carry out numerical simulations of magnetohydrodynamic (MHD) dynamos driven by thermal convection. 
-% {\color{red}
-% Dynamo simulations with a lower Ekman number are necessary, however, we were forced to perform dynamo simulations with $E = 10^{-3}$ to investigate various Rayleigh numbers and inner core radii for computational limitation like dynamo simulations of Lhuillier {\it et al.} \shortcite{Lhuillier:2019}, in which the Ekman number is larger than $E = 10^{-3}$.
-% }
+%}
