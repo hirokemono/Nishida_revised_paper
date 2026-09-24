@@ -186,7 +186,7 @@ hyperref]{biblatex}
 \RequirePackage{setspace}
 
 % fonts and math
-\RequirePackage{mathptmx} 
+% \RequirePackage{mathptmx} 
 \RequirePackage[scaled=.90]{helvet} 
 \RequirePackage{newtxmath}
 \if@breakmath

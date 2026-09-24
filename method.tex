@@ -5,44 +5,44 @@ A numerical geodynamo model is given by an electrically conducting Boussinesq fl
 \begin{equation}
 \begin{array}{l}
 \displaystyle
-\frac{\partial \bvec{u}}{\partial t} + \left(\bvec{\omega} \times \bvec{u}\right)
- = - \nabla \left(P+\frac{1}{2}u^{2} \right) - \nabla \times \nabla \times \bvec{u}
+\frac{\partial {\vec u}}{\partial t} + \left({\boldmath \omega} \omega \times \vec{u}\right)
+ = - \bnabla \left(P+\frac{1}{2}u^{2} \right) - \bnabla \times \bnabla \times \vec{u}
 \\
 \displaystyle
 \hspace*{3em}
-      - \frac{2}{E} \left(\hat{\bvec{z}} \times \bvec{u} \right)
-  + \frac{Ra}{Pr} T \frac{\bvec{r}}{r_{o}}
-        + \frac{1}{Pm E} \left(\bvec{J} \times \bvec{B} \right),
+      - \frac{2}{E} \left(\hat{\vec{z}} \times \vec{u} \right)
+  + \frac{Ra}{Pr} T \frac{\vec{r}}{r_{o}}
+        + \frac{1}{Pm E} \left(\vec{J} \times \vec{B} \right),
 \label{eq:momentum}
 \end{array}
 \end{equation}
 %
 \begin{equation}
-\nabla \cdot \bvec{u} = 0, 
+\bnabla \bcdot \vec{u} = 0, 
 \label{eq:conservation}
 \end{equation}
 %
 \begin{equation}
-\frac{\partial T}{\partial t} + \left(\bvec{u} \cdot \nabla \right) T
- = \frac{1}{Pr} \nabla^{2} T,
+\frac{\partial T}{\partial t} + \left(\vec{u} \bcdot \bnabla \right) T
+ = \frac{1}{Pr} \bnabla^{2} T,
 \label{eq:heat}
 \end{equation}
 %
 \begin{equation}
- \frac{\partial \bvec{B}}{\partial t}
- = -\frac{1}{Pm}  \nabla \times \nabla \times \bvec{B}
-       + \nabla \times \left(\bvec{u} \times \bvec{B} \right),
+ \frac{\partial \vec{B}}{\partial t}
+ = -\frac{1}{Pm}  \bnabla \times \bnabla \times \vec{B}
+       + \bnabla \times \left(\vec{u} \times \vec{B} \right),
 \label{eq:induction}
 \end{equation}
 %
 and
 \begin{equation}
-\nabla \cdot \bvec{B} = 0,
+\bnabla \bcdot \vec{B} = 0,
 \label{eq:Gauss_B}
 \end{equation}
 %
-where $\bvec{u}$, $t$, $P$, $T$, $\bvec{B}$, $\bvec{r}$, and $\hat{\bvec{z}}$ are the velocity, time, reduced pressure, temperature, magnetic field, position vector, and unit vector along the rotation axis, respectively.
-In eq.~(\ref{eq:momentum}), $\bvec{\omega} = \nabla \times \bvec{u}$ is the vorticity, and $\bvec{J} = \nabla \times \bvec{B} / \mu_0$ in the dimensional form is the current density, where $\mu_0$ is the magnetic permeability of vacuum.
+where $\vec{u}$, $t$, $P$, $T$, $\vec{B}$, $\vec{r}$, and $\hat{\vec{z}}$ are the velocity, time, reduced pressure, temperature, magnetic field, position vector, and unit vector along the rotation axis, respectively.
+In eq.~(\ref{eq:momentum}), $\vec{\omega} = \bnabla \times \vec{u}$ is the vorticity, and $\vec{J} = \bnabla \times \vec{B} / \mu_0$ in the dimensional form is the current density, where $\mu_0$ is the magnetic permeability of vacuum.
 In eqs.~(\ref{eq:momentum})--(\ref{eq:Gauss_B}), the length and temperature are normalised by the outer core thickness, $L = r_{o} - r_{i}$ and average temperature difference between the inner core boundary (ICB) and the CMB, $\Delta T$, respectively. 
 The time is normalised by the kinematic viscosity diffusion time, $\tau_{\nu}  = L^{2} / \nu$, where $\nu$ is the kinetic viscosity, and the magnetic field is normalised by $\sqrt{\rho_{0} \mu_{0} \eta \Omega}$, where $\rho_{0}$, $\eta$, and $\Omega$ are the average density of core fluid, the magnetic diffusivity, and the angular velocity of system's rotation, respectively.
 The Rayleigh number, $Ra$, the Ekman number, $E$, the Prandtl number, $Pr$, and the magnetic Prandtl number, $Pm$, are respectively defined as follows:
@@ -59,25 +59,25 @@ Pm = \displaystyle{ \frac{\nu}{\eta} },
 where, $\alpha$, $g_o$, and $\kappa$ are the thermal expansion coefficient, the gravitational acceleration at the CMB, and the thermal diffusivity, respectively.
 
 We use a numerical dynamo code Calypso \cite{Matsui:2014}, in which numerical simulations are carried out in the spherical coordinates, $(r, \theta, \phi)$.
-Solenoidal vector fields, $\bvec{u}$ and $\bvec{B}$, are decomposed into the toroidal and poloidal constituents as
+Solenoidal vector fields, $\vec{u}$ and $\vec{B}$, are decomposed into the toroidal and poloidal constituents as
 %{\color{red}
 %
 \begin{equation}
-\bvec{u}(\bvec{r}, t) = \nabla \times (u_T (\bvec{r}, t) \hat{\bvec{r}} ) + \nabla \times \nabla \times (u_S (\bvec{r}, t) \hat{\bvec{r}} ) ,
+\vec{u}(\vec{r}, t) = \bnabla \times (u_T (\vec{r}, t) \hat{\vec{r}} ) + \bnabla \times \bnabla \times (u_S (\vec{r}, t) \hat{\vec{r}} ) ,
 \label{eq:u_uT_uS}
 \end{equation}
 %
 \begin{equation}
-\bvec{B}(\bvec{r}, t) = \nabla \times (B_T (\bvec{r}, t) \hat{\bvec{r}} ) + \nabla \times \nabla \times (B_S (\bvec{r}, t) \hat{\bvec{r}} ) ,
+\vec{B}(\vec{r}, t) = \bnabla \times (B_T (\vec{r}, t) \hat{\vec{r}} ) + \bnabla \times \bnabla \times (B_S (\vec{r}, t) \hat{\vec{r}} ) ,
 \label{eq:B_BT_BS}
 \end{equation}
 %
-where $\hat{\bvec{r}}$ is the radial unit vector.
-Todoidal and poloidal scalar functions for the velocity and magnetic fields, $u_T(\bvec{r}, t)$, $u_S(\bvec{r}, t)$, $B_T(\bvec{r}, t)$, and $B_S(\bvec{r}, t)$ are expanded into spherical harmonics.
-As an example, $u_T (\bvec{r}, t)$ is expanded as
+where $\hat{\vec{r}}$ is the radial unit vector.
+Todoidal and poloidal scalar functions for the velocity and magnetic fields, $u_T(\vec{r}, t)$, $u_S(\vec{r}, t)$, $B_T(\vec{r}, t)$, and $B_S(\vec{r}, t)$ are expanded into spherical harmonics.
+As an example, $u_T (\vec{r}, t)$ is expanded as
 %
 \begin{equation}
-u_T (\bvec{r}, t) = \sum_{l = 1}^{L_{\rm max}} \sum_{m=-l}^{l} u_{T l}^{\ m} (r, t) Y_l^{|m|} (\theta, \phi) ,
+u_T (\vec{r}, t) = \sum_{l = 1}^{L_{\rm max}} \sum_{m=-l}^{l} u_{T l}^{\ m} (r, t) Y_l^{|m|} (\theta, \phi) ,
 \label{eq:uT_Ylm}
 \end{equation}
 %
@@ -95,10 +95,10 @@ Y_l^{|m|} (\theta, \phi) = \left\{
 \end{equation}
 %
 $P_l^m(\cos\theta)$ is a Schmidt-normalised associated Legendre polynomial with degree $l$ and order $m$.
-The temperature, $T(\bvec{r}, t)$, is also expanded into spherical harmonics as
+The temperature, $T(\vec{r}, t)$, is also expanded into spherical harmonics as
 %
 \begin{equation}
-T (\bvec{r}, t) = \sum_{l = 0}^{L_{\rm max}} \sum_{m=-l}^{l} T_l^m(r, t) Y_l^{|m|} (\theta, \phi) .
+T (\vec{r}, t) = \sum_{l = 0}^{L_{\rm max}} \sum_{m=-l}^{l} T_l^m(r, t) Y_l^{|m|} (\theta, \phi) .
 \label{eq:T_Ylm}
 \end{equation}
 %
@@ -116,9 +116,9 @@ The second-order finite differences are used for the partial differentiation in 
 For the time integration, the Crank-Nicolson method is used in the diffusion and other linear terms, and the second order Adams-Bashforth method is used in the other terms.
 
 As the initial condition, temperature perturbation is applied to all the sectorial modes $(l = m)$. 
-The initial magnetic field is set as an axial dipole field and zonal toroidal field with degree $l=2$ adopted by Christensen {\it et al.} \shortcite{Uli:2001}. 
+The initial magnetic field is set as an axial dipole field and zonal toroidal field with degree $l=2$ adopted by Christensen {\it et al.} \citep{Uli:2001}. 
 For the boundary condition, the non-dimensional temperatures at the CMB and ICB are fixed as $T(r_{o}) = 0$ and  $T(r_{i}) = 1$, respectively. 
-The mantle and inner core are assumed to be co-rotating, and a non-slip boundary ($\bvec{u} = \bvec{0}$) is applied to the CMB and ICB. 
+The mantle and inner core are assumed to be co-rotating, and a non-slip boundary ($\vec{u} = 0$) is applied to the CMB and ICB. 
 The mantle and inner core are also assumed to be electrically insulated, and the magnetic field at the boundaries is connected to the potential field.
 %{\color{blue}
 We choose two parameter settings; % for the Ekman, Parndtl, and magnetic Prandtl numbers. 

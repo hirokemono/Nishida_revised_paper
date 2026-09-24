@@ -2,13 +2,12 @@
 
 \subsection{Estimation of the critical Rayleigh number}
 
-%{\color{red}
-We first estimate the critical Rayleigh number, $Ra_{\rm crit}$, for the onset of thermal convection following the method by Al-Shamali {\it et al.} \shortcite{Al-Shamali:2004}.
-We carry out numerical simulations of thermal convection by solving eqs (\ref{eq:momentum})--(\ref{eq:heat}) without the Lorentz force term, $\left(Pm E\right)^{-1} \left(\bvec{J} \times \bvec{B} \right)$.
+% We first estimate the critical Rayleigh number, $Ra_{\rm crit}$, for the onset of thermal convection following the method by Al-Shamali {\it et al.} \citep{Al-Shamali:2004}.
+We carry out numerical simulations of thermal convection by solving eqs (\ref{eq:momentum})--(\ref{eq:heat}) without the Lorentz force term, $\left(Pm E\right)^{-1} \left(\vec{J} \times \vec{B} \right)$.
 The kinetic energy density defined by
 %
 \begin{equation}
-E_{\rm kin} = \frac{1}{V_{S}} \int_{V_{S}} \frac{1}{2} \bvec{u}^{2} dV,
+E_{\rm kin} = \frac{1}{V_{S}} \int_{V_{S}} \frac{1}{2} \vec{u}^{2} dV,
 \label{eq:kinetic_energy}
 \end{equation}
 %
@@ -16,45 +15,32 @@ where $V_{S}$ is volume of a spherical shell, is calculated as the time average 
 Fig.~\ref{fig:fig_1} shows $E_{\rm kin}$ as a function of $Ra$, as listed in Tables \ref{table:Rac} and \ref{table:Rac_Ek4} for $E = 10^{-3}$ and $E = 10^{-4}$, respectively, for $r_i / r_o = 0.15$, $0.25$ and $0.35$.
 $E_{\rm kin}$ is linearly related with the Rayleigh number being close to $Ra_{\rm crit}$.
 Therefore, we can determine $Ra_{\rm crit}$ through extrapolation of $E_{\rm kin}$ to zero kinetic energy density.
-%}
-\input fig01
-\input table_Rac
-\input table_Rac_Ek4
-The critical Rayleigh numbers 
-%{\color{blue} 
-for $E = 10^{-3}$
-%}
-are estimated as $Ra_{\rm crit} = 1.09 \times 10^5$, $0.72 \times 10^5$ and $0.56 \times 10^5$ for $r_i/r_o = 0.15$, $0.25$ and $0.35$, respectively, 
-%{\color{blue} 
-and those for $E = 10^{-4}$ are $Ra_{\rm crit} = 1.08 \times 10^6$, $0.82 \times 10^6$ and $0.70 \times 10^6$, respectively.
-%}
-The obtained values of $Ra_{\rm crit}$ are almost identical to those reported in Al-Shamali {\it et al.} \shortcite{Al-Shamali:2004} for the same parameters and conditions used in this study. 
-%{\color{red} % MM
+%
+\input{fig01}
+\input{table_Rac}
+\input{table_Rac_Ek4}
+%
+The critical Rayleigh numbers for $E = 10^{-3}$ are estimated as $Ra_{\rm crit} = 1.09 \times 10^5$, $0.72 \times 10^5$ and $0.56 \times 10^5$ for $r_i/r_o = 0.15$, $0.25$ and $0.35$, respectively, and those for $E = 10^{-4}$ are $Ra_{\rm crit} = 1.08 \times 10^6$, $0.82 \times 10^6$ and $0.70 \times 10^6$, respectively.
+%
+The obtained values of $Ra_{\rm crit}$ are almost identical to those reported in Al-Shamali {\it et al.}\cite{AlShamali:2004} for the same parameters and conditions used in this study. 
+%
 $Ra_{\rm crit}$ is found to be larger when the aspect ratio is smaller in both the cases of $E = 10^{-3}$ and $E = 10^{-4}$. 
 These results indicate that convection in a rotating, thicker spherical shell requires larger buoyancy.
-%}
-%
 %
 
 \subsection{Results of MHD dynamo simulation}
-
-%{\color{red}
 To understand the geometry effect on the dynamo regime through evolution of the core, we perform magnetohydrodynaic (MHD) dynamo simulations for various combinations of Rayleigh, Ekman numbers and the radius ratios.
 We solve eqs (\ref{eq:momentum})--(\ref{eq:Gauss_B}) for at least two magnetic diffusion time to assess whether the magnetic field is sustained or dissipated.
-%}
-%{\color{red}
+%
 Fig.~\ref{fig:fig_2} shows the time evolution of $E_{\rm kin}$ and the magnetic energy density, $E_{\rm mag}$, defined by
 %
 \begin{equation}
-E_{\rm mag} = \frac{1}{V_{S}E Pm} \int_{V_{S}} \frac{1}{2} \bvec{B}^{2} dV,
+E_{\rm mag} = \frac{1}{V_{S}E Pm} \int_{V_{S}} \frac{1}{2} \vec{B}^{2} dV,
 \label{eq:magnetic_energy}
 \end{equation}
 %
 at $Ra/Ra_{\rm crit} = 21.1$ and $E = 10^{-4}$ for $r_i/r_o = 0.25$.
-%}
-%{\color{red}
 The magnetic field is found to be sustained, and the magnetic energy is larger than the kinetic energy in this parameter setting.
-%}
 
 \input fig02
 \input table_S15
@@ -70,11 +56,8 @@ We here summarise results of the present MHD dynamo simulations in Tables~\ref{t
  at $E = 10^{-4}$ and $Pm = 2$.
 %}
 %%%%% ref{#} of tables does not work well.
-%{\color{red}
 $Ra$, $L_{\rm max}$ and $N_r$ are parameters adopted in respective numerical simulations.
 $E_{\rm kin}$ and $E_{\rm mag}$ are obtained as average values over a 0.5 magnetic diffusion time at the end of each simulation (see the shaded area in Fig.~\ref{fig:fig_2}).
-%}
-%{\color{red}
 The magnetic Reynolds number, $Rm$, is the ratio of the generation to diffusion terms in the induction equation (\ref{eq:induction}) and is calculated as
 %
 \begin{equation}
@@ -99,28 +82,24 @@ The magnetic energy density at the CMB, $E_{\rm mag} (r=r_o)$, is calculated as
 %
 \begin{equation}
 E_{\rm mag} (r=r_o) = 
-  \frac{1}{S_o E Pm} \int_{S_o} \frac{1}{2} \bvec{B}^2 dS,
+  \frac{1}{S_o E Pm} \int_{S_o} \frac{1}{2} \vec{B}^2 dS,
 \end{equation}
 %
 where $S_o = 4\pi r_o^2$ is the surface area of the outer core.
 Another index for the dipolar dominance, $f_{\rm mag\_fit}$, is explained and discussed in the next section.
-The dynamic Elsasser number, $\Lambda_d$, represents the relative strength of the Lorentz to Coriolis forces defined by Soderlund {\it et al.} \shortcite{Soderlund:2012}.
+The dynamic Elsasser number, $\Lambda_d$, represents the relative strength of the Lorentz to Coriolis forces defined by Soderlund {\it et al.} \citep{Soderlund:2012}.
 $Rm$, $f_{\rm dip}$, $f_{\rm mag\_fit}$, and $\Lambda_d$ are also obtained as average values in the same way as $E_{\rm kin}$ and $E_{\rm mag}$.
 %}
 
 \input fig03
 
-%{\color{red} % MM
 Fig.~\ref{fig:fig_3} shows the kinetic and magnetic energy densities as a function of $Ra / Ra_{\rm crit}$.
-%}
-%{\color{red} % MM
 The $E_{\rm kin}$ values at each Rayleigh number in the MHD dynamo and non-MHD (thermal convection) cases are close to each other.
 However, those in the MHD case are found to be smaller than those in the non-MHD case whenever the magnetic field is sustained by the dynamo action irrespective of spherical shell ratios.
 The $E_{\rm mag}$ values can be larger than the $E_{\rm kin}$ values, and the relation depends on the Rayleigh number as well as spherical shell ratios; the smaller $r_i / r_o$ is, the narrower the range of $Ra$ is, as a whole.
 In fact, all the $E_{\rm mag}$ values are smaller than the $E_{\rm kin}$ values at $E = 10^{-3}$ for $r_i / r_o = 0.15$.
-This is consistent with a result of Heimpel {\it et al.} \shortcite{Heimpel:2005}, where all the $E_{\rm mag}$ values are also smaller than the $E_{\rm kin}$ values at $E = 4.0 \times 10^{-4}$ and $Pm = 5$ for $r_i / r_o = 0.15$.
+This is consistent with a result of Heimpel {\it et al.} \citep{Heimpel:2005}, where all the $E_{\rm mag}$ values are also smaller than the $E_{\rm kin}$ values at $E = 4.0 \times 10^{-4}$ and $Pm = 5$ for $r_i / r_o = 0.15$.
 It should be pointed out that at a smaller Ekman number, $E = 10^{-4}$, the $E_{\rm mag}$ values can be larger than the $E_{\rm kin}$ values at a limited range of $Ra$ for $r_i / r_o = 0.15$.
-%}
 %
 \input fig04
 %
@@ -134,32 +113,23 @@ This suggests that the magnetic field with smaller length-scale is effectively g
 These characteristics can be found in the followings.
 %}
 
-% \input fig04
 \input fig05
 \input fig06
 \input fig07
 \input fig08
 
-%{\color{blue}
 Next, we investigate characteristics of the field structures.
 Figs~\ref{fig:Snap_non_dipoler_E1-3} and \ref{fig:Snap_Dipoler_E1-3} show spatial structures of the temperature, the $z$-component of the vorticity, $\omega_z$, that of the magnetic field, $B_z$, on the equatorial plane, and the radial magnetic field, $B_r$, at the CMB for cases of small and large $f_{\rm dip}$, respectively, at $E = 10^{-3}$.
 The same structures for small and large $f_{\rm dip}$ at $E = 10^{-4}$ are shown in Figs~\ref{fig:Snap_non_dipoler_E1-4} and \ref{fig:Snap_Dipoler_E1-4}, respectively.
-%}
-%{\color{blue}
 The magnetic field on the equatorial plane for large $f_{\rm dip}$ is concentrated in the anti-cyclonic convection columns as seen in Figs~\ref{fig:Snap_Dipoler_E1-3} and \ref{fig:Snap_Dipoler_E1-4}, and a strong axial dipole magnetic field is maintained; intense magnetic patches on the equatorial plane are found to be located near the ICB.
 On the other hand, as found in Figs~\ref{fig:Snap_non_dipoler_E1-3} and \ref{fig:Snap_non_dipoler_E1-4} for small $f_{\rm dip}$, 
-%}
 strong convection occurs locally, where a strong magnetic field is generated between the cyclonic and anti-cyclonic convective columns.
 %
-%{\color{green} % よくわからない
 These intense $z$-components of the magnetic field are not concentrated in the convection columns. 
 Then, the corresponding magnetic lines of force are not connected to the radial magnetic field at the CMB near the tangent cylinder. 
 In addition, intense $r$-components of the magnetic field with equatorial symmetry can be found at the CMB.
 This may result from a nature that the $z$-component of the magnetic field with equatorial symmetry vanishes on the equatorial plane.
-%}
 %
-%{\color{red}
 The number of high temperature regions around the inner boundary decreases with decrease of the aspect ratio, $r_i / r_o$.
 This would arise from a nature that there exists a typical length scale for locations of upward flows at the ICB.
 As a result, intense convective columns are more localised with smaller $r_i / r_o$.
-%}
