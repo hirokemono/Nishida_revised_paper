@@ -5,7 +5,7 @@ A numerical geodynamo model is given by an electrically conducting Boussinesq fl
 \begin{equation}
 \begin{array}{l}
 \displaystyle
-\frac{\partial {\vec u}}{\partial t} + \left({\boldmath \omega} \omega \times \vec{u}\right)
+\frac{\partial {\vec u}}{\partial t} + \left(\boldsymbol{\omega} \times \vec{u}\right)
  = - \bnabla \left(P+\frac{1}{2}u^{2} \right) - \bnabla \times \bnabla \times \vec{u}
 \\
 \displaystyle
@@ -42,7 +42,7 @@ and
 \end{equation}
 %
 where $\vec{u}$, $t$, $P$, $T$, $\vec{B}$, $\vec{r}$, and $\hat{\vec{z}}$ are the velocity, time, reduced pressure, temperature, magnetic field, position vector, and unit vector along the rotation axis, respectively.
-In eq.~(\ref{eq:momentum}), $\vec{\omega} = \bnabla \times \vec{u}$ is the vorticity, and $\vec{J} = \bnabla \times \vec{B} / \mu_0$ in the dimensional form is the current density, where $\mu_0$ is the magnetic permeability of vacuum.
+In eq.~(\ref{eq:momentum}), $\boldsymbol{\omega} = \bnabla \times \vec{u}$ is the vorticity, and $\vec{J} = \bnabla \times \vec{B} / \mu_0$ in the dimensional form is the current density, where $\mu_0$ is the magnetic permeability of vacuum.
 In eqs.~(\ref{eq:momentum})--(\ref{eq:Gauss_B}), the length and temperature are normalised by the outer core thickness, $L = r_{o} - r_{i}$ and average temperature difference between the inner core boundary (ICB) and the CMB, $\Delta T$, respectively. 
 The time is normalised by the kinematic viscosity diffusion time, $\tau_{\nu}  = L^{2} / \nu$, where $\nu$ is the kinetic viscosity, and the magnetic field is normalised by $\sqrt{\rho_{0} \mu_{0} \eta \Omega}$, where $\rho_{0}$, $\eta$, and $\Omega$ are the average density of core fluid, the magnetic diffusivity, and the angular velocity of system's rotation, respectively.
 The Rayleigh number, $Ra$, the Ekman number, $E$, the Prandtl number, $Pr$, and the magnetic Prandtl number, $Pm$, are respectively defined as follows:
