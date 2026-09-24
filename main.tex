@@ -1,75 +1,132 @@
-% V2.0 released 1998 December 18
-% V2.1 released 2003 October 7 -- Gregor Hutton, updated the web address for the style files.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% jSEDI Template -- March 2026
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \documentclass{gji}
-\documentclass[mreferee]{gji}
-\usepackage{timet,xcolor,graphicx}
-\usepackage{lineno}
-\linenumbers % by MM on 11 April 2023
+% Possible option: letter (for Methods section)
+\documentclass[]{jsedi_sub}
+%\documentclass[]{jsedi_sub}
 
-\title[Dipolar dominance in geodynamo with different inner core sizes]
-{Investigation of dipolar dominance in geodynamo simulations with different inner core sizes}
-\author[Y. Nishida et al.]
-{Yuki Nishida$^1$, Hiroaki Matsui$^2$, Masaki Matsushima$^3$,\\ 
-{\rm \LARGE
-Takumi Kera$^1$, Atsushi Kumamoto$^1$, and Yuto Katoh$^1$ }\\
-  %\thanks{Pacific Region Office, GJI} \\
-  $^1$ Department of Geophysics, Tohoku University, Sendai, Japan \\
-  $^2$ Department of Earth and Planetary Sciences, University of California Davis, Davis, California, USA \\
-  $^3$ Department of Earth and Planetary Sciences, Tokyo Institute of Technology, Tokyo, Japan
-  }
-\date{ }
-\pagerange{\pageref{firstpage}--\pageref{lastpage}}
-\volume{23X}
-\pubyear{2022}
 
-%\def\LaTeX{L\kern-.36em\raise.3ex\hbox{{\small A}}\kern-.15em
-%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
-%\def\LATeX{L\kern-.36em\raise.3ex\hbox{{\Large A}}\kern-.15em
-%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
-% Authors with AMS fonts and mssymb.tex can comment out the following
-% line to get the correct symbol for Geophysical Journal International.
-\let\leqslant=\leq
+% Publication available options: breakmath, proof, onecolumn, and,
+% as article type: letter, review, comment, reply
+% breakmath breaks the equations that are too long
+% proof prints a proof watermark
+% onecolumn only if issue with breakmath
 
-\newtheorem{theorem}{Theorem}[section]
+%\documentclass[breakmath]{jsedi_sub} % default: regular article
+%\documentclass[breakmath,regular]{jsedi_sub} % regular article
+%\documentclass[breakmath,letter]{jsedi_sub} % Express letter
+%\documentclass[breakmath,review]{jsedi_sub} % Review paper, on invitation
+%\documentclass[breakmath,comment]{jsedi_sub} % Comment
+%\documentclass[breakmath,reply]{jsedi_sub} % Reply
 
-\input{mathdef.tex}
+\definecolor{lightgray}{gray}{0.5}
+
+% verbatim with grey background. May be removed if not useful.
+\let\oldv\verbatim
+\let\oldendv\endverbatim
+
+\def\verbatim{\par\setbox0\vbox\bgroup\oldv}
+\def\endverbatim{\oldendv\egroup\fboxsep0pt \noindent\colorbox[gray]{0.8}{\usebox0}\par}
+
+\title{Investigation of dipolar dominance in geodynamo simulations with different inner core sizes}
+\shorttitle{Dipolar dominance in geodynamo with different inner core sizes} % used for header, not mandatory but recommended
+
+\author[1]{Yuki ~Nishida
+%	\orcid{1111-1111-1111-1111}
+}
+\author[2]{Hiroaki ~Matsui
+%	\orcid{2222-2222-2222-2222}
+	\thanks{Corresponding author: 
+\href{mailto:hrmatsui@ai.titech.ac.jp}{\texttt{hrmatsui@ai.titech.ac.jp}}}
+}
+\author[2]{Masaki ~Matsushima
+%	\orcid{3333-3333-3333-3333}
+}
+\author[1]{Takumi ~Kera
+%	\orcid{3333-3333-3333-3333}
+}
+\author[1]{Atsushi ~Kumamoto
+%	\orcid{3333-3333-3333-3333}
+}
+\author[1]{Yuto ~Katoh
+%	\orcid{3333-3333-3333-3333}
+}
+\affil[1]{Department of geophysics, Tohoku University, Sendai, Japan}
+\affil[2]{Department of Earth and Planetary Sciences, Institute of Science Tokyo, Tokyo, Japan}
+
+%% Author CRediT roles 
+%% Please use the CRediT roles as defined at https://casrai.org/credit
+%% Use as many roles as necessary; there is no requirement to use all 14 roles
+\credit{Conceptualization}{Yuki Nishida, Hiroaki Matsui, Yuto Katoh}
+%\credit{Methodology}{people}
+\credit{Software}{Hiroaki Matsui}
+%\credit{Validation}{people}
+\credit{Formal Analysis}{Yuki Nishida, Takumi Kera}
+%\credit{Investigation}{people}
+%\credit{Resources}{people}
+\credit{Writing - Original draft}{Yuki Nishida}
+\credit{Writing - Review \& Editing}{Hiroaki Matsui, Masaki Matsushima, 
+Atsushi Kumamoto, Yuto Katoh}
+%\credit{Visualization}{people}
+%\credit{Supervision}{people}
+%\credit{Project administration}{people}
+%\credit{Funding acquisition}{people}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Several abstracts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% the command \makesedititle does not allow page breaks in preprint mode. If you have
+%%		many abstracts, you can use the command \addsummaries. It will induce a pagebreak.
+
+\addbibresource{jrn.bib}
+\addbibresource{Nishida_icore.bib}
+
+\linenumbers % comment out this line when submitting using arXiv
+
 \begin{document}
 
-\maketitle
+%%%-- for publication only, using data (doi, etc.) provided by the editorial board upon acceptance of paper 
+\publicationonly{
+\dois{10.26443/jsedi.v2i1.N}
+\handedname{Efirstname Elastname}
+\receiveddate{September 23, 2024}
+\reviseddate{October 10, 2024}
+\accepteddate{January 6, 2025}
+\publisheddate{January 11, 2025}
+\theyear{2025}
+\thevolume{2}
+\thepaper{1}  %% article number
+}
+
+%% Your article can include up to 3 abstracts. The first is the English language abstract.
+%% For other languages in the second and third optional abstracts, you might have to define 
+%% additional font(s) in preamble above
+%% You can also include a non-technical summary in addition to the abstract(s)
+\makesedititle{
+  \begin{summary}{Abstract}
+%    The text for the first abstract goes here. This should be in English, no longer than 200 words, and should not include references.
 %
-\begin{summary}
 The solid inner core of the Earth has been growing for approximately one billion years due to cooling of the Earth.
-The changing spherical shell geometry of the Earth’s core is likely to influence the geodynamo driven by convective motions in the fluid outer core.
-To understand the geometry effect on the dynamo regime through evolution of the core, we perform numerical simulations of geodynamo with three spherical shell radius ratios: $r_{i}/r_{o} = 0.15$, $0.25$ and $0.35$, where $r_{i}$ and $r_{o}$ are the inner and outer core radii, respectively.
-% To evaluate the morphology of the magnetic field, we examine two indices for dipole component dominance: (i) $f_{\rm dip}$, dipolarity used to assess the relative strength of the dipole field at the core surface in numerical dynamo models; and (ii) $f_{\rm mag\_fit}$, the ratio of magnetic energy density for the dipole component to that extrapolated from the magnetic power spectrum for the high degree components.
-To evaluate the morphology of the magnetic field, we examine two indices for dipole component dominance.
-%
-%{\color{red}
+The changing spherical shell geometry of the Earth’s core is likely to influence the geodynamo driven by convection in the fluid outer core.
+To understand the geometry effect on the dynamo regime through evolution of the core, we perform geodynamo simulations with three spherical shell radius ratios to be 0.15, 0.25 and 0.35.
+In the present study, we examine two indices for dipole component dominance to evaluate the morphology of the generated magnetic field.
 One is $f_{\rm dip}$, the dipolarity used to assess the relative strength of the dipole field at the core surface in numerical dynamo models, and the other is $f_{\rm mag\_fit}$, the ratio of magnetic energy for the dipole component to that obtained from extrapolation of the magnetic energy spectrum for the non-dipole components.
-%}
-%{\color{red}
 We find that $f_{\rm mag\_fit}$ is valid to determine the dynamo regime, even if $f_{\rm dip}$ suggests a transition regime between dipolar and non-dipolar dominance.
-%}
-We also investigate the range of 
-%{\color{blue}
-magnetic Reynolds number
-%}
-for self-sustained dynamos based on $f_{\rm dip}$ and $f_{\rm mag\_fit}$.
-%{\color{blue} 
-The lower limit of the magnetic Reynolds number to sustain a dynamo decreases with increase of the inner core size, while the upper limit to sustain the dipolar field is independent of the inner core size. 
-Consequently, the range of magnetic Reynolds number for self-sustained dynamos characterised by a strong dipole field becomes narrower for a smaller inner core.
-%}
-These results indicate that changes in the spherical shell radius ratio due to the inner core solidification largely influence on the dynamo regime.
-\end{summary}
+We also investigate the range of magnetic Reynolds number for self-sustained dynamos based on $f_{\rm dip}$ and $f_{\rm mag\_fit}$.
+The lower limit of the magnetic Reynolds number to sustain a dynamo increases with smaller inner core size, while the upper limit to sustain the dipolar field is independent of the inner core size. 
 %
-\begin{keywords}
-Dynamo: theories and simulations; Magnetic field variations through time; Numerical solutions
-\end{keywords}
+%    \vspace{1.3cm} % because abstract is too short
+  \end{summary}
+% \begin{summary}{Non-technical summary}
+%    The text goes here. Again, no longer than 200 words, no reference.
+%    \vspace{1.3cm} % because abstract is too short
+% \end{summary}
+}
 %
-\input{introduction}
+\include{introduction}
 %
-\input{method}
+\include{method}
 %
 \input{results}
 %
@@ -77,6 +134,9 @@ Dynamo: theories and simulations; Magnetic field variations through time; Numeri
 %
 \input{conclusions}
 %
-\input{reference}
+%
+\bibliography{Nishida_icore}
+\bibliographystyle{unsrt}
 %
 \end{document}
+
