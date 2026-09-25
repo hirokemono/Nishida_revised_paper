@@ -1,39 +1,33 @@
 \section{METHOD}
 
 A numerical geodynamo model is given by an electrically conducting Boussinesq fluid in a rotating spherical shell. The governing equations of the geodynamo in the outer core are described by the momentum equation, continuity equation, heat equation, magnetic induction equation, and Gauss's law for the magnetic field, which are respectively given as
+\begin{equation} \label{myeq}
+  \int_{OC}\rho_a\left(T_a\frac{\partial s_a}{\partial t}+\mu_{Si}\frac{\partial\xi_{Si}}{\partial t}+\mu_O\frac{\partial\xi_O}{\partial t}\right)\mathrm{d}V=T_L(r_{IC})\Delta
+  S 4\pi r_{IC}^2\frac{\mathrm{d}r_{IC}}{\mathrm{d}t} + Q_R+Q^{ICB}-Q^{CMB}.
+\nonumber
+\end{equation}
 %
-\begin{equation}
-\begin{array}{l}
-\displaystyle
-\frac{\partial {\vec u}}{\partial t} + \left(\boldsymbol{\omega} \times \vec{u}\right)
- = - \bnabla \left(P+\frac{1}{2}u^{2} \right) - \bnabla \times \bnabla \times \vec{u}
-\\
-\displaystyle
-\hspace*{3em}
-      - \frac{2}{E} \left(\hat{\vec{z}} \times \vec{u} \right)
+\begin{eqnarray}
+\frac{\partial \vec{u}}{\partial t} + \left(\boldsymbol{\omega} \times \vec{u}\right)
+ &=& - \bnabla \left(P+\frac{1}{2}u^{2} \right) - \bnabla \times \bnabla \times \vec{u}
+\nonumber \\
+ & &   - \frac{2}{E} \left(\hat{\vec{z}} \times \vec{u} \right)
   + \frac{Ra}{Pr} T \frac{\vec{r}}{r_{o}}
-        + \frac{1}{Pm E} \left(\vec{J} \times \vec{B} \right),
-\label{eq:momentum}
-\end{array}
-\end{equation}
+  + \frac{1}{Pm E} \left(\vec{J} \times \vec{B} \right),
+\label{eq:momentum} \\
 %
-\begin{equation}
-\bnabla \bcdot \vec{u} = 0, 
-\label{eq:conservation}
-\end{equation}
+\bnabla \bcdot \vec{u} &=& 0, 
+\label{eq:conservation} \\
 %
-\begin{equation}
 \frac{\partial T}{\partial t} + \left(\vec{u} \bcdot \bnabla \right) T
- = \frac{1}{Pr} \bnabla^{2} T,
-\label{eq:heat}
-\end{equation}
+ &=& \frac{1}{Pr} \bnabla^{2} T,
+\label{eq:heat} \\
 %
-\begin{equation}
  \frac{\partial \vec{B}}{\partial t}
- = -\frac{1}{Pm}  \bnabla \times \bnabla \times \vec{B}
+ &=& -\frac{1}{Pm}  \bnabla \times \bnabla \times \vec{B}
        + \bnabla \times \left(\vec{u} \times \vec{B} \right),
 \label{eq:induction}
-\end{equation}
+\end{eqnarray}
 %
 and
 \begin{equation}
